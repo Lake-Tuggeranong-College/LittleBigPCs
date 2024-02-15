@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/godot-openxr/scenes/first_person_controller_vr.tscn" type="PackedScene" id=1]
+
+[sub_resource type="PlaneMesh" id=1]
+size = Vector2( 1000, 1000 )
+
+[sub_resource type="SphereMesh" id=2]
+
+[node name="World" type="Spatial"]
+
+[node name="FPController" parent="." instance=ExtResource( 1 )]
+
+[node name="Platform" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+
+[node name="Player" type="MeshInstance" parent="Platform"]
+mesh = SubResource( 2 )
+skeleton = NodePath("../..")
+
+[node name="Obj-1" type="MeshInstance" parent="Platform"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.47968, 3.69041, 3.80186 )
+mesh = SubResource( 2 )
+skeleton = NodePath("../..")
+
+[node name="Obj-2" type="MeshInstance" parent="Platform"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.12684, 3.24008, -5.62743 )
+mesh = SubResource( 2 )
+skeleton = NodePath("../..")

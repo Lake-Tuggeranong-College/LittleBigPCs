@@ -1,0 +1,8 @@
+# Godot Import files.
+.import/
+
+# Our 3D Model assets.
+LttleBigPCs/Assets/
+
+# Our source game file.
+project.godot
