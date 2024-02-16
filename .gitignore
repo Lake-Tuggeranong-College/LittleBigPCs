@@ -1,8 +1,27 @@
-# Godot Import files.
-.import/
-
 # Our 3D Model assets.
-LttleBigPCs/Assets/
+**/Assets
 
-# Our source game file.
-project.godot
+# Godot 4+ specific ignores
+.godot/
+
+# Godot-specific ignores
+.import/
+export.cfg
+export_presets.cfg
+
+# PNG imported file
+*.png.import
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# Mono-specific ignores
+.mono/
+data_*/
+mono_crash.*.json
+
+# Do not ignore .md files
+!README.md
+
+# Do not ignore LICENSE
+!LICENSE
