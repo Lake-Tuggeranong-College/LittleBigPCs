@@ -1,0 +1,37 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path.s3tc="res://.import/Sheet_Normal.jpg-e4d76d75c25716d9aae5d80b25246f5b.s3tc.stex"
+path.etc2="res://.import/Sheet_Normal.jpg-e4d76d75c25716d9aae5d80b25246f5b.etc2.stex"
+metadata={
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://_MyContent/Images/Sheet_Normal.jpg"
+dest_files=[ "res://.import/Sheet_Normal.jpg-e4d76d75c25716d9aae5d80b25246f5b.s3tc.stex", "res://.import/Sheet_Normal.jpg-e4d76d75c25716d9aae5d80b25246f5b.etc2.stex" ]
+
+[params]
+
+compress/mode=2
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=1
+flags/repeat=true
+flags/filter=true
+flags/mipmaps=true
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

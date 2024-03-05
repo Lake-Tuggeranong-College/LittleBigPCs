@@ -1,0 +1,214 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://_MyContent/Meshes/Arcade_Machine.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://_MyContent/Materials/White.tres" type="Material" id=2]
+[ext_resource path="res://_MyContent/Materials/Metal.tres" type="Material" id=3]
+[ext_resource path="res://_MyContent/Scenes/Flappy_Fern.tscn" type="PackedScene" id=4]
+[ext_resource path="res://_MyContent/Scenes/Button.gd" type="Script" id=5]
+[ext_resource path="res://_MyContent/Scenes/Flappy_Fern_Machine.gd" type="Script" id=6]
+[ext_resource path="res://_MyContent/Images/FF_Poster.jpg" type="Texture" id=7]
+
+[sub_resource type="CubeMesh" id=3]
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_texture = ExtResource( 7 )
+emission_enabled = true
+emission = Color( 0, 0, 0, 1 )
+emission_energy = 0.1
+emission_operator = 0
+emission_on_uv2 = false
+emission_texture = ExtResource( 7 )
+uv1_scale = Vector3( 3.046, 1.987, 1 )
+uv1_offset = Vector3( 0, 0.014, 0 )
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_texture = ExtResource( 7 )
+emission_enabled = true
+emission = Color( 0, 0, 0, 1 )
+emission_energy = 0.1
+emission_operator = 0
+emission_on_uv2 = false
+emission_texture = ExtResource( 7 )
+uv1_scale = Vector3( 3.175, 0.641, 1 )
+uv1_offset = Vector3( -0.034, -0.31, 0 )
+
+[sub_resource type="ViewportTexture" id=1]
+viewport_path = NodePath("Viewport")
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.128927, 0.0519592, 0.076451 )
+
+[sub_resource type="Animation" id=6]
+resource_name = "Finish"
+length = 3.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:translation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0.183558, -0.25, 0, 0.25, 0, 1.10468, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 3 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:translation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1.00475, -0.25, 0, 0.25, 0, 1.00475, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 3 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath(".:translation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( -4.86948, -0.25, 0, 0.25, 0, -4.86948, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 3 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath(".:rotation_degrees:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 3 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath(".:rotation_degrees:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 3.41509e-06, -0.25, 0, 0.25, 0, -58.101, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 3 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath(".:rotation_degrees:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 3 )
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:translation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0.183558, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:translation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1.00475, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath(".:translation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( -4.86948, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath(".:rotation_degrees:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath(".:rotation_degrees:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 3.41509e-06, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath(".:rotation_degrees:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[node name="Machine" type="Spatial"]
+transform = Transform( 1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, 0.183558, 1.00475, -4.86948 )
+script = ExtResource( 6 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = ExtResource( 3 )
+material/2 = ExtResource( 2 )
+
+[node name="Poster" type="MeshInstance" parent="MeshInstance"]
+transform = Transform( 0.0180006, 0, 0, 0, 1, 0, 0, 0, 0.474429, -0.437947, -0.0130937, -0.682852 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="Poster2" type="MeshInstance" parent="MeshInstance"]
+transform = Transform( -0.0180006, 0, -4.14759e-08, 0, 1, 0, 1.57366e-09, 0, -0.474429, 0.672839, -0.0130937, -0.682852 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="Poster3" type="MeshInstance" parent="MeshInstance"]
+transform = Transform( -7.86831e-10, 0, 0.474429, 0, 0.178258, 0, -0.0180006, 0, -2.0738e-08, 0.0808092, 1.12961, 0.278272 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 5 )
+
+[node name="Viewport" type="Viewport" parent="."]
+size = Vector2( 1980, 1080 )
+
+[node name="Player" parent="Viewport" instance=ExtResource( 4 )]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform( 0.0448867, 0, 0, 0, 0.0448867, 0, 0, 0, 0.0448867, 0.120762, 0.358222, -0.215129 )
+flip_v = true
+opacity = 0.12
+texture = SubResource( 1 )
+
+[node name="RigidBody" type="RigidBody" parent="."]
+mode = 1
+script = ExtResource( 5 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 0.427654, -0.0659224, -0.0323367 )
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Finish = SubResource( 6 )
+anims/RESET = SubResource( 7 )

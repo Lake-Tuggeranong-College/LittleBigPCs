@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/162158__beerbelly38__extractor-vent-loop-2.wav-60c8d9db7c9b9117c2668d7da4f6fabe.sample"
+
+[deps]
+
+source_file="res://_MyContent/Sounds/162158__beerbelly38__extractor-vent-loop-2.wav"
+dest_files=[ "res://.import/162158__beerbelly38__extractor-vent-loop-2.wav-60c8d9db7c9b9117c2668d7da4f6fabe.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

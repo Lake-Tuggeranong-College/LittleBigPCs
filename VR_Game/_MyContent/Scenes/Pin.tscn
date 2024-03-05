@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://_MyContent/Meshes/Bowling_Pin.obj" type="ArrayMesh" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.0618241, 0.328159, 0.0592413 )
+
+[node name="Pin" type="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5607, 0.391964, 3.85398 )
+mass = 0.1
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 0.703932, 0, 0, 0, 0.703932, 0, 0, 0, 0.703932, 0, 0, 0 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.183554, 0 )
+shape = SubResource( 1 )
+
+[node name="Position3D" type="Position3D" parent="."]
+transform = Transform( 0.339685, 0, 0, 0, 0.339685, 0, 0, 0, 0.339685, 0, 0.471538, 0 )

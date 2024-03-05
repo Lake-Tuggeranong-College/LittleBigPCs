@@ -1,0 +1,83 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://_MyContent/Scenes/Button.gd" type="Script" id=1]
+[ext_resource path="res://_MyContent/Meshes/Char/Chad_Ghost_Friendly.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://_MyContent/8bitOperatorPlus-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://_MyContent/Scenes/HelpButton.gd" type="Script" id=4]
+
+[sub_resource type="BoxShape" id=53]
+extents = Vector3( 0.560912, 1.56431, 1 )
+
+[sub_resource type="DynamicFont" id=54]
+size = 124
+font_data = ExtResource( 3 )
+
+[sub_resource type="ViewportTexture" id=55]
+viewport_path = NodePath("\?")
+
+[sub_resource type="ViewportTexture" id=56]
+viewport_path = NodePath("TextViewport")
+
+[node name="HelpButton" type="Spatial"]
+script = ExtResource( 4 )
+text = "Score 60 Points to earn a star!"
+
+[node name="RigidBody" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, -7.10543e-15, 1, -4.76837e-07, 0, 4.76837e-07 )
+mode = 1
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+transform = Transform( 0.220422, 0, 0, 0, 0.220422, 0, 0, 0, 0.220422, -0.0334192, 0.069747, 0 )
+shape = SubResource( 53 )
+
+[node name="MeshInstance" type="MeshInstance" parent="RigidBody"]
+transform = Transform( -2.16774e-08, -3.52374e-15, 0.495922, 0, 0.495922, 0, -0.495922, 3.52374e-15, -2.16774e-08, 0, 0.270663, 0 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="\?" type="Viewport" parent="."]
+size = Vector2( 75, 125 )
+transparent_bg = true
+
+[node name="Label" type="Label" parent="\?"]
+margin_left = -6.0
+margin_top = -40.0
+margin_right = 70.0
+margin_bottom = 133.0
+custom_fonts/font = SubResource( 54 )
+text = "?"
+
+[node name="Idle" type="Sprite3D" parent="."]
+transform = Transform( -1.2425e-08, 0, 0.28425, 0, 0.28425, 0, -0.28425, 0, -1.2425e-08, 0, 0.534381, -0.0128649 )
+flip_v = true
+texture = SubResource( 55 )
+
+[node name="TextViewport" type="Viewport" parent="."]
+size = Vector2( 1980, 1080 )
+transparent_bg = true
+
+[node name="Label" type="Label" parent="TextViewport"]
+margin_left = -6.0
+margin_top = -40.0
+margin_right = 1949.0
+margin_bottom = 1013.0
+custom_fonts/font = SubResource( 54 )
+text = "Score 60 Points to earn a star!
+"
+align = 1
+valign = 2
+autowrap = true
+clip_text = true
+
+[node name="Text" type="Sprite3D" parent="."]
+transform = Transform( -2.85509e-09, 0, 0.0653168, 0, 0.0550931, 0, -0.0653168, 0, -2.85509e-09, 0.0597713, 0.85873, -0.0361008 )
+visible = false
+flip_v = true
+texture = SubResource( 56 )
+
+[node name="TextTimer" type="Timer" parent="."]
+wait_time = 20.0
+
+[connection signal="timeout" from="TextTimer" to="." method="_on_TextTimer_timeout"]

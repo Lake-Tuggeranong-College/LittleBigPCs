@@ -1,0 +1,149 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://_MyContent/Images/Fern.png" type="Texture" id=1]
+[ext_resource path="res://_MyContent/Scenes/Flappy_Fern_Player.gd" type="Script" id=2]
+[ext_resource path="res://_MyContent/Scenes/Flappy_Fern_Wall.gd" type="Script" id=3]
+[ext_resource path="res://_MyContent/8bitOperatorPlus-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://_MyContent/Images/Flappy_Fern_Background.jpg" type="Texture" id=5]
+[ext_resource path="res://_MyContent/Images/Flappy_Fern_Pipe.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=6]
+size = 160
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 171.43, 157.01 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 195.462, 209.881 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 68.5, 361 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 46.5, 141 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 249.5, 23 )
+
+[node name="Player" type="Node2D"]
+pause_mode = 1
+position = Vector2( 50, 53 )
+
+[node name="Background" type="TextureRect" parent="."]
+margin_left = -50.0
+margin_top = -52.0
+margin_right = 1930.0
+margin_bottom = 1028.0
+texture = ExtResource( 5 )
+
+[node name="Score" type="Label" parent="."]
+margin_left = 8.0
+margin_top = -40.0
+margin_right = 105.0
+margin_bottom = 183.0
+custom_fonts/font = SubResource( 6 )
+text = "0"
+align = 1
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( 194, 491 )
+scale = Vector2( 0.312081, 0.312081 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Player"]
+position = Vector2( 41.6559, 0 )
+scale = Vector2( 6.42472, 6.42472 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( -11.215, -19.2258 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D"]
+position = Vector2( -12.8172, -17.6237 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Wall" type="StaticBody2D" parent="." groups=["Wall"]]
+position = Vector2( 1979, 523 )
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Wall"]
+position = Vector2( 23.9888, -463.859 )
+rotation = -3.14159
+scale = Vector2( 1, 1.379 )
+texture = ExtResource( 6 )
+
+[node name="Sprite2" type="Sprite" parent="Wall"]
+position = Vector2( 25, 559 )
+scale = Vector2( 1, 1.36 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2( 25.5, -471 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall"]
+position = Vector2( 24, 569 )
+shape = SubResource( 3 )
+
+[node name="Point Area" type="Area2D" parent="Wall"]
+position = Vector2( 77, 62 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall/Point Area"]
+position = Vector2( -36.5, -10 )
+shape = SubResource( 5 )
+
+[node name="Wall2" type="StaticBody2D" parent="." groups=["Wall"]]
+position = Vector2( 3319, 523 )
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Wall2"]
+position = Vector2( 23.9888, -463.859 )
+rotation = -3.14159
+scale = Vector2( 1, 1.379 )
+texture = ExtResource( 6 )
+
+[node name="Sprite2" type="Sprite" parent="Wall2"]
+position = Vector2( 25, 559 )
+scale = Vector2( 1, 1.36 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2"]
+position = Vector2( 25.5, -463 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall2"]
+position = Vector2( 24, 569 )
+shape = SubResource( 3 )
+
+[node name="Point Area" type="Area2D" parent="Wall2"]
+position = Vector2( 85, 62 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2/Point Area"]
+position = Vector2( -36.5, -10 )
+shape = SubResource( 5 )
+
+[node name="Floor" type="StaticBody2D" parent="." groups=["Wall"]]
+position = Vector2( 827, 1036 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2( -626.5, -31 )
+shape = SubResource( 4 )
+
+[node name="Floor2" type="StaticBody2D" parent="." groups=["Wall"]]
+position = Vector2( 827, -30 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2"]
+position = Vector2( -645, 1.5 )
+shape = SubResource( 4 )
+
+[connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Wall/Point Area" to="Wall" method="_on_Point_Area_body_entered"]
+[connection signal="body_entered" from="Wall2/Point Area" to="Wall2" method="_on_Point_Area_body_entered"]

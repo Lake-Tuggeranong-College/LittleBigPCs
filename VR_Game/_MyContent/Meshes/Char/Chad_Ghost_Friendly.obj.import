@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Chad_Ghost_Friendly.obj-b3731b00fae71ec59f240d069a4ece0b.mesh"
+
+[deps]
+
+files=[ "res://.import/Chad_Ghost_Friendly.obj-b3731b00fae71ec59f240d069a4ece0b.mesh" ]
+
+source_file="res://_MyContent/Meshes/Char/Chad_Ghost_Friendly.obj"
+dest_files=[ "res://.import/Chad_Ghost_Friendly.obj-b3731b00fae71ec59f240d069a4ece0b.mesh", "res://.import/Chad_Ghost_Friendly.obj-b3731b00fae71ec59f240d069a4ece0b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

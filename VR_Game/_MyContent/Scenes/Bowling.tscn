@@ -1,0 +1,1528 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://_MyContent/Scenes/Pin.tscn" type="PackedScene" id=1]
+[ext_resource path="res://_MyContent/Scenes/Bowling.gd" type="Script" id=2]
+[ext_resource path="res://_MyContent/Meshes/Bowling_Ball_Return.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://_MyContent/Materials/Metal.tres" type="Material" id=4]
+[ext_resource path="res://_MyContent/Scenes/CurvedFloor.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Ball.tscn" type="PackedScene" id=6]
+[ext_resource path="res://_MyContent/Scenes/Barriers.tscn" type="PackedScene" id=7]
+[ext_resource path="res://_MyContent/Materials/Flesh.tres" type="Material" id=8]
+[ext_resource path="res://_MyContent/Images/Wood.jpg" type="Texture" id=9]
+[ext_resource path="res://_MyContent/Images/Wood_Normal.jpg" type="Texture" id=10]
+[ext_resource path="res://_MyContent/Images/Bowling_Points.png" type="Texture" id=11]
+[ext_resource path="res://_MyContent/Meshes/Arcade_Machine.obj" type="ArrayMesh" id=12]
+[ext_resource path="res://_MyContent/8bitOperatorPlus-Regular.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://_MyContent/Scenes/Bowling_Score_Square.tscn" type="PackedScene" id=14]
+
+[sub_resource type="DynamicFont" id=55]
+size = 44
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=57]
+size = 44
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=59]
+size = 36
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 13 )
+
+[sub_resource type="ViewportTexture" id=54]
+viewport_path = NodePath("Viewport")
+
+[sub_resource type="Animation" id=35]
+resource_name = "Fall"
+length = 4.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Pin:translation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 11.5607, -0.25, 0, 0.25, 0, 11.5607, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Pin:translation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 2.14034, -0.25, 0, 0.25, 0, 0.391964, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Pin:translation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 3.85398, -0.25, 0, 0.25, 0, 3.85398, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Pin2:translation:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 11.8042, -0.25, 0, 0.25, 0, 11.8042, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("Pin2:translation:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 2.14034, -0.25, 0, 0.25, 0, 0.391964, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("Pin2:translation:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 3.64148, -0.25, 0, 0.25, 0, 3.64148, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("Pin3:translation:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 11.8076, -0.25, 0, 0.25, 0, 11.8076, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("Pin3:translation:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 2.14034, -0.25, 0, 0.25, 0, 0.391964, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("Pin3:translation:z")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 4.0939, -0.25, 0, 0.25, 0, 4.0939, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("Pin4:translation:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 12.0744, -0.25, 0, 0.25, 0, 12.0744, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("Pin4:translation:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( 2.14034, -0.25, 0, 0.25, 0, 0.391964, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("Pin4:translation:z")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( 3.86172, -0.25, 0, 0.25, 0, 3.86172, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/12/type = "bezier"
+tracks/12/path = NodePath("Pin5:translation:x")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"points": PoolRealArray( 12.0744, -0.25, 0, 0.25, 0, 12.0744, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/13/type = "bezier"
+tracks/13/path = NodePath("Pin5:translation:y")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"points": PoolRealArray( 2.14034, -0.25, 0, 0.25, 0, 0.391964, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/14/type = "bezier"
+tracks/14/path = NodePath("Pin5:translation:z")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"points": PoolRealArray( 3.45281, -0.25, 0, 0.25, 0, 3.45281, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/15/type = "bezier"
+tracks/15/path = NodePath("Pin6:translation:x")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"points": PoolRealArray( 12.0744, -0.25, 0, 0.25, 0, 12.0744, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/16/type = "bezier"
+tracks/16/path = NodePath("Pin6:translation:y")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"points": PoolRealArray( 2.14034, -0.25, 0, 0.25, 0, 0.391964, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/17/type = "bezier"
+tracks/17/path = NodePath("Pin6:translation:z")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"points": PoolRealArray( 4.33301, -0.25, 0, 0.25, 0, 4.33301, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/18/type = "bezier"
+tracks/18/path = NodePath("Pin7:translation:x")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"points": PoolRealArray( 12.3239, -0.25, 0, 0.25, 0, 12.3239, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/19/type = "bezier"
+tracks/19/path = NodePath("Pin7:translation:y")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"points": PoolRealArray( 2.14034, -0.25, 0, 0.25, 0, 0.391964, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/20/type = "bezier"
+tracks/20/path = NodePath("Pin7:translation:z")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"points": PoolRealArray( 4.0939, -0.25, 0, 0.25, 0, 4.0939, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/21/type = "bezier"
+tracks/21/path = NodePath("Pin8:translation:x")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"points": PoolRealArray( 12.3239, -0.25, 0, 0.25, 0, 12.3239, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/22/type = "bezier"
+tracks/22/path = NodePath("Pin8:translation:y")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"points": PoolRealArray( 2.14034, -0.25, 0, 0.25, 0, 0.391964, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/23/type = "bezier"
+tracks/23/path = NodePath("Pin8:translation:z")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"points": PoolRealArray( 4.58252, -0.25, 0, 0.25, 0, 4.58252, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/24/type = "bezier"
+tracks/24/path = NodePath("Pin9:translation:x")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"points": PoolRealArray( 12.3239, -0.25, 0, 0.25, 0, 12.3239, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/25/type = "bezier"
+tracks/25/path = NodePath("Pin9:translation:y")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"points": PoolRealArray( 2.14034, -0.25, 0, 0.25, 0, 0.391964, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/26/type = "bezier"
+tracks/26/path = NodePath("Pin9:translation:z")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
+"points": PoolRealArray( 3.63994, -0.25, 0, 0.25, 0, 3.63994, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/27/type = "bezier"
+tracks/27/path = NodePath("Pin10:translation:x")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/keys = {
+"points": PoolRealArray( 12.3239, -0.25, 0, 0.25, 0, 12.3239, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/28/type = "bezier"
+tracks/28/path = NodePath("Pin10:translation:y")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/keys = {
+"points": PoolRealArray( 2.14034, -0.25, 0, 0.25, 0, 0.391964, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/29/type = "bezier"
+tracks/29/path = NodePath("Pin10:translation:z")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/keys = {
+"points": PoolRealArray( 3.25875, -0.25, 0, 0.25, 0, 3.25875, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/30/type = "bezier"
+tracks/30/path = NodePath("Pin:rotation_degrees:x")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/31/type = "bezier"
+tracks/31/path = NodePath("Pin:rotation_degrees:y")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/32/type = "bezier"
+tracks/32/path = NodePath("Pin:rotation_degrees:z")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/33/type = "bezier"
+tracks/33/path = NodePath("Pin2:rotation_degrees:x")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/34/type = "bezier"
+tracks/34/path = NodePath("Pin2:rotation_degrees:y")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/35/type = "bezier"
+tracks/35/path = NodePath("Pin2:rotation_degrees:z")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/36/type = "bezier"
+tracks/36/path = NodePath("Pin3:rotation_degrees:x")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/37/type = "bezier"
+tracks/37/path = NodePath("Pin3:rotation_degrees:y")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/38/type = "bezier"
+tracks/38/path = NodePath("Pin3:rotation_degrees:z")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/39/type = "bezier"
+tracks/39/path = NodePath("Pin4:rotation_degrees:x")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/40/type = "bezier"
+tracks/40/path = NodePath("Pin4:rotation_degrees:y")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/41/type = "bezier"
+tracks/41/path = NodePath("Pin4:rotation_degrees:z")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/42/type = "bezier"
+tracks/42/path = NodePath("Pin5:rotation_degrees:x")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/43/type = "bezier"
+tracks/43/path = NodePath("Pin5:rotation_degrees:y")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/44/type = "bezier"
+tracks/44/path = NodePath("Pin5:rotation_degrees:z")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/45/type = "bezier"
+tracks/45/path = NodePath("Pin6:rotation_degrees:x")
+tracks/45/interp = 1
+tracks/45/loop_wrap = true
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/46/type = "bezier"
+tracks/46/path = NodePath("Pin6:rotation_degrees:y")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/47/type = "bezier"
+tracks/47/path = NodePath("Pin6:rotation_degrees:z")
+tracks/47/interp = 1
+tracks/47/loop_wrap = true
+tracks/47/imported = false
+tracks/47/enabled = true
+tracks/47/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/48/type = "bezier"
+tracks/48/path = NodePath("Pin7:rotation_degrees:x")
+tracks/48/interp = 1
+tracks/48/loop_wrap = true
+tracks/48/imported = false
+tracks/48/enabled = true
+tracks/48/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/49/type = "bezier"
+tracks/49/path = NodePath("Pin7:rotation_degrees:y")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/50/type = "bezier"
+tracks/50/path = NodePath("Pin7:rotation_degrees:z")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/51/type = "bezier"
+tracks/51/path = NodePath("Pin8:rotation_degrees:x")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/52/type = "bezier"
+tracks/52/path = NodePath("Pin8:rotation_degrees:y")
+tracks/52/interp = 1
+tracks/52/loop_wrap = true
+tracks/52/imported = false
+tracks/52/enabled = true
+tracks/52/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/53/type = "bezier"
+tracks/53/path = NodePath("Pin8:rotation_degrees:z")
+tracks/53/interp = 1
+tracks/53/loop_wrap = true
+tracks/53/imported = false
+tracks/53/enabled = true
+tracks/53/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/54/type = "bezier"
+tracks/54/path = NodePath("Pin9:rotation_degrees:x")
+tracks/54/interp = 1
+tracks/54/loop_wrap = true
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/55/type = "bezier"
+tracks/55/path = NodePath("Pin9:rotation_degrees:y")
+tracks/55/interp = 1
+tracks/55/loop_wrap = true
+tracks/55/imported = false
+tracks/55/enabled = true
+tracks/55/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/56/type = "bezier"
+tracks/56/path = NodePath("Pin9:rotation_degrees:z")
+tracks/56/interp = 1
+tracks/56/loop_wrap = true
+tracks/56/imported = false
+tracks/56/enabled = true
+tracks/56/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/57/type = "bezier"
+tracks/57/path = NodePath("Pin10:rotation_degrees:x")
+tracks/57/interp = 1
+tracks/57/loop_wrap = true
+tracks/57/imported = false
+tracks/57/enabled = true
+tracks/57/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/58/type = "bezier"
+tracks/58/path = NodePath("Pin10:rotation_degrees:y")
+tracks/58/interp = 1
+tracks/58/loop_wrap = true
+tracks/58/imported = false
+tracks/58/enabled = true
+tracks/58/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/59/type = "bezier"
+tracks/59/path = NodePath("Pin10:rotation_degrees:z")
+tracks/59/interp = 1
+tracks/59/loop_wrap = true
+tracks/59/imported = false
+tracks/59/enabled = true
+tracks/59/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=36]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Pin:translation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 11.5607, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Pin:translation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0.391964, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Pin:translation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 3.85398, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Pin2:translation:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 11.8042, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("Pin2:translation:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0.391964, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("Pin2:translation:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 3.64148, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("Pin3:translation:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 11.8076, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("Pin3:translation:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 0.391964, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("Pin3:translation:z")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 4.0939, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("Pin4:translation:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 12.0744, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("Pin4:translation:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( 0.391964, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("Pin4:translation:z")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( 3.86172, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/12/type = "bezier"
+tracks/12/path = NodePath("Pin5:translation:x")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"points": PoolRealArray( 12.0744, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/13/type = "bezier"
+tracks/13/path = NodePath("Pin5:translation:y")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"points": PoolRealArray( 0.391964, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/14/type = "bezier"
+tracks/14/path = NodePath("Pin5:translation:z")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"points": PoolRealArray( 3.45281, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/15/type = "bezier"
+tracks/15/path = NodePath("Pin6:translation:x")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"points": PoolRealArray( 12.0744, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/16/type = "bezier"
+tracks/16/path = NodePath("Pin6:translation:y")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"points": PoolRealArray( 0.391964, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/17/type = "bezier"
+tracks/17/path = NodePath("Pin6:translation:z")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"points": PoolRealArray( 4.33301, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/18/type = "bezier"
+tracks/18/path = NodePath("Pin7:translation:x")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"points": PoolRealArray( 12.3239, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/19/type = "bezier"
+tracks/19/path = NodePath("Pin7:translation:y")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"points": PoolRealArray( 0.391964, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/20/type = "bezier"
+tracks/20/path = NodePath("Pin7:translation:z")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"points": PoolRealArray( 4.0939, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/21/type = "bezier"
+tracks/21/path = NodePath("Pin8:translation:x")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"points": PoolRealArray( 12.3239, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/22/type = "bezier"
+tracks/22/path = NodePath("Pin8:translation:y")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"points": PoolRealArray( 0.391964, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/23/type = "bezier"
+tracks/23/path = NodePath("Pin8:translation:z")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"points": PoolRealArray( 4.58252, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/24/type = "bezier"
+tracks/24/path = NodePath("Pin9:translation:x")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"points": PoolRealArray( 12.3239, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/25/type = "bezier"
+tracks/25/path = NodePath("Pin9:translation:y")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"points": PoolRealArray( 0.391964, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/26/type = "bezier"
+tracks/26/path = NodePath("Pin9:translation:z")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
+"points": PoolRealArray( 3.63994, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/27/type = "bezier"
+tracks/27/path = NodePath("Pin10:translation:x")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/keys = {
+"points": PoolRealArray( 12.3239, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/28/type = "bezier"
+tracks/28/path = NodePath("Pin10:translation:y")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/keys = {
+"points": PoolRealArray( 0.391964, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/29/type = "bezier"
+tracks/29/path = NodePath("Pin10:translation:z")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/keys = {
+"points": PoolRealArray( 3.25875, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/30/type = "bezier"
+tracks/30/path = NodePath("Pin:rotation_degrees:x")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/31/type = "bezier"
+tracks/31/path = NodePath("Pin:rotation_degrees:y")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/32/type = "bezier"
+tracks/32/path = NodePath("Pin:rotation_degrees:z")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/33/type = "bezier"
+tracks/33/path = NodePath("Pin2:rotation_degrees:x")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/34/type = "bezier"
+tracks/34/path = NodePath("Pin2:rotation_degrees:y")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/35/type = "bezier"
+tracks/35/path = NodePath("Pin2:rotation_degrees:z")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/36/type = "bezier"
+tracks/36/path = NodePath("Pin3:rotation_degrees:x")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/37/type = "bezier"
+tracks/37/path = NodePath("Pin3:rotation_degrees:y")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/38/type = "bezier"
+tracks/38/path = NodePath("Pin3:rotation_degrees:z")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/39/type = "bezier"
+tracks/39/path = NodePath("Pin4:rotation_degrees:x")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/40/type = "bezier"
+tracks/40/path = NodePath("Pin4:rotation_degrees:y")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/41/type = "bezier"
+tracks/41/path = NodePath("Pin4:rotation_degrees:z")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/42/type = "bezier"
+tracks/42/path = NodePath("Pin5:rotation_degrees:x")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/43/type = "bezier"
+tracks/43/path = NodePath("Pin5:rotation_degrees:y")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/44/type = "bezier"
+tracks/44/path = NodePath("Pin5:rotation_degrees:z")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/45/type = "bezier"
+tracks/45/path = NodePath("Pin6:rotation_degrees:x")
+tracks/45/interp = 1
+tracks/45/loop_wrap = true
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/46/type = "bezier"
+tracks/46/path = NodePath("Pin6:rotation_degrees:y")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/47/type = "bezier"
+tracks/47/path = NodePath("Pin6:rotation_degrees:z")
+tracks/47/interp = 1
+tracks/47/loop_wrap = true
+tracks/47/imported = false
+tracks/47/enabled = true
+tracks/47/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/48/type = "bezier"
+tracks/48/path = NodePath("Pin7:rotation_degrees:x")
+tracks/48/interp = 1
+tracks/48/loop_wrap = true
+tracks/48/imported = false
+tracks/48/enabled = true
+tracks/48/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/49/type = "bezier"
+tracks/49/path = NodePath("Pin7:rotation_degrees:y")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/50/type = "bezier"
+tracks/50/path = NodePath("Pin7:rotation_degrees:z")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/51/type = "bezier"
+tracks/51/path = NodePath("Pin8:rotation_degrees:x")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/52/type = "bezier"
+tracks/52/path = NodePath("Pin8:rotation_degrees:y")
+tracks/52/interp = 1
+tracks/52/loop_wrap = true
+tracks/52/imported = false
+tracks/52/enabled = true
+tracks/52/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/53/type = "bezier"
+tracks/53/path = NodePath("Pin8:rotation_degrees:z")
+tracks/53/interp = 1
+tracks/53/loop_wrap = true
+tracks/53/imported = false
+tracks/53/enabled = true
+tracks/53/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/54/type = "bezier"
+tracks/54/path = NodePath("Pin9:rotation_degrees:x")
+tracks/54/interp = 1
+tracks/54/loop_wrap = true
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/55/type = "bezier"
+tracks/55/path = NodePath("Pin9:rotation_degrees:y")
+tracks/55/interp = 1
+tracks/55/loop_wrap = true
+tracks/55/imported = false
+tracks/55/enabled = true
+tracks/55/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/56/type = "bezier"
+tracks/56/path = NodePath("Pin9:rotation_degrees:z")
+tracks/56/interp = 1
+tracks/56/loop_wrap = true
+tracks/56/imported = false
+tracks/56/enabled = true
+tracks/56/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/57/type = "bezier"
+tracks/57/path = NodePath("Pin10:rotation_degrees:x")
+tracks/57/interp = 1
+tracks/57/loop_wrap = true
+tracks/57/imported = false
+tracks/57/enabled = true
+tracks/57/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/58/type = "bezier"
+tracks/58/path = NodePath("Pin10:rotation_degrees:y")
+tracks/58/interp = 1
+tracks/58/loop_wrap = true
+tracks/58/imported = false
+tracks/58/enabled = true
+tracks/58/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/59/type = "bezier"
+tracks/59/path = NodePath("Pin10:rotation_degrees:z")
+tracks/59/interp = 1
+tracks/59/loop_wrap = true
+tracks/59/imported = false
+tracks/59/enabled = true
+tracks/59/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="SpatialMaterial" id=43]
+albedo_color = Color( 0.298039, 0.298039, 0.298039, 1 )
+metallic = 0.52
+metallic_specular = 1.0
+
+[sub_resource type="BoxShape" id=44]
+extents = Vector3( 1.09551, 0.0355415, 0.251768 )
+
+[sub_resource type="BoxShape" id=45]
+extents = Vector3( 0.023954, 0.0587871, 0.251768 )
+
+[sub_resource type="BoxShape" id=46]
+extents = Vector3( 0.023954, 0.0587871, 1.05182 )
+
+[sub_resource type="CubeMesh" id=39]
+
+[sub_resource type="SpatialMaterial" id=51]
+albedo_texture = ExtResource( 9 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 10 )
+uv1_scale = Vector3( 34.928, -1.74, 1 )
+
+[sub_resource type="ConvexPolygonShape" id=42]
+points = PoolVector3Array( 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, -1, 1, 1, -1, -1, -1, 1, -1, -1, -1, 1, -1, -1, -1 )
+
+[sub_resource type="SpatialMaterial" id=40]
+albedo_color = Color( 0.870588, 0.572549, 0, 1 )
+
+[sub_resource type="BoxShape" id=53]
+extents = Vector3( 0.988063, 1, 1.54262 )
+
+[node name="Bowling" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.946615, 9.53674e-07, 1.10417 )
+script = ExtResource( 2 )
+
+[node name="Base" type="Sprite" parent="."]
+visible = false
+position = Vector2( 499, 277 )
+texture = ExtResource( 11 )
+
+[node name="Viewport" type="Viewport" parent="."]
+size = Vector2( 1000, 600 )
+transparent_bg = true
+
+[node name="Base2" type="Sprite" parent="Viewport"]
+position = Vector2( 499, 277 )
+texture = ExtResource( 11 )
+
+[node name="Player" type="Label" parent="Viewport"]
+margin_left = 2.0
+margin_top = 54.0
+margin_right = 162.0
+margin_bottom = 118.0
+custom_fonts/font = SubResource( 55 )
+text = "Player"
+
+[node name="Total" type="Label" parent="Viewport"]
+margin_left = 901.0
+margin_top = 57.0
+margin_right = 993.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 57 )
+text = "---"
+align = 1
+
+[node name="Numbers" type="Label" parent="Viewport"]
+margin_left = 182.0
+margin_top = -3.0
+margin_right = 974.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 59 )
+text = "1     2    3   4     5    6    7    8    9   10  Tot."
+
+[node name="Squares" type="Control" parent="Viewport"]
+margin_top = 11.0
+margin_right = 40.0
+margin_bottom = 51.0
+
+[node name="Score_Square" parent="Viewport/Squares" instance=ExtResource( 14 )]
+margin_right = 228.0
+margin_bottom = 117.0
+
+[node name="Score_Square2" parent="Viewport/Squares" instance=ExtResource( 14 )]
+margin_left = 229.0
+margin_right = 301.0
+margin_bottom = 117.0
+
+[node name="Score_Square3" parent="Viewport/Squares" instance=ExtResource( 14 )]
+margin_left = 306.0
+margin_right = 378.0
+margin_bottom = 117.0
+
+[node name="Score_Square4" parent="Viewport/Squares" instance=ExtResource( 14 )]
+margin_left = 379.0
+margin_right = 451.0
+margin_bottom = 117.0
+
+[node name="Score_Square5" parent="Viewport/Squares" instance=ExtResource( 14 )]
+margin_left = 452.0
+margin_right = 524.0
+margin_bottom = 117.0
+
+[node name="Score_Square6" parent="Viewport/Squares" instance=ExtResource( 14 )]
+margin_left = 524.0
+margin_right = 596.0
+margin_bottom = 117.0
+
+[node name="Score_Square7" parent="Viewport/Squares" instance=ExtResource( 14 )]
+margin_left = 597.0
+margin_right = 669.0
+margin_bottom = 117.0
+
+[node name="Score_Square8" parent="Viewport/Squares" instance=ExtResource( 14 )]
+margin_left = 674.0
+margin_right = 746.0
+margin_bottom = 117.0
+
+[node name="Score_Square9" parent="Viewport/Squares" instance=ExtResource( 14 )]
+margin_left = 747.0
+margin_right = 819.0
+margin_bottom = 117.0
+
+[node name="Score_Square10" parent="Viewport/Squares" instance=ExtResource( 14 )]
+margin_left = 820.0
+margin_right = 892.0
+margin_bottom = 117.0
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform( 0.0529651, 0, 0.0305794, 0, 0.0631331, 0, -0.0305794, 0, 0.0529651, -0.428216, 1.13831, 1.58525 )
+flip_h = true
+flip_v = true
+opacity = 0.27
+texture = SubResource( 54 )
+
+[node name="Ball" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.799015, 0.928693, 0.368227 )
+ball_name = "Bowling"
+mat = ExtResource( 8 )
+
+[node name="Pins" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26, 0.02, -5 )
+
+[node name="Pin" parent="Pins" instance=ExtResource( 1 )]
+
+[node name="Pin2" parent="Pins" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8042, 0.391964, 3.64148 )
+
+[node name="Pin3" parent="Pins" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8076, 0.391964, 4.0939 )
+
+[node name="Pin4" parent="Pins" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0744, 0.391964, 3.86172 )
+
+[node name="Pin5" parent="Pins" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0744, 0.391964, 3.45281 )
+
+[node name="Pin6" parent="Pins" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0744, 0.391964, 4.33301 )
+
+[node name="Pin7" parent="Pins" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3239, 0.391964, 4.0939 )
+
+[node name="Pin8" parent="Pins" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3239, 0.391964, 4.58252 )
+
+[node name="Pin9" parent="Pins" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3239, 0.391964, 3.63994 )
+
+[node name="Pin10" parent="Pins" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3239, 0.391964, 3.25875 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Pins")
+anims/Fall = SubResource( 35 )
+anims/RESET = SubResource( 36 )
+
+[node name="Ball Return" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.100736, 0, -0.026943 )
+
+[node name="StaticBody" type="StaticBody" parent="Ball Return"]
+
+[node name="Mesh" type="MeshInstance" parent="Ball Return/StaticBody"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.6047, -0.83882, -2.80608 )
+mesh = ExtResource( 3 )
+skeleton = NodePath("../../../Pins/Pin")
+material/0 = ExtResource( 4 )
+material/1 = SubResource( 43 )
+material/2 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Ball Return/StaticBody"]
+transform = Transform( 0.9953, -0.096836, 0, 0.096836, 0.9953, 0, 0, 0, 1, 0.529885, 0.523207, 0.404344 )
+shape = SubResource( 44 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Ball Return/StaticBody"]
+transform = Transform( 0.983073, -0.183214, 0, 0.183214, 0.983073, 0, 0, 0, 1, -0.560166, 0.523295, 0.404344 )
+shape = SubResource( 45 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="Ball Return/StaticBody"]
+transform = Transform( -0.00843985, -0.0964675, -0.9953, 0.0867461, 0.991513, -0.096836, 0.996195, -0.0871557, -4.37114e-08, 0.487493, 0.6405, 0.157254 )
+shape = SubResource( 46 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="Ball Return/StaticBody"]
+transform = Transform( -0.00843985, -0.0964675, -0.9953, 0.0867461, 0.991513, -0.096836, 0.996195, -0.0871557, -4.37114e-08, 0.487493, 0.6405, 0.641687 )
+shape = SubResource( 46 )
+
+[node name="Floor" type="StaticBody" parent="."]
+transform = Transform( 6.83379, 0, 0, 0, 0.245914, 0, 0, 0, 1, 7.68337, 3.41061e-13, -1.14917 )
+
+[node name="Floor" type="MeshInstance" parent="Floor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0175212, 0 )
+mesh = SubResource( 39 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 51 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor"]
+shape = SubResource( 42 )
+
+[node name="Floor2" type="StaticBody" parent="."]
+transform = Transform( 0.113568, 0, 0, 0, 0.570334, 0, 0, 0, 1.73568, 14.5168, 0.338975, -1.14917 )
+
+[node name="Floor" type="MeshInstance" parent="Floor2"]
+mesh = SubResource( 39 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 40 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor2"]
+shape = SubResource( 42 )
+
+[node name="Bumper" type="StaticBody" parent="."]
+transform = Transform( 6.72858, 0, 0, 0, 0.245914, 0, 0, 0, 0.0547491, 7.65956, 0.236875, -0.124704 )
+
+[node name="Floor" type="MeshInstance" parent="Bumper"]
+mesh = SubResource( 39 )
+skeleton = NodePath("../..")
+material/0 = ExtResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Bumper"]
+shape = SubResource( 42 )
+
+[node name="Bumper2" type="StaticBody" parent="."]
+transform = Transform( 6.72858, 0, 0, 0, 0.245914, 0, 0, 0, 0.0547491, 7.65956, 0.236875, -2.76413 )
+
+[node name="Floor" type="MeshInstance" parent="Bumper2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.1157 )
+mesh = SubResource( 39 )
+skeleton = NodePath("../..")
+material/0 = ExtResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Bumper2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.2866 )
+shape = SubResource( 42 )
+
+[node name="BallDetector" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6636, 0.431274, -1.15175 )
+
+[node name="CollisionShape" type="CollisionShape" parent="BallDetector"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.43504, 0, 0 )
+shape = SubResource( 53 )
+
+[node name="Pin Respawn Delay" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( -0.539585, 0, -0.311529, 0, 0.623059, 0, 0.311529, 0, -0.539585, -0.427705, 0.881749, 1.43651 )
+mesh = ExtResource( 12 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="Floor3" parent="." instance=ExtResource( 5 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 6.26406, 0, -1.14523 )
+
+[node name="Barriers" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 4.33, 0.28, -1.117 )
+
+[node name="Barriers2" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -1.50996e-07, 0, 2, 0, 1.50996e-07, 0, -1, 5.254, 0.28, -1.117 )
+
+[connection signal="body_entered" from="BallDetector" to="." method="_on_BallDetector_body_entered"]
+[connection signal="timeout" from="Pin Respawn Delay" to="." method="_on_Pin_Respawn_Delay_timeout"]

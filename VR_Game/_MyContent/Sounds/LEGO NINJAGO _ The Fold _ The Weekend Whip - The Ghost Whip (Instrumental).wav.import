@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/LEGO NINJAGO _ The Fold _ The Weekend Whip - The Ghost Whip (Instrumental).wav-261c1a891fad07a3600687194df0c255.sample"
+
+[deps]
+
+source_file="res://_MyContent/Sounds/LEGO NINJAGO _ The Fold _ The Weekend Whip - The Ghost Whip (Instrumental).wav"
+dest_files=[ "res://.import/LEGO NINJAGO _ The Fold _ The Weekend Whip - The Ghost Whip (Instrumental).wav-261c1a891fad07a3600687194df0c255.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

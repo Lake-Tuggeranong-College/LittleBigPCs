@@ -1,0 +1,71 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://_MyContent/Images/Wood.jpg" type="Texture" id=1]
+[ext_resource path="res://_MyContent/Images/Wood_Normal.jpg" type="Texture" id=2]
+[ext_resource path="res://_MyContent/Materials/Metal.tres" type="Material" id=3]
+
+[sub_resource type="CubeMesh" id=52]
+
+[sub_resource type="SpatialMaterial" id=51]
+albedo_texture = ExtResource( 1 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 2 )
+uv1_scale = Vector3( 34.928, -1.74, 1 )
+
+[sub_resource type="BoxShape" id=53]
+
+[sub_resource type="PrismMesh" id=54]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Track" type="StaticBody" parent="."]
+transform = Transform( 0.6, 0, 0, 0, 0.1, 0, 0, 0, 0.3, 0, 0, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Track"]
+mesh = SubResource( 52 )
+material/0 = SubResource( 51 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Track"]
+shape = SubResource( 53 )
+
+[node name="Rail 1" type="StaticBody" parent="."]
+transform = Transform( 0.6, 0, 0, 0, 0.1, 0, 0, 0, 0.02, 0, 0.1, -0.32 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Rail 1"]
+mesh = SubResource( 52 )
+material/0 = ExtResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Rail 1"]
+shape = SubResource( 53 )
+
+[node name="Rail 2" type="StaticBody" parent="."]
+transform = Transform( 0.6, 0, 0, 0, 0.1, 0, 0, 0, 0.02, 0, 0.1, 0.317 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Rail 2"]
+mesh = SubResource( 52 )
+material/0 = ExtResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Rail 2"]
+shape = SubResource( 53 )
+
+[node name="Catcher" type="StaticBody" parent="."]
+transform = Transform( 0.491491, -0.0573577, 0, 0.344146, 0.0819152, 0, 0, 0, 0.3, 0.850633, 0.046066, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Catcher"]
+mesh = SubResource( 52 )
+material/0 = SubResource( 51 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Catcher"]
+shape = SubResource( 53 )
+
+[node name="Ramp" type="StaticBody" parent="."]
+transform = Transform( 0.7, 0, 0, 0, 0.2, 0, 0, 0, 0.3, 0, 0, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ramp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01939, 0, 0 )
+mesh = SubResource( 54 )
+material/0 = SubResource( 51 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Ramp"]
+shape = SubResource( 53 )

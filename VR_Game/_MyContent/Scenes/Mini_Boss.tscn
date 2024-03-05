@@ -1,0 +1,119 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://addons/godot-openxr/scenes/first_person_controller_vr.tscn" type="PackedScene" id=1]
+[ext_resource path="res://_MyContent/Scenes/Roboto.tscn" type="PackedScene" id=2]
+[ext_resource path="res://_MyContent/Materials/White.tres" type="Material" id=3]
+[ext_resource path="res://_MyContent/Scenes/Scar.tscn" type="PackedScene" id=5]
+
+[sub_resource type="ProceduralSky" id=17]
+sky_top_color = Color( 0.0156863, 0.109804, 0.129412, 1 )
+sky_horizon_color = Color( 0.458824, 0.231373, 0.0627451, 1 )
+sky_energy = 0.3
+ground_bottom_color = Color( 0.0156863, 0.109804, 0.129412, 1 )
+ground_horizon_color = Color( 0.458824, 0.231373, 0.0627451, 1 )
+ground_curve = 0.0627668
+ground_energy = 0.3
+sun_longitude = 180.0
+
+[sub_resource type="Environment" id=16]
+background_mode = 2
+background_sky = SubResource( 17 )
+fog_color = Color( 0, 0, 0, 1 )
+fog_sun_amount = 1.0
+fog_depth_begin = 2.0
+fog_depth_end = 125.0
+fog_depth_curve = 0.466516
+
+[sub_resource type="CylinderMesh" id=13]
+top_radius = 0.2
+bottom_radius = 0.5
+height = 0.2
+
+[sub_resource type="SpatialMaterial" id=14]
+flags_transparent = true
+flags_unshaded = true
+albedo_color = Color( 0.460938, 0.633606, 1, 0.431373 )
+
+[sub_resource type="CylinderMesh" id=15]
+top_radius = 0.01
+bottom_radius = 0.1
+height = 0.8
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.290196, 1, 0, 1 )
+metallic = 0.5
+roughness = 0.53
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.209479, 1, 0.197763 )
+
+[sub_resource type="CubeMesh" id=18]
+
+[sub_resource type="BoxShape" id=19]
+extents = Vector3( 1, 6.42522, 3.17123 )
+
+[node name="Game" type="Spatial"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 16 )
+
+[node name="Scar" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.477267, 1.5733, 0.164301 )
+
+[node name="FPController" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23277, 0 )
+world_scale = 2.0
+
+[node name="Teleport_Mesh" type="MeshInstance" parent="."]
+visible = false
+mesh = SubResource( 13 )
+material/0 = SubResource( 14 )
+
+[node name="Teleport_Pointy" type="MeshInstance" parent="Teleport_Mesh"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.679908, 0 )
+mesh = SubResource( 15 )
+material/0 = SubResource( 14 )
+
+[node name="Floor" type="StaticBody" parent="."]
+transform = Transform( 49.1821, 0, 0, 0, 0.40155, 0, 0, 0, 49.1821, 0, 0.51467, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Floor"]
+transform = Transform( 1.31314, 0, 0, 0, 1, 0, 0, 0, 1.31314, 0, 0, 0 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor"]
+shape = SubResource( 3 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, -3.45625, 18.8655, -1.5111 )
+light_color = Color( 0.0745098, 0.0745098, 0.0745098, 1 )
+
+[node name="Roboto" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.999957, 0, -0.00928527, 0, 1, 0, 0.00928527, 0, -0.999957, 0, 11.5349, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 5.11395, 0, -2.95254, 0, 20.9638, 0, 2.95254, 0, 5.11395, -30.8902, 21.5105, 52.9005 )
+mesh = SubResource( 18 )
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="MeshInstance"]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 9.13644, 0, -5.27492 )
+mesh = SubResource( 18 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="MeshInstance3" type="MeshInstance" parent="MeshInstance"]
+transform = Transform( 4.25643, 0, 0.155224, 0, 0.576026, 0, -2.45745, 0, 0.268856, 5.13194, 0.423645, -1.95376 )
+mesh = SubResource( 18 )
+skeleton = NodePath("../..")
+material/0 = ExtResource( 3 )
+
+[node name="Portal" type="StaticBody" parent="."]
+transform = Transform( 0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -36.8029, 11.3776, 49.675 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Portal"]
+shape = SubResource( 19 )

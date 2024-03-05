@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Flickering_Light.wav-9d8e228ac2552f358c239e5f5b482cbd.sample"
+
+[deps]
+
+source_file="res://_MyContent/Sounds/Flickering_Light.wav"
+dest_files=[ "res://.import/Flickering_Light.wav-9d8e228ac2552f358c239e5f5b482cbd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

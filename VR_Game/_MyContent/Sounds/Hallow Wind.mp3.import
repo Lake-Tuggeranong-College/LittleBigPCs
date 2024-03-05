@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Hallow Wind.mp3-ca52de084b954723c03c90dd16120bfb.mp3str"
+
+[deps]
+
+source_file="res://_MyContent/Sounds/Hallow Wind.mp3"
+dest_files=[ "res://.import/Hallow Wind.mp3-ca52de084b954723c03c90dd16120bfb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

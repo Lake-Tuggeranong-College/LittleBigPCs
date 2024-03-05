@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://_MyContent/Scenes/Roboto_Bomb.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Bomb.tscn" type="PackedScene" id=2]
+
+[node name="Roboto_Bomb" type="PathFollow"]
+transform = Transform( 0.993613, -0.102494, 0.0472116, 0.102911, 0.99467, -0.00647294, -0.0462965, 0.01129, 0.998864, -0.92523, -2.944, 0.00474703 )
+loop = false
+script = ExtResource( 1 )
+
+[node name="Bomb" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.996641, 0.0818875, -0.000769999, 0.0818883, 0.996464, -0.0187706, -0.000769801, -0.0187703, -0.999823, 0, 0, 0 )
