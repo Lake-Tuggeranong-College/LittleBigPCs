@@ -21,6 +21,12 @@ export_presets.cfg
 # FBX imported file
 *.fbx.import
 
+# SVG imported file
+*.svg.import
+
+# GLTF imported file
+*.gltf.import
+
 # Imported translations (automatically generated from CSV files)
 *.translation
 
@@ -31,6 +37,12 @@ mono_crash.*.json
 
 # Do not ignore .md files
 !README.md
+!About.md
+!License.md
+!CHANGES.md
 
 # Do not ignore LICENSE
 !LICENSE
+
+# Do not ignore README
+!README
