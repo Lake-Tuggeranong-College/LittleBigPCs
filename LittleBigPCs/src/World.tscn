@@ -27,3 +27,5 @@ skeleton = NodePath("../..")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.12684, 3.24008, -5.62743 )
 mesh = SubResource( 2 )
 skeleton = NodePath("../..")
+
+[editable path="FPController"]
