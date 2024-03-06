@@ -9,6 +9,12 @@ export_presets.cfg
 # PNG imported file
 *.png.import
 
+# JPEG imported file
+*.jpeg.import
+
+# FBX imported file
+*.fbx.import
+
 # Imported translations (automatically generated from CSV files)
 *.translation
 
