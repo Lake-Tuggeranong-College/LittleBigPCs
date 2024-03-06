@@ -12,6 +12,12 @@ export_presets.cfg
 # JPEG imported file
 *.jpeg.import
 
+# JPG imported file
+*.jpg.import
+
+# GLB imported file
+*.glb.import
+
 # FBX imported file
 *.fbx.import
 
