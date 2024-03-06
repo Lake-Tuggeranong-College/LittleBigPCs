@@ -6,6 +6,7 @@
 
 [node name="FPController" type="ARVROrigin"]
 script = ExtResource( 1 )
+enable_passthrough = true
 
 [node name="Configuration" type="Node" parent="."]
 script = ExtResource( 3 )
