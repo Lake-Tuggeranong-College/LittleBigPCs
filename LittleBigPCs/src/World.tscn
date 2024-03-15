@@ -75,24 +75,24 @@ visible = true
 
 [node name="LeftPhysicsHand" parent="FPController/LeftHandController" index="0" instance=ExtResource( 5 )]
 
-[node name="FunctionTeleport" parent="FPController/LeftHandController" index="1" instance=ExtResource( 6 )]
+[node name="MovementDirect" parent="FPController/LeftHandController" index="1" instance=ExtResource( 4 )]
+enabled = true
+order = 10
+max_speed = 10.0
+strafe = false
 
-[node name="FunctionPickup" parent="FPController/LeftHandController" index="2" instance=ExtResource( 10 )]
+[node name="FunctionTeleport" parent="FPController/LeftHandController" index="2" instance=ExtResource( 6 )]
+
+[node name="FunctionPickup" parent="FPController/LeftHandController" index="3" instance=ExtResource( 10 )]
 
 [node name="RightHandController" parent="FPController" index="3"]
 visible = true
 
 [node name="RightPhysicsHand" parent="FPController/RightHandController" index="0" instance=ExtResource( 7 )]
 
-[node name="MovementDirect" parent="FPController/RightHandController" index="1" instance=ExtResource( 4 )]
-enabled = true
-order = 10
-max_speed = 10.0
-strafe = false
+[node name="MovementTurn" parent="FPController/RightHandController" index="1" instance=ExtResource( 8 )]
 
-[node name="MovementTurn" parent="FPController/RightHandController" index="2" instance=ExtResource( 8 )]
-
-[node name="FunctionPickup" parent="FPController/RightHandController" index="3" instance=ExtResource( 10 )]
+[node name="FunctionPickup" parent="FPController/RightHandController" index="2" instance=ExtResource( 10 )]
 
 [node name="PlayerBody" parent="FPController" instance=ExtResource( 3 )]
 
