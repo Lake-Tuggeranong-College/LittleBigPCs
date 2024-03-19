@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://addons/godot-xr-tools/staging/scene_base.gd" type="Script" id=1]
 [ext_resource path="res://default_env.tres" type="Environment" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://assets/floor/start_room_floor/Floor_Texure.jpg" type="Texture" id=13]
 [ext_resource path="res://assets/floor/start_room_floor/Floor_Roughness.jpg" type="Texture" id=14]
 [ext_resource path="res://assets/floor/start_room_floor/Floor_Transmission.jpg" type="Texture" id=15]
+[ext_resource path="res://scenes/object_scene/rooftop.tscn" type="PackedScene" id=16]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 100, 100 )
@@ -28,10 +29,10 @@ normal_texture = ExtResource( 5 )
 transmission_enabled = true
 transmission = Color( 0, 0, 0, 1 )
 transmission_texture = ExtResource( 15 )
-uv1_scale = Vector3( 100, 100, 100 )
+uv1_scale = Vector3( 15, 15, 15 )
 
 [sub_resource type="BoxShape" id=4]
-extents = Vector3( 100, 1, 100 )
+extents = Vector3( 50, 1, 50 )
 
 [node name="StartRoom" type="Spatial"]
 script = ExtResource( 1 )
@@ -65,8 +66,8 @@ visible = true
 
 [node name="StandablePlatform" type="StaticBody" parent="."]
 
-[node name="StandingPlatform" type="MeshInstance" parent="StandablePlatform"]
-transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 0, 0 )
+[node name="Floor" type="MeshInstance" parent="StandablePlatform"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
 mesh = SubResource( 1 )
 material/0 = SubResource( 5 )
 
@@ -74,19 +75,31 @@ material/0 = SubResource( 5 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
 shape = SubResource( 4 )
 
-[node name="Wall" parent="StandablePlatform" instance=ExtResource( 3 )]
+[node name="Wall" type="CSGCombiner" parent="StandablePlatform"]
+use_collision = true
+
+[node name="Wall1" parent="StandablePlatform/Wall" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49.75, 0, 0 )
+skeleton = NodePath("../..")
 
-[node name="Wall2" parent="StandablePlatform" instance=ExtResource( 3 )]
+[node name="Wall2" parent="StandablePlatform/Wall" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -49.75, 0, 0 )
+skeleton = NodePath("../..")
 
-[node name="Wall3" parent="StandablePlatform" instance=ExtResource( 3 )]
+[node name="Wall3" parent="StandablePlatform/Wall" instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 49.75 )
+skeleton = NodePath("../..")
 
-[node name="Wall4" parent="StandablePlatform" instance=ExtResource( 3 )]
+[node name="Wall4" parent="StandablePlatform/Wall" instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -49.75 )
+skeleton = NodePath("../..")
 
-[node name="RoomLight" type="DirectionalLight" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 50, 0 )
+[node name="RoofTop" parent="StandablePlatform" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 64.651, 0 )
+
+[node name="RoomLight" type="OmniLight" parent="StandablePlatform"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 45, 0 )
+omni_range = 600.0
+omni_attenuation = 6.06287
 
 [editable path="FPController"]

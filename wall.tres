@@ -26,4 +26,4 @@ ao_texture_channel = 0
 transmission_enabled = true
 transmission = Color( 0, 0, 0, 1 )
 transmission_texture = ExtResource( 2 )
-uv1_scale = Vector3( 100, 100, 100 )
+uv1_scale = Vector3( 40, 40, 40 )
