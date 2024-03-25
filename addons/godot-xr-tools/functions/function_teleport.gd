@@ -339,7 +339,7 @@ func _get_configuration_warning():
 	return ""
 
 
-# Set enabled property
+# Set enabled propertymax_slope
 func set_enabled(new_value : bool) -> void:
 	enabled = new_value
 	if enabled:
