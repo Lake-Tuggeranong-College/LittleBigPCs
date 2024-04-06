@@ -64,6 +64,7 @@ visible = true
 [node name="MovementTurn" parent="FPController/RightHandController" index="1" instance=ExtResource( 11 )]
 
 [node name="PlayerBody" parent="FPController" instance=ExtResource( 4 )]
+collision_layer = 524290
 
 [node name="StandablePlatform" type="StaticBody" parent="."]
 
@@ -104,13 +105,12 @@ omni_range = 600.0
 omni_attenuation = 6.06287
 
 [node name="QuitArea" parent="StandablePlatform" instance=ExtResource( 17 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, -48.213 )
-
-[node name="QuitHitBox" parent="StandablePlatform/QuitArea" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0123825 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, -46.0001 )
+collision_mask = 2
 
 [node name="QuitText" parent="StandablePlatform/QuitArea" index="1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.855, 0.142349 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.04128, 1.23116 )
+pixel_size = 0.065
 
 [editable path="FPController"]
 [editable path="StandablePlatform/QuitArea"]
