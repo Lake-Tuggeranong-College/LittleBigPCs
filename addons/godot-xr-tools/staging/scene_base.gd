@@ -124,3 +124,7 @@ func load_scene(p_scene_path : String) -> void:
 ## staging.
 func reset_scene() -> void:
 	emit_signal("request_reset_scene")
+
+
+func _on_QuitArea_body_entered(body):
+	pass # Replace with function body.
