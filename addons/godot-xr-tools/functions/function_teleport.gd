@@ -67,7 +67,7 @@ onready var ws : float = ARVRServer.world_scale
 # Turn on editable children,
 # hide the capsule,
 # and add your own player character as child.
-onready var capsule : MeshInstance = get_node("Target/Player_figure/Capsule")
+# onready var capsule : MeshInstance = get_node("Target/Player_figure/Capsule")
 
 ## [ARVROrigin] node.
 onready var origin_node := ARVRHelpers.get_arvr_origin(self)
@@ -100,8 +100,8 @@ func _ready():
 	$Target/Player_figure.scale = Vector3(ws, ws, ws)
 
 	# get our capsule shape
-	collision_shape = $CollisionShape.shape
-	$CollisionShape.shape = null
+	# collision_shape = $CollisionShape.shape
+	# $CollisionShape.shape = null
 
 	# now remove our collision shape, we are not using our kinematic body
 	remove_child($CollisionShape)
@@ -367,9 +367,9 @@ func _update_player_height() -> void:
 	if collision_shape:
 		collision_shape.height = player_height - (2.0 * player_radius)
 
-	if capsule:
-		capsule.mesh.mid_height = player_height - (2.0 * player_radius)
-		capsule.translation = Vector3(0.0, player_height/2.0, 0.0)
+#	if capsule:
+#		capsule.mesh.mid_height = player_height - (2.0 * player_radius)
+#		capsule.translation = Vector3(0.0, player_height/2.0, 0.0)
 
 
 # Player radius update handler
@@ -378,6 +378,6 @@ func _update_player_radius():
 		collision_shape.height = player_height - (2.0 * player_radius)
 		collision_shape.radius = player_radius
 
-	if capsule:
-		capsule.mesh.mid_height = player_height - (2.0 * player_radius)
-		capsule.mesh.radius = player_radius
+#	if capsule:
+#		capsule.mesh.mid_height = player_height - (2.0 * player_radius)
+#		capsule.mesh.radius = player_radius
