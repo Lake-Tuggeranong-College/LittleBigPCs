@@ -108,6 +108,7 @@ omni_attenuation = 6.06287
 [node name="QuitArea" parent="StandablePlatform" instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.95089, -46.0001 )
 collision_mask = 2
+script = ExtResource( 12 )
 
 [node name="QuitText" parent="StandablePlatform/QuitArea" index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.04128, 1.23116 )
@@ -115,10 +116,14 @@ pixel_size = 0.065
 
 [node name="OptionsArea" parent="StandablePlatform" instance=ExtResource( 18 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45.987, 3.951, 27.9323 )
+script = ExtResource( 12 )
 
 [node name="OptionsText" parent="StandablePlatform/OptionsArea" index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.041, 1.231 )
 pixel_size = 0.065
+
+[connection signal="body_entered" from="StandablePlatform/QuitArea" to="." method="_on_QuitArea_body_entered"]
+[connection signal="body_entered" from="StandablePlatform/OptionsArea" to="." method="_on_OptionsArea_body_entered"]
 
 [editable path="FPController"]
 [editable path="StandablePlatform/QuitArea"]
