@@ -126,5 +126,13 @@ func reset_scene() -> void:
 	emit_signal("request_reset_scene")
 
 
+func _on_OptionsArea_body_entered(body):
+	if body.name == "PlayerBody":
+#		get_tree().change_scene("res://scenes/start/options_pop_up.tscn")
+		print("Detected the player, waiting for pop-up screen...")
+
+
 func _on_QuitArea_body_entered(body):
-	pass # Replace with function body.
+	if body.name == "PlayerBody":
+		get_tree().quit()
+#		print("Detected the player, waiting to log out the game...")
