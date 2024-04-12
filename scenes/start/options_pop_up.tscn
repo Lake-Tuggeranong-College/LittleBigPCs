@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://fonts/DragonHunter-9Ynxj.otf" type="DynamicFontData" id=1]
+
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 0.01, 2, 1.335 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.055, 0.068, 0.668 )
+
+[sub_resource type="CubeMesh" id=3]
+size = Vector3( 0.1, 0.1, 1.335 )
+
+[sub_resource type="DynamicFont" id=5]
+outline_size = 1
+use_filter = true
+extra_spacing_char = 3
+font_data = ExtResource( 1 )
+
+[sub_resource type="CubeMesh" id=6]
+size = Vector3( 0.1, 0.1, 1.335 )
+
+[node name="NodeContainer" type="Spatial"]
+
+[node name="PopUpScreen" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+
+[node name="InteractButton1" type="Area" parent="."]
+
+[node name="HitBox" type="CollisionShape" parent="InteractButton1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061, 0.442, 0 )
+shape = SubResource( 2 )
+
+[node name="Button1" type="MeshInstance" parent="InteractButton1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.051, 0.441888, 0 )
+mesh = SubResource( 3 )
+
+[node name="TestText1" type="Label3D" parent="InteractButton1/Button1"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.052278, -0.0112816, 0 )
+text = "Button 1"
+font = SubResource( 5 )
+
+[node name="IntereactButton2" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.291569, 0 )
+
+[node name="HitBox" type="CollisionShape" parent="IntereactButton2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061, -0.002, 0 )
+shape = SubResource( 2 )
+
+[node name="Button2" type="MeshInstance" parent="IntereactButton2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.051, 0, 0 )
+mesh = SubResource( 6 )
+skeleton = NodePath("")
+
+[node name="TestText2" type="Label3D" parent="IntereactButton2/Button2"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.052278, -0.0112816, 0 )
+text = "Button 2"
+font = SubResource( 5 )
