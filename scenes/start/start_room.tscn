@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://default_env.tres" type="Environment" id=1]
 [ext_resource path="res://addons/godot-xr-tools/functions/function_teleport.tscn" type="PackedScene" id=2]
@@ -16,7 +16,8 @@
 [ext_resource path="res://assets/floor/start_room_floor/Floor_Normal_Map_GL.jpg" type="Texture" id=14]
 [ext_resource path="res://assets/floor/start_room_floor/Floor_Roughness.jpg" type="Texture" id=15]
 [ext_resource path="res://assets/floor/start_room_floor/Floor_Transmission.jpg" type="Texture" id=16]
-[ext_resource path="res://scenes/quit/quit.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/start/quit.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/start/options.tscn" type="PackedScene" id=18]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 100, 100 )
@@ -80,20 +81,20 @@ shape = SubResource( 4 )
 [node name="Wall" type="CSGCombiner" parent="StandablePlatform"]
 use_collision = true
 
-[node name="Wall1" parent="StandablePlatform/Wall" instance=ExtResource( 10 )]
+[node name="RightWall" parent="StandablePlatform/Wall" instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49.75, 0, 0 )
 skeleton = NodePath("../..")
 
-[node name="Wall2" parent="StandablePlatform/Wall" instance=ExtResource( 10 )]
+[node name="LeftWall" parent="StandablePlatform/Wall" instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -49.75, 0, 0 )
 skeleton = NodePath("../..")
 
-[node name="Wall3" parent="StandablePlatform/Wall" instance=ExtResource( 10 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 49.75 )
+[node name="FrontWall" parent="StandablePlatform/Wall" instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -49.75 )
 skeleton = NodePath("../..")
 
-[node name="Wall4" parent="StandablePlatform/Wall" instance=ExtResource( 10 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -49.75 )
+[node name="BackWall" parent="StandablePlatform/Wall" instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 49.75 )
 skeleton = NodePath("../..")
 
 [node name="RoofTop" parent="StandablePlatform" instance=ExtResource( 6 )]
@@ -105,12 +106,20 @@ omni_range = 600.0
 omni_attenuation = 6.06287
 
 [node name="QuitArea" parent="StandablePlatform" instance=ExtResource( 17 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, -46.0001 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.95089, -46.0001 )
 collision_mask = 2
 
 [node name="QuitText" parent="StandablePlatform/QuitArea" index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.04128, 1.23116 )
 pixel_size = 0.065
 
+[node name="OptionsArea" parent="StandablePlatform" instance=ExtResource( 18 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45.987, 3.951, 18.8562 )
+
+[node name="OptionsText" parent="StandablePlatform/OptionsArea" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.041, 1.231 )
+pixel_size = 0.065
+
 [editable path="FPController"]
 [editable path="StandablePlatform/QuitArea"]
+[editable path="StandablePlatform/OptionsArea"]
