@@ -1,0 +1,125 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://default_env.tres" type="Environment" id=1]
+[ext_resource path="res://addons/godot-xr-tools/functions/function_teleport.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_physics_fullglove_low.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/godot-xr-tools/player/player_body.tscn" type="PackedScene" id=4]
+[ext_resource path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_physics_fullglove_low.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/objects/rooftop.tscn" type="PackedScene" id=6]
+[ext_resource path="res://addons/godot-openxr/scenes/first_person_controller_vr.tscn" type="PackedScene" id=7]
+[ext_resource path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" type="PackedScene" id=8]
+[ext_resource path="res://addons/godot-xr-tools/functions/movement_direct.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/objects/wall.tscn" type="PackedScene" id=10]
+[ext_resource path="res://addons/godot-xr-tools/functions/movement_turn.tscn" type="PackedScene" id=11]
+[ext_resource path="res://addons/godot-xr-tools/staging/scene_base.gd" type="Script" id=12]
+[ext_resource path="res://assets/floor/start_room_floor/Floor_Texure.jpg" type="Texture" id=13]
+[ext_resource path="res://assets/floor/start_room_floor/Floor_Normal_Map_GL.jpg" type="Texture" id=14]
+[ext_resource path="res://assets/floor/start_room_floor/Floor_Roughness.jpg" type="Texture" id=15]
+[ext_resource path="res://assets/floor/start_room_floor/Floor_Transmission.jpg" type="Texture" id=16]
+[ext_resource path="res://scenes/start/quit.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/start/options.tscn" type="PackedScene" id=18]
+
+[sub_resource type="PlaneMesh" id=1]
+size = Vector2( 100, 100 )
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_texture = ExtResource( 13 )
+roughness_texture = ExtResource( 15 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 14 )
+transmission_enabled = true
+transmission = Color( 0, 0, 0, 1 )
+transmission_texture = ExtResource( 16 )
+uv1_scale = Vector3( 15, 15, 15 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 50, 1, 50 )
+
+[node name="StartRoom" type="Spatial"]
+script = ExtResource( 12 )
+environment = ExtResource( 1 )
+
+[node name="FPController" parent="." instance=ExtResource( 7 )]
+
+[node name="VRCommonShaderCache" parent="FPController/ARVRCamera" index="0" instance=ExtResource( 8 )]
+
+[node name="LeftHandController" parent="FPController" index="2"]
+visible = true
+
+[node name="LeftPhysicsHand" parent="FPController/LeftHandController" index="0" instance=ExtResource( 5 )]
+
+[node name="MovementDirect" parent="FPController/LeftHandController" index="1" instance=ExtResource( 9 )]
+enabled = true
+order = 10
+max_speed = 10.0
+strafe = false
+
+[node name="FunctionTeleport" parent="FPController/LeftHandController" index="2" instance=ExtResource( 2 )]
+
+[node name="RightHandController" parent="FPController" index="3"]
+visible = true
+
+[node name="RightPhysicsHand" parent="FPController/RightHandController" index="0" instance=ExtResource( 3 )]
+
+[node name="MovementTurn" parent="FPController/RightHandController" index="1" instance=ExtResource( 11 )]
+
+[node name="PlayerBody" parent="FPController" instance=ExtResource( 4 )]
+collision_layer = 524290
+
+[node name="StandablePlatform" type="StaticBody" parent="."]
+
+[node name="Floor" type="MeshInstance" parent="StandablePlatform"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 5 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StandablePlatform"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+shape = SubResource( 4 )
+
+[node name="Wall" type="CSGCombiner" parent="StandablePlatform"]
+use_collision = true
+
+[node name="RightWall" parent="StandablePlatform/Wall" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49.75, 0, 0 )
+skeleton = NodePath("../..")
+
+[node name="LeftWall" parent="StandablePlatform/Wall" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -49.75, 0, 0 )
+skeleton = NodePath("../..")
+
+[node name="FrontWall" parent="StandablePlatform/Wall" instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -49.75 )
+skeleton = NodePath("../..")
+
+[node name="BackWall" parent="StandablePlatform/Wall" instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 49.75 )
+skeleton = NodePath("../..")
+
+[node name="RoofTop" parent="StandablePlatform" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 64.651, 0 )
+
+[node name="RoomLight" type="OmniLight" parent="StandablePlatform"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 45, 0 )
+omni_range = 600.0
+omni_attenuation = 6.06287
+
+[node name="QuitArea" parent="StandablePlatform" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.95089, -46.0001 )
+collision_mask = 2
+
+[node name="QuitText" parent="StandablePlatform/QuitArea" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.04128, 1.23116 )
+pixel_size = 0.065
+
+[node name="OptionsArea" parent="StandablePlatform" instance=ExtResource( 18 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45.987, 3.951, 18.8562 )
+
+[node name="OptionsText" parent="StandablePlatform/OptionsArea" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.041, 1.231 )
+pixel_size = 0.065
+
+[editable path="FPController"]
+[editable path="StandablePlatform/QuitArea"]
+[editable path="StandablePlatform/OptionsArea"]
