@@ -128,8 +128,16 @@ func reset_scene() -> void:
 
 func _on_OptionsArea_body_entered(body):
 	if body.name == "PlayerBody":
-#		get_tree().change_scene("res://scenes/start/options_pop_up.tscn")
-		print("Detected the player, waiting for pop-up screen...")
+		var pop_up_screen = get_node("OptionPopUp")
+		pop_up_screen.visible = true
+#		print("Detected the player, waiting for pop-up screen...")
+
+
+func _on_OptionsArea_body_exited(body):
+	if body.name == "PlayerBody":
+		var pop_up_screen = get_node("OptionPopUp")
+		pop_up_screen.visible = false
+#		print("Finish option configuration, waiting for player to close it...")
 
 
 func _on_QuitArea_body_entered(body):

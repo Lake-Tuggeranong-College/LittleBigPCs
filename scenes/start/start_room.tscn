@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://default_env.tres" type="Environment" id=1]
 [ext_resource path="res://addons/godot-xr-tools/functions/function_teleport.tscn" type="PackedScene" id=2]
@@ -18,6 +18,7 @@
 [ext_resource path="res://assets/floor/start_room_floor/Floor_Transmission.jpg" type="Texture" id=16]
 [ext_resource path="res://scenes/start/quit.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/start/options.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/start/options_pop_up.tscn" type="PackedScene" id=19]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 100, 100 )
@@ -122,9 +123,15 @@ script = ExtResource( 12 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.041, 1.231 )
 pixel_size = 0.065
 
+[node name="OptionPopUp" parent="StandablePlatform/OptionsArea" instance=ExtResource( 19 )]
+transform = Transform( -1.31134e-07, 0, 3, 0, 3.018, 0, -3, 0, -1.31134e-07, 0, 2.53358, 4.20122 )
+visible = false
+
 [connection signal="body_entered" from="StandablePlatform/QuitArea" to="." method="_on_QuitArea_body_entered"]
 [connection signal="body_entered" from="StandablePlatform/OptionsArea" to="." method="_on_OptionsArea_body_entered"]
+[connection signal="body_exited" from="StandablePlatform/OptionsArea" to="." method="_on_OptionsArea_body_exited"]
 
 [editable path="FPController"]
 [editable path="StandablePlatform/QuitArea"]
 [editable path="StandablePlatform/OptionsArea"]
+[editable path="StandablePlatform/OptionsArea/OptionPopUp"]
