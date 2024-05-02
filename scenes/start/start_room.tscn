@@ -124,7 +124,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.041, 1.231 )
 pixel_size = 0.065
 
 [node name="OptionPopUp" parent="StandablePlatform/OptionsArea" instance=ExtResource( 19 )]
-transform = Transform( -1.31134e-07, 0, 3, 0, 3.018, 0, -3, 0, -1.31134e-07, 0, 2.53358, 4.20122 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -2.611, 4.15388 )
 visible = false
 
 [connection signal="body_entered" from="StandablePlatform/QuitArea" to="." method="_on_QuitArea_body_entered"]

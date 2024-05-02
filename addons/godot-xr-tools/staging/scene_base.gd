@@ -128,14 +128,14 @@ func reset_scene() -> void:
 
 func _on_OptionsArea_body_entered(body):
 	if body.name == "PlayerBody":
-		var pop_up_screen = get_node("OptionPopUp")
+		var pop_up_screen = get_node("StandablePlatform/OptionsArea/OptionPopUp")
 		pop_up_screen.visible = true
 #		print("Detected the player, waiting for pop-up screen...")
 
 
 func _on_OptionsArea_body_exited(body):
 	if body.name == "PlayerBody":
-		var pop_up_screen = get_node("OptionPopUp")
+		var pop_up_screen = get_node("StandablePlatform/OptionsArea/OptionPopUp")
 		pop_up_screen.visible = false
 #		print("Finish option configuration, waiting for player to close it...")
 
