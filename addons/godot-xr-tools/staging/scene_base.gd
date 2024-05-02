@@ -144,3 +144,13 @@ func _on_QuitArea_body_entered(body):
 	if body.name == "PlayerBody":
 		get_tree().quit()
 #		print("Detected the player, waiting to log out the game...")
+
+
+func _on_HelpArea_body_entered(body):
+	if body.name == "PlayerBody":
+		print("Detected the player, waiting for something...")
+
+
+func _on_HelpArea_body_exited(body):
+	if body.name == "PlayerBody":
+		print("Finish reading like a nerd, waiting for player to touch some grass...")

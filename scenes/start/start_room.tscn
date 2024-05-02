@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://default_env.tres" type="Environment" id=1]
 [ext_resource path="res://addons/godot-xr-tools/functions/function_teleport.tscn" type="PackedScene" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://scenes/start/quit.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/start/options.tscn" type="PackedScene" id=18]
 [ext_resource path="res://scenes/start/options_pop_up.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/start/help.tscn" type="PackedScene" id=20]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 100, 100 )
@@ -116,7 +117,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.04128, 1.23116 )
 pixel_size = 0.065
 
 [node name="OptionsArea" parent="StandablePlatform" instance=ExtResource( 18 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45.987, 3.951, 27.9323 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45.987, 3.951, -23.555 )
 script = ExtResource( 12 )
 
 [node name="OptionsText" parent="StandablePlatform/OptionsArea" index="1"]
@@ -127,11 +128,22 @@ pixel_size = 0.065
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -2.611, 4.15388 )
 visible = false
 
+[node name="HelpArea" parent="StandablePlatform" instance=ExtResource( 20 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46, 3.951, 26.015 )
+script = ExtResource( 12 )
+
+[node name="HelpText" parent="StandablePlatform/HelpArea" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.041, 0 )
+pixel_size = 0.065
+
 [connection signal="body_entered" from="StandablePlatform/QuitArea" to="." method="_on_QuitArea_body_entered"]
 [connection signal="body_entered" from="StandablePlatform/OptionsArea" to="." method="_on_OptionsArea_body_entered"]
 [connection signal="body_exited" from="StandablePlatform/OptionsArea" to="." method="_on_OptionsArea_body_exited"]
+[connection signal="body_entered" from="StandablePlatform/HelpArea" to="." method="_on_HelpArea_body_entered"]
+[connection signal="body_exited" from="StandablePlatform/HelpArea" to="." method="_on_HelpArea_body_exited"]
 
 [editable path="FPController"]
 [editable path="StandablePlatform/QuitArea"]
 [editable path="StandablePlatform/OptionsArea"]
 [editable path="StandablePlatform/OptionsArea/OptionPopUp"]
+[editable path="StandablePlatform/HelpArea"]
