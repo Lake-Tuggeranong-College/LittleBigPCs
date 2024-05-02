@@ -43,6 +43,7 @@ script = ExtResource( 12 )
 environment = ExtResource( 1 )
 
 [node name="FPController" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
 
 [node name="VRCommonShaderCache" parent="FPController/ARVRCamera" index="0" instance=ExtResource( 8 )]
 
