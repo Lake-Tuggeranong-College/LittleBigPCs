@@ -155,6 +155,7 @@ script = ExtResource( 12 )
 [connection signal="body_exited" from="StandablePlatform/HelpArea" to="." method="_on_HelpArea_body_exited"]
 [connection signal="body_entered" from="StandablePlatform/DoorTriggerArea" to="StandablePlatform/DoorTriggerArea" method="_on_DoorTriggerArea_body_entered"]
 [connection signal="body_exited" from="StandablePlatform/DoorTriggerArea" to="StandablePlatform/DoorTriggerArea" method="_on_DoorTriggerArea_body_exited"]
+[connection signal="body_entered" from="StandablePlatform/DoorTriggerArea/SceneChangeDoor" to="StandablePlatform/DoorTriggerArea/SceneChangeDoor" method="_on_SceneChangeDoor_body_entered"]
 
 [editable path="FPController"]
 [editable path="StandablePlatform/QuitArea"]

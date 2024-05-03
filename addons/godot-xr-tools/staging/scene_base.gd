@@ -173,3 +173,9 @@ func _on_DoorTriggerArea_body_exited(body):
 		var scene_change = get_node("SceneChangeDoor")
 		scene_change.visible = false
 #		print("Player has left the door zone.")
+
+
+func _on_SceneChangeDoor_body_entered(body):
+	if body.name == "PlayerBody":
+		get_tree().change_scene("res://scenes/main/main_room.tscn")
+#		print("Transfer player to the main room.")
