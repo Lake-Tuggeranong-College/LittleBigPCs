@@ -381,7 +381,7 @@ _global_script_class_icons={
 [application]
 
 config/name="LittleBigPCs"
-run/main_scene="res://scenes/test/test_world.tscn"
+run/main_scene="res://scenes/start/start_room.tscn"
 config/icon="res://icon.png"
 
 [autoload]

@@ -125,7 +125,6 @@ func load_scene(p_scene_path : String) -> void:
 func reset_scene() -> void:
 	emit_signal("request_reset_scene")
 
-
 func _on_OptionsArea_body_entered(body):
 	if body.name == "PlayerBody":
 		var pop_up_screen = get_node("StandablePlatform/OptionsArea/OptionPopUp")
@@ -154,3 +153,29 @@ func _on_HelpArea_body_entered(body):
 func _on_HelpArea_body_exited(body):
 	if body.name == "PlayerBody":
 		print("Finish reading like a nerd, waiting for player to touch some grass...")
+
+
+func _on_DoorTriggerArea_body_entered(body):
+	if body.name == "PlayerBody":
+		var door_trigger_animation = get_node("DoorOpenAnimation")
+		door_trigger_animation.play("open_door")
+		
+		var scene_change = get_node("SceneChangeDoor")
+		scene_change.visible = true
+#		print("Player has entered the door zone.")
+
+
+func _on_DoorTriggerArea_body_exited(body):
+	if body.name == "PlayerBody":
+		var door_trigger_animation = get_node("DoorOpenAnimation")
+		door_trigger_animation.play("close_door")
+		
+		var scene_change = get_node("SceneChangeDoor")
+		scene_change.visible = false
+#		print("Player has left the door zone.")
+
+
+func _on_SceneChangeDoor_body_entered(body):
+	if body.name == "PlayerBody":
+		get_tree().change_scene("res://scenes/main/main_room.tscn")
+#		print("Transfer player to the main room.")
