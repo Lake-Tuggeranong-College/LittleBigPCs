@@ -159,6 +159,9 @@ func _on_DoorTriggerArea_body_entered(body):
 	if body.name == "PlayerBody":
 		var door_trigger_animation = get_node("DoorOpenAnimation")
 		door_trigger_animation.play("open_door")
+		
+		var scene_change = get_node("SceneChangeDoor")
+		scene_change.visible = true
 #		print("Player has entered the door zone.")
 
 
@@ -166,4 +169,7 @@ func _on_DoorTriggerArea_body_exited(body):
 	if body.name == "PlayerBody":
 		var door_trigger_animation = get_node("DoorOpenAnimation")
 		door_trigger_animation.play("close_door")
+		
+		var scene_change = get_node("SceneChangeDoor")
+		scene_change.visible = false
 #		print("Player has left the door zone.")

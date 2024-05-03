@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://default_env.tres" type="Environment" id=1]
 [ext_resource path="res://addons/godot-xr-tools/functions/function_teleport.tscn" type="PackedScene" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://scenes/start/options_pop_up.tscn" type="PackedScene" id=19]
 [ext_resource path="res://scenes/start/help.tscn" type="PackedScene" id=20]
 [ext_resource path="res://scenes/objects/door.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/functions/scene_change.tscn" type="PackedScene" id=22]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 100, 100 )
@@ -142,6 +143,11 @@ pixel_size = 0.065
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.256, 49.2554 )
 script = ExtResource( 12 )
 
+[node name="SceneChangeDoor" parent="StandablePlatform/DoorTriggerArea" instance=ExtResource( 22 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 0.891187, 0, 8.74228e-08, 0, -1, 0, -0.44057, 0 )
+visible = false
+script = ExtResource( 12 )
+
 [connection signal="body_entered" from="StandablePlatform/QuitArea" to="." method="_on_QuitArea_body_entered"]
 [connection signal="body_entered" from="StandablePlatform/OptionsArea" to="." method="_on_OptionsArea_body_entered"]
 [connection signal="body_exited" from="StandablePlatform/OptionsArea" to="." method="_on_OptionsArea_body_exited"]
@@ -156,3 +162,4 @@ script = ExtResource( 12 )
 [editable path="StandablePlatform/OptionsArea/OptionPopUp"]
 [editable path="StandablePlatform/HelpArea"]
 [editable path="StandablePlatform/DoorTriggerArea"]
+[editable path="StandablePlatform/DoorTriggerArea/SceneChangeDoor"]
