@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://addons/godot-xr-tools/player/player_body.tscn" type="PackedScene" id=1]
 [ext_resource path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_physics_fullglove_low.tscn" type="PackedScene" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://assets/test_skins/Test object (7).png" type="Texture" id=17]
 [ext_resource path="res://assets/test_skins/Test object (6).png" type="Texture" id=18]
 [ext_resource path="res://assets/test_skins/Test object (1).png" type="Texture" id=19]
+[ext_resource path="res://scenes/objects/pc_tower.tscn" type="PackedScene" id=20]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 1000, 1000 )
@@ -157,36 +158,40 @@ transform = Transform( -0.801504, 0, -0.597989, 0, 1, 0, 0.597989, 0, -0.801504,
 mesh = SubResource( 8 )
 material/0 = SubResource( 14 )
 
-[node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( -1, -5.61943e-08, 6.69697e-08, 0, 0.766044, 0.642788, -8.74228e-08, 0.642788, -0.766044, 0, 8, 0 )
+[node name="PC" parent="StandablePlatform" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.324687, 2.85834, -13.4185 )
+visible = false
 
-[node name="PickableBlocks" type="Spatial" parent="."]
+[node name="PickableBlocks" type="Spatial" parent="StandablePlatform"]
 
-[node name="Cube1" parent="PickableBlocks" instance=ExtResource( 7 )]
+[node name="Cube1" parent="StandablePlatform/PickableBlocks" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.05761, 1.87919, 7.11248 )
 
-[node name="Cube2" parent="PickableBlocks" instance=ExtResource( 7 )]
+[node name="Cube2" parent="StandablePlatform/PickableBlocks" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.59777, 1.87919, 7.11248 )
 
-[node name="Cube3" parent="PickableBlocks" instance=ExtResource( 7 )]
+[node name="Cube3" parent="StandablePlatform/PickableBlocks" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.59777, 1.87919, 7.69293 )
 
-[node name="Cube4" parent="PickableBlocks" instance=ExtResource( 7 )]
+[node name="Cube4" parent="StandablePlatform/PickableBlocks" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.05175, 1.87919, 7.69293 )
 
-[node name="Cube5" parent="PickableBlocks" instance=ExtResource( 7 )]
+[node name="Cube5" parent="StandablePlatform/PickableBlocks" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.84193, 1.87919, 7.38194 )
 
-[node name="Cube6" parent="PickableBlocks" instance=ExtResource( 7 )]
+[node name="Cube6" parent="StandablePlatform/PickableBlocks" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33681, 1.87919, 7.38194 )
 
-[node name="Cube7" parent="PickableBlocks" instance=ExtResource( 7 )]
+[node name="Cube7" parent="StandablePlatform/PickableBlocks" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.33277, 1.87919, 7.38194 )
 
-[node name="Cube8" parent="PickableBlocks" instance=ExtResource( 7 )]
+[node name="Cube8" parent="StandablePlatform/PickableBlocks" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8464, 1.87919, 6.71857 )
 
-[node name="Cube9" parent="PickableBlocks" instance=ExtResource( 7 )]
+[node name="Cube9" parent="StandablePlatform/PickableBlocks" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8464, 1.87919, 8.05688 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -1, -5.61943e-08, 6.69697e-08, 0, 0.766044, 0.642788, -8.74228e-08, 0.642788, -0.766044, 0, 8, 0 )
 
 [editable path="FPController"]
