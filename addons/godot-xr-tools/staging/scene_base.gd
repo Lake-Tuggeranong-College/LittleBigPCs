@@ -154,3 +154,13 @@ func _on_HelpArea_body_entered(body):
 func _on_HelpArea_body_exited(body):
 	if body.name == "PlayerBody":
 		print("Finish reading like a nerd, waiting for player to touch some grass...")
+
+
+func _on_DoorTriggerArea_body_entered(body):
+	if body.name == "PlayerBody":
+		print("Player has entered the door zone.")
+
+
+func _on_DoorTriggerArea_body_exited(body):
+	if body.name == "PlayerBody":
+		print("Player has left the door zone.")

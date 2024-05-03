@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://default_env.tres" type="Environment" id=1]
 [ext_resource path="res://addons/godot-xr-tools/functions/function_teleport.tscn" type="PackedScene" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://scenes/start/options.tscn" type="PackedScene" id=18]
 [ext_resource path="res://scenes/start/options_pop_up.tscn" type="PackedScene" id=19]
 [ext_resource path="res://scenes/start/help.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/objects/door.tscn" type="PackedScene" id=21]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 100, 100 )
@@ -92,11 +93,11 @@ skeleton = NodePath("../..")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -49.75, 0, 0 )
 skeleton = NodePath("../..")
 
-[node name="FrontWall" parent="StandablePlatform/Wall" instance=ExtResource( 10 )]
+[node name="BackWall" parent="StandablePlatform/Wall" instance=ExtResource( 10 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -49.75 )
 skeleton = NodePath("../..")
 
-[node name="BackWall" parent="StandablePlatform/Wall" instance=ExtResource( 10 )]
+[node name="FrontWall" parent="StandablePlatform/Wall" instance=ExtResource( 10 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 49.75 )
 skeleton = NodePath("../..")
 
@@ -137,14 +138,21 @@ script = ExtResource( 12 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.041, 0 )
 pixel_size = 0.065
 
+[node name="DoorTriggerArea" parent="StandablePlatform" instance=ExtResource( 21 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.256, 49.2554 )
+script = ExtResource( 12 )
+
 [connection signal="body_entered" from="StandablePlatform/QuitArea" to="." method="_on_QuitArea_body_entered"]
 [connection signal="body_entered" from="StandablePlatform/OptionsArea" to="." method="_on_OptionsArea_body_entered"]
 [connection signal="body_exited" from="StandablePlatform/OptionsArea" to="." method="_on_OptionsArea_body_exited"]
 [connection signal="body_entered" from="StandablePlatform/HelpArea" to="." method="_on_HelpArea_body_entered"]
 [connection signal="body_exited" from="StandablePlatform/HelpArea" to="." method="_on_HelpArea_body_exited"]
+[connection signal="body_entered" from="StandablePlatform/DoorTriggerArea" to="StandablePlatform/DoorTriggerArea" method="_on_DoorTriggerArea_body_entered"]
+[connection signal="body_exited" from="StandablePlatform/DoorTriggerArea" to="StandablePlatform/DoorTriggerArea" method="_on_DoorTriggerArea_body_exited"]
 
 [editable path="FPController"]
 [editable path="StandablePlatform/QuitArea"]
 [editable path="StandablePlatform/OptionsArea"]
 [editable path="StandablePlatform/OptionsArea/OptionPopUp"]
 [editable path="StandablePlatform/HelpArea"]
+[editable path="StandablePlatform/DoorTriggerArea"]
