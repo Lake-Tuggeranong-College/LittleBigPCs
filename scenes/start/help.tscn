@@ -12,14 +12,14 @@ use_filter = true
 extra_spacing_char = 5
 font_data = ExtResource( 2 )
 
-[node name="OptionsArea" type="Area"]
+[node name="HelpArea" type="Area"]
 __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="OptionsHitBox" type="CollisionShape" parent="."]
+[node name="HelpHitBox" type="CollisionShape" parent="."]
 shape = SubResource( 2 )
 
-[node name="OptionsText" type="Label3D" parent="."]
-text = "Options"
+[node name="HelpText" type="Label3D" parent="."]
+text = "Info / Help"
 font = SubResource( 3 )
