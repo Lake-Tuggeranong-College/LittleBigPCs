@@ -125,7 +125,6 @@ func load_scene(p_scene_path : String) -> void:
 func reset_scene() -> void:
 	emit_signal("request_reset_scene")
 
-
 func _on_OptionsArea_body_entered(body):
 	if body.name == "PlayerBody":
 		var pop_up_screen = get_node("StandablePlatform/OptionsArea/OptionPopUp")
@@ -158,9 +157,13 @@ func _on_HelpArea_body_exited(body):
 
 func _on_DoorTriggerArea_body_entered(body):
 	if body.name == "PlayerBody":
-		print("Player has entered the door zone.")
+		var door_trigger_animation = get_node("DoorOpenAnimation")
+		door_trigger_animation.play("open_door")
+#		print("Player has entered the door zone.")
 
 
 func _on_DoorTriggerArea_body_exited(body):
 	if body.name == "PlayerBody":
-		print("Player has left the door zone.")
+		var door_trigger_animation = get_node("DoorOpenAnimation")
+		door_trigger_animation.play("close_door")
+#		print("Player has left the door zone.")
