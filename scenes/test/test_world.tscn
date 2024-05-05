@@ -19,7 +19,7 @@
 [ext_resource path="res://assets/test_skins/Test object (7).png" type="Texture" id=17]
 [ext_resource path="res://assets/test_skins/Test object (6).png" type="Texture" id=18]
 [ext_resource path="res://assets/test_skins/Test object (1).png" type="Texture" id=19]
-[ext_resource path="res://scenes/objects/pc_tower.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/objects/pc_tower.tscn" type="PackedScene" id=21]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 1000, 1000 )
@@ -158,9 +158,8 @@ transform = Transform( -0.801504, 0, -0.597989, 0, 1, 0, 0.597989, 0, -0.801504,
 mesh = SubResource( 8 )
 material/0 = SubResource( 14 )
 
-[node name="PC" parent="StandablePlatform" instance=ExtResource( 20 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.324687, 2.85834, -13.4185 )
-visible = false
+[node name="PC" parent="StandablePlatform" instance=ExtResource( 21 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -5.19289, 1.42307, -13.4185 )
 
 [node name="PickableBlocks" type="Spatial" parent="StandablePlatform"]
 
