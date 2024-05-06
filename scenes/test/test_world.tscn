@@ -159,7 +159,7 @@ mesh = SubResource( 8 )
 material/0 = SubResource( 14 )
 
 [node name="PC" parent="StandablePlatform" instance=ExtResource( 21 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -5.19289, 1.42307, -13.4185 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -4.9458, 1.42307, -13.4185 )
 
 [node name="PickableBlocks" type="Spatial" parent="StandablePlatform"]
 
