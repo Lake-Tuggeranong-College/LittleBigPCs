@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://default_env.tres" type="Environment" id=1]
 [ext_resource path="res://addons/godot-xr-tools/functions/function_teleport.tscn" type="PackedScene" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://scenes/start/help.tscn" type="PackedScene" id=20]
 [ext_resource path="res://scenes/objects/door.tscn" type="PackedScene" id=21]
 [ext_resource path="res://scenes/functions/scene_change.tscn" type="PackedScene" id=22]
+[ext_resource path="res://addons/godot-xr-tools/functions/function_pointer.tscn" type="PackedScene" id=23]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 100, 100 )
@@ -62,12 +63,18 @@ strafe = false
 
 [node name="FunctionTeleport" parent="FPController/LeftHandController" index="2" instance=ExtResource( 2 )]
 
+[node name="FunctionPointer" parent="FPController/LeftHandController" index="3" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 0 )
+
 [node name="RightHandController" parent="FPController" index="3"]
 visible = true
 
 [node name="RightPhysicsHand" parent="FPController/RightHandController" index="0" instance=ExtResource( 3 )]
 
 [node name="MovementTurn" parent="FPController/RightHandController" index="1" instance=ExtResource( 11 )]
+
+[node name="FunctionPointer" parent="FPController/RightHandController" index="2" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 0 )
 
 [node name="PlayerBody" parent="FPController" instance=ExtResource( 4 )]
 collision_layer = 524290
