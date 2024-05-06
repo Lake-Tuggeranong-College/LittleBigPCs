@@ -3,3 +3,873 @@
 [ext_resource path="res://assets/pc_tower/pc_tower.glb" type="PackedScene" id=1]
 
 [node name="PC" instance=ExtResource( 1 )]
+
+[node name="BezierCurve008" parent="." index="0"]
+transform = Transform( 0, -1.05239e-08, 0.176562, 0.176562, 0, -1.05239e-08, -1.05239e-08, 0.176562, 0, 0.627889, 1.50817, -1.65742 )
+
+[node name="BezierCurve011" parent="." index="1"]
+transform = Transform( 0, -1.05239e-08, 0.176562, 0.176562, 0, -1.05239e-08, -1.05239e-08, 0.176562, 0, 0.627889, 1.50817, -1.68955 )
+
+[node name="BezierCurve010" parent="." index="2"]
+transform = Transform( 0, -1.05239e-08, 0.176562, 0.176562, 0, -1.05239e-08, -1.05239e-08, 0.176562, 0, 0.627889, 1.50817, -1.67818 )
+
+[node name="BezierCurve009" parent="." index="3"]
+transform = Transform( 0, -1.05239e-08, 0.176562, 0.176562, 0, -1.05239e-08, -1.05239e-08, 0.176562, 0, 0.627889, 1.50817, -1.66746 )
+
+[node name="BezierCurve" parent="." index="4"]
+transform = Transform( 0, -1.05239e-08, 0.176562, 0.176562, 0, -1.05239e-08, -1.05239e-08, 0.176562, 0, 0.627889, 1.54707, -1.65087 )
+
+[node name="BezierCurve001" parent="." index="5"]
+transform = Transform( 0, -1.05239e-08, 0.176562, 0.176562, 0, -1.05239e-08, -1.05239e-08, 0.176562, 0, 0.627889, 1.54707, -1.66092 )
+
+[node name="BezierCurve002" parent="." index="6"]
+transform = Transform( 0, -1.05239e-08, 0.176562, 0.176562, 0, -1.05239e-08, -1.05239e-08, 0.176562, 0, 0.627889, 1.54707, -1.67163 )
+
+[node name="BezierCurve003" parent="." index="7"]
+transform = Transform( 0, -1.05239e-08, 0.176562, 0.176562, 0, -1.05239e-08, -1.05239e-08, 0.176562, 0, 0.627889, 1.54707, -1.683 )
+
+[node name="BezierCurve012" parent="." index="8"]
+transform = Transform( 0, -1.05239e-08, 0.176562, 0.176562, 0, -1.05239e-08, -1.05239e-08, 0.176562, 0, 0.627889, 1.50817, -1.60938 )
+
+[node name="BezierCurve013" parent="." index="9"]
+transform = Transform( 0, -1.05239e-08, 0.176562, 0.176562, 0, -1.05239e-08, -1.05239e-08, 0.176562, 0, 0.627889, 1.50817, -1.61943 )
+
+[node name="BezierCurve014" parent="." index="10"]
+transform = Transform( 0, -1.05239e-08, 0.176562, 0.176562, 0, -1.05239e-08, -1.05239e-08, 0.176562, 0, 0.627889, 1.50817, -1.63014 )
+
+[node name="BezierCurve015" parent="." index="11"]
+transform = Transform( 0, -1.05239e-08, 0.176562, 0.176562, 0, -1.05239e-08, -1.05239e-08, 0.176562, 0, 0.627889, 1.50817, -1.64151 )
+
+[node name="BezierCurve004" parent="." index="12"]
+transform = Transform( 0, -1.05239e-08, 0.176562, 0.176562, 0, -1.05239e-08, -1.05239e-08, 0.176562, 0, 0.627889, 1.54707, -1.60167 )
+
+[node name="BezierCurve005" parent="." index="13"]
+transform = Transform( 0, -1.05239e-08, 0.176562, 0.176562, 0, -1.05239e-08, -1.05239e-08, 0.176562, 0, 0.627889, 1.54707, -1.61172 )
+
+[node name="BezierCurve006" parent="." index="14"]
+transform = Transform( 0, -1.05239e-08, 0.176562, 0.176562, 0, -1.05239e-08, -1.05239e-08, 0.176562, 0, 0.627889, 1.54707, -1.62243 )
+
+[node name="BezierCurve007" parent="." index="15"]
+transform = Transform( 0, -1.05239e-08, 0.176562, 0.176562, 0, -1.05239e-08, -1.05239e-08, 0.176562, 0, 0.627889, 1.54707, -1.6338 )
+
+[node name="BezierCurve016" parent="." index="16"]
+transform = Transform( 0.597344, 0, 0, 0, 0.597344, 0, 0, 0, 0.597344, 0.77832, 0.328488, 0.0162467 )
+
+[node name="BezierCurve017" parent="." index="17"]
+transform = Transform( 0.597344, 0, 0, 0, 0.597344, 0, 0, 0, 0.597344, 0.77832, 0.328488, 0.070815 )
+
+[node name="BezierCurve018" parent="." index="18"]
+transform = Transform( 0.597344, 0, 0, 0, 0.597344, 0, 0, 0, 0.597344, 0.77832, 0.290179, 0.0162467 )
+
+[node name="BezierCurve019" parent="." index="19"]
+transform = Transform( 0.597344, 0, 0, 0, 0.597344, 0, 0, 0, 0.597344, 0.77832, 0.290179, 0.070815 )
+
+[node name="BezierCurve020" parent="." index="20"]
+transform = Transform( 0.597344, 0, 0, 0, 0.597344, 0, 0, 0, 0.597344, 0.77832, 0.406365, 0.0162467 )
+
+[node name="BezierCurve021" parent="." index="21"]
+transform = Transform( 0.597344, 0, 0, 0, 0.597344, 0, 0, 0, 0.597344, 0.77832, 0.406365, 0.070815 )
+
+[node name="BezierCurve022" parent="." index="22"]
+transform = Transform( 0.597344, 0, 0, 0, 0.597344, 0, 0, 0, 0.597344, 0.77832, 0.368056, 0.0162467 )
+
+[node name="BezierCurve023" parent="." index="23"]
+transform = Transform( 0.597344, 0, 0, 0, 0.597344, 0, 0, 0, 0.597344, 0.77832, 0.368056, 0.070815 )
+
+[node name="BezierCurve024" parent="." index="24"]
+transform = Transform( 0.597344, 0, 0, 0, 0.597344, 0, 0, 0, 0.597344, 0.77832, 0.48206, 0.0162467 )
+
+[node name="BezierCurve025" parent="." index="25"]
+transform = Transform( 0.597344, 0, 0, 0, 0.597344, 0, 0, 0, 0.597344, 0.77832, 0.48206, 0.070815 )
+
+[node name="BezierCurve026" parent="." index="26"]
+transform = Transform( 0.597344, 0, 0, 0, 0.597344, 0, 0, 0, 0.597344, 0.77832, 0.443751, 0.0162467 )
+
+[node name="BezierCurve027" parent="." index="27"]
+transform = Transform( 0.597344, 0, 0, 0, 0.597344, 0, 0, 0, 0.597344, 0.77832, 0.443751, 0.070815 )
+
+[node name="BezierCurve028" parent="." index="28"]
+transform = Transform( 0.597344, 0, 0, 0, 0.597344, 0, 0, 0, 0.597344, 0.77832, 0.553891, 0.0162467 )
+
+[node name="BezierCurve029" parent="." index="29"]
+transform = Transform( 0.597344, 0, 0, 0, 0.597344, 0, 0, 0, 0.597344, 0.77832, 0.553891, 0.070815 )
+
+[node name="BezierCurve030" parent="." index="30"]
+transform = Transform( 0.597344, 0, 0, 0, 0.597344, 0, 0, 0, 0.597344, 0.77832, 0.515582, 0.0162467 )
+
+[node name="BezierCurve031" parent="." index="31"]
+transform = Transform( 0.597344, 0, 0, 0, 0.597344, 0, 0, 0, 0.597344, 0.77832, 0.515582, 0.070815 )
+
+[node name="BezierCurve032" parent="." index="32"]
+transform = Transform( 0.597344, 0, 0, 0, 0.597344, 0, 0, 0, 0.597344, 0.77832, 0.628754, 0.0162467 )
+
+[node name="BezierCurve033" parent="." index="33"]
+transform = Transform( 0.597344, 0, 0, 0, 0.597344, 0, 0, 0, 0.597344, 0.77832, 0.628754, 0.070815 )
+
+[node name="BezierCurve034" parent="." index="34"]
+transform = Transform( 0.597344, 0, 0, 0, 0.597344, 0, 0, 0, 0.597344, 0.77832, 0.590446, 0.0162467 )
+
+[node name="BezierCurve035" parent="." index="35"]
+transform = Transform( 0.597344, 0, 0, 0, 0.597344, 0, 0, 0, 0.597344, 0.77832, 0.590446, 0.070815 )
+
+[node name="BezierCurve036" parent="." index="36"]
+transform = Transform( 0.597344, 0, 0, 0, 0.597344, 0, 0, 0, 0.597344, 0.77832, 0.248509, 0.0162467 )
+
+[node name="BezierCurve037" parent="." index="37"]
+transform = Transform( 0.597344, 0, 0, 0, 0.597344, 0, 0, 0, 0.597344, 0.77832, 0.248509, 0.070815 )
+
+[node name="BezierCurve038" parent="." index="38"]
+transform = Transform( 0.597344, 0, 0, 0, 0.597344, 0, 0, 0, 0.597344, 0.77832, 0.2102, 0.0162467 )
+
+[node name="BezierCurve039" parent="." index="39"]
+transform = Transform( 0.597344, 0, 0, 0, 0.597344, 0, 0, 0, 0.597344, 0.77832, 0.2102, 0.070815 )
+
+[node name="BezierCurve040" parent="." index="40"]
+transform = Transform( 4.86021e-08, 7.29031e-08, 0.407704, -0.342077, 0.221823, 0, -0.221823, -0.342077, 9.72042e-08, 0.737205, -1.83441, -0.299065 )
+
+[node name="BezierCurve041" parent="." index="41"]
+transform = Transform( 4.86021e-08, 7.29031e-08, 0.407704, -0.342077, 0.221823, 0, -0.221823, -0.342077, 9.72042e-08, 0.737205, -1.83441, -0.31154 )
+
+[node name="BezierCurve042" parent="." index="42"]
+transform = Transform( 4.86021e-08, 7.29031e-08, 0.407704, -0.342077, 0.221823, 0, -0.221823, -0.342077, 9.72042e-08, 0.737205, -1.83441, -0.273128 )
+
+[node name="BezierCurve043" parent="." index="43"]
+transform = Transform( 4.86021e-08, 7.29031e-08, 0.407704, -0.342077, 0.221823, 0, -0.221823, -0.342077, 9.72042e-08, 0.737205, -1.83441, -0.245967 )
+
+[node name="BezierCurve044" parent="." index="44"]
+transform = Transform( 0, 6.07741e-08, 0.407848, -0.342198, 0.221902, -2.43096e-08, -0.221902, -0.342198, 4.86193e-08, 0.742246, -1.83441, -1.96155 )
+
+[node name="BezierCurve045" parent="." index="45"]
+transform = Transform( 0, 6.07741e-08, 0.407848, -0.342198, 0.221902, -2.43096e-08, -0.221902, -0.342198, 4.86193e-08, 0.742246, -1.83441, -1.96681 )
+
+[node name="BezierCurve046" parent="." index="46"]
+transform = Transform( 0, 6.07741e-08, 0.407848, -0.342198, 0.221902, -2.43096e-08, -0.221902, -0.342198, 4.86193e-08, 0.741955, -1.83441, -1.94345 )
+
+[node name="BezierCurve047" parent="." index="47"]
+transform = Transform( 0, 6.07741e-08, 0.407848, -0.342198, 0.221902, -2.43096e-08, -0.221902, -0.342198, 4.86193e-08, 0.739309, -1.83441, -1.9291 )
+
+[node name="BezierCurve052" parent="." index="48"]
+transform = Transform( 0.39415, 0, 0, 0, 0.227675, 0.321742, 0, -0.321742, 0.227675, 0.118742, 0.493812, -0.684779 )
+
+[node name="BezierCurve053" parent="." index="49"]
+transform = Transform( 0.39415, 0, 0, 0, 0.227675, 0.321742, 0, -0.321742, 0.227675, 0.118742, 0.728805, -0.684779 )
+
+[node name="BezierCurve054" parent="." index="50"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -0.356015, 0.155535 )
+
+[node name="BezierCurve055" parent="." index="51"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -0.371337, 0.155535 )
+
+[node name="BezierCurve056" parent="." index="52"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -0.384991, 0.155535 )
+
+[node name="BezierCurve057" parent="." index="53"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -0.402125, 0.155535 )
+
+[node name="BezierCurve058" parent="." index="54"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -0.479585, 0.155535 )
+
+[node name="BezierCurve059" parent="." index="55"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -0.494908, 0.155535 )
+
+[node name="BezierCurve060" parent="." index="56"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -0.508562, 0.155535 )
+
+[node name="BezierCurve061" parent="." index="57"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -0.525695, 0.155535 )
+
+[node name="BezierCurve062" parent="." index="58"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -0.600416, 0.155535 )
+
+[node name="BezierCurve063" parent="." index="59"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -0.615738, 0.155535 )
+
+[node name="BezierCurve064" parent="." index="60"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -0.629392, 0.155535 )
+
+[node name="BezierCurve065" parent="." index="61"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -0.646525, 0.155535 )
+
+[node name="BezierCurve066" parent="." index="62"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -0.661215, 0.155535 )
+
+[node name="BezierCurve067" parent="." index="63"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -0.676537, 0.155535 )
+
+[node name="BezierCurve068" parent="." index="64"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -0.690192, 0.155535 )
+
+[node name="BezierCurve069" parent="." index="65"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -0.707325, 0.155535 )
+
+[node name="BezierCurve070" parent="." index="66"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -0.799155, 0.155535 )
+
+[node name="BezierCurve071" parent="." index="67"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -0.814477, 0.155535 )
+
+[node name="BezierCurve072" parent="." index="68"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -0.828131, 0.155535 )
+
+[node name="BezierCurve073" parent="." index="69"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -0.845265, 0.155535 )
+
+[node name="BezierCurve074" parent="." index="70"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -0.955077, 0.155535 )
+
+[node name="BezierCurve075" parent="." index="71"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -0.9704, 0.155535 )
+
+[node name="BezierCurve076" parent="." index="72"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -0.984054, 0.155535 )
+
+[node name="BezierCurve077" parent="." index="73"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -1.00119, 0.155535 )
+
+[node name="BezierCurve078" parent="." index="74"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -1.11595, 0.155535 )
+
+[node name="BezierCurve079" parent="." index="75"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -1.13127, 0.155535 )
+
+[node name="BezierCurve080" parent="." index="76"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -1.14492, 0.155535 )
+
+[node name="BezierCurve081" parent="." index="77"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -1.16206, 0.155535 )
+
+[node name="BezierCurve082" parent="." index="78"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -1.23527, 0.155535 )
+
+[node name="BezierCurve083" parent="." index="79"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -1.25059, 0.155535 )
+
+[node name="BezierCurve084" parent="." index="80"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -1.26425, 0.155535 )
+
+[node name="BezierCurve085" parent="." index="81"]
+transform = Transform( 0.0986016, 1.89624e-08, 0.0986016, -1.89624e-08, -0.139444, 4.57794e-08, 0.0986016, -4.57794e-08, -0.0986016, 0.890865, -1.28138, 0.155535 )
+
+[node name="BezierCurve086" parent="." index="82"]
+transform = Transform( 1.19209e-07, -1.19209e-07, 1, -1, 0, 1.19209e-07, 0, -1, -1.19209e-07, -0.198072, -1.40738, -0.586116 )
+
+[node name="BezierCurve087" parent="." index="83"]
+transform = Transform( 1.19209e-07, -1.19209e-07, 1, -1, 0, 1.19209e-07, 0, -1, -1.19209e-07, -0.198072, -1.43952, -0.586116 )
+
+[node name="BezierCurve088" parent="." index="84"]
+transform = Transform( 1.19209e-07, -1.19209e-07, 1, -1, 0, 1.19209e-07, 0, -1, -1.19209e-07, -0.198072, -1.40738, -0.55398 )
+
+[node name="BezierCurve089" parent="." index="85"]
+transform = Transform( 1.19209e-07, -1.19209e-07, 1, -1, 0, 1.19209e-07, 0, -1, -1.19209e-07, -0.198072, -1.43952, -0.55398 )
+
+[node name="BezierCurve090" parent="." index="86"]
+transform = Transform( 1.19209e-07, -1.19209e-07, 1, -1, 0, 1.19209e-07, 0, -1, -1.19209e-07, -0.198072, -1.40738, -0.518191 )
+
+[node name="BezierCurve091" parent="." index="87"]
+transform = Transform( 1.19209e-07, -1.19209e-07, 1, -1, 0, 1.19209e-07, 0, -1, -1.19209e-07, -0.198072, -1.43952, -0.518191 )
+
+[node name="BezierCurve092" parent="." index="88"]
+transform = Transform( 1.19209e-07, -1.19209e-07, 1, -1, 0, 1.19209e-07, 0, -1, -1.19209e-07, -0.198072, -1.40738, -0.48418 )
+
+[node name="BezierCurve093" parent="." index="89"]
+transform = Transform( 1.19209e-07, -1.19209e-07, 1, -1, 0, 1.19209e-07, 0, -1, -1.19209e-07, -0.198072, -1.43952, -0.48418 )
+
+[node name="Cube001" parent="." index="90"]
+transform = Transform( -0.888562, 0, -2.44633e-07, 0, 0.0889182, 0, 3.46019e-07, 0, -0.628208, 0.061419, -2.29881, 0.98755 )
+
+[node name="Cube009" parent="." index="91"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.869128, 0.482911, -1.38646 )
+
+[node name="Cube010" parent="." index="92"]
+transform = Transform( 0.0321615, 0, 0, 0, 0.0451464, 0, 0, 0, 0.0321615, 0.79443, -0.510044, 0.033293 )
+
+[node name="Cube011" parent="." index="93"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.869128, 0.482911, -1.38646 )
+
+[node name="Cube012" parent="." index="94"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.869128, 0.482911, -1.38646 )
+
+[node name="Cube013" parent="." index="95"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.869128, 0.482911, -1.38646 )
+
+[node name="Cube014" parent="." index="96"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.869128, 0.482911, -1.38646 )
+
+[node name="Cube015" parent="." index="97"]
+transform = Transform( 0.062933, 0, 0, 0, 0.0613041, 0, 0, 0, 0.062933, 0.784335, -0.36232, -0.974179 )
+
+[node name="Cube016" parent="." index="98"]
+transform = Transform( 0.062933, 0, 0, 0, 0.0613041, 0, 0, 0, 0.062933, 0.784335, -0.36232, -0.974179 )
+
+[node name="Cube017" parent="." index="99"]
+transform = Transform( 0.062933, 0, 0, 0, 0.0613041, 0, 0, 0, 0.062933, 0.784335, -0.977666, -0.974179 )
+
+[node name="Cube018" parent="." index="100"]
+transform = Transform( 0.062933, 0, 0, 0, 0.0613041, 0, 0, 0, 0.062933, 0.784335, -0.977666, -0.974179 )
+
+[node name="Cube019" parent="." index="101"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.869128, 0.482911, -1.38646 )
+
+[node name="Cube020" parent="." index="102"]
+transform = Transform( 0.062933, 0, 0, 0, 0.0613041, 0, 0, 0, 0.062933, 0.784335, -1.38022, -0.974179 )
+
+[node name="Cube021" parent="." index="103"]
+transform = Transform( 0.062933, 0, 0, 0, 0.0613041, 0, 0, 0, 0.062933, 0.784335, -1.38022, -0.974179 )
+
+[node name="Cube022" parent="." index="104"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.869128, 0.482911, -1.38646 )
+
+[node name="Cube023" parent="." index="105"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.869128, 0.482911, -1.38646 )
+
+[node name="Cube024" parent="." index="106"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.869128, 0.482911, -1.38646 )
+
+[node name="Cube025" parent="." index="107"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.869128, 0.482911, -1.38646 )
+
+[node name="Cube026" parent="." index="108"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.869128, 0.482911, -1.28649 )
+
+[node name="Cube027" parent="." index="109"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.869128, 0.482911, -1.28649 )
+
+[node name="Cube028" parent="." index="110"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.869128, 0.482911, -1.19222 )
+
+[node name="Cube029" parent="." index="111"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.869128, 0.482911, -1.19222 )
+
+[node name="Cube030" parent="." index="112"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.869128, 0.482911, -1.09721 )
+
+[node name="Cube031" parent="." index="113"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.869128, 0.482911, -1.09721 )
+
+[node name="Cube032" parent="." index="114"]
+transform = Transform( 0.0332412, 0, 0, 0, 0.0405834, 0, 0, 0, 0.0369272, 0.833703, 1.30031, -0.54059 )
+
+[node name="Cube033" parent="." index="115"]
+transform = Transform( 0.0332412, 0, 0, 0, 0.0405834, 0, 0, 0, 0.0369272, 0.833703, 1.30031, -0.442164 )
+
+[node name="Cube034" parent="." index="116"]
+transform = Transform( 0.0332412, 0, 0, 0, 0.0405834, 0, 0, 0, 0.0369272, 0.833703, 1.30031, -0.347959 )
+
+[node name="Cube035" parent="." index="117"]
+transform = Transform( 0.0332412, 0, 0, 0, 0.0405834, 0, 0, 0, 0.0369272, 0.833703, 1.30031, -0.252343 )
+
+[node name="Cube036" parent="." index="118"]
+transform = Transform( 0.0332412, 0, 0, 0, 0.0405834, 0, 0, 0, 0.0369272, 0.833703, -0.0671828, -0.54059 )
+
+[node name="Cube037" parent="." index="119"]
+transform = Transform( 0.0332412, 0, 0, 0, 0.0405834, 0, 0, 0, 0.0369272, 0.833703, -0.0671828, -0.442164 )
+
+[node name="Cube038" parent="." index="120"]
+transform = Transform( 0.0332412, 0, 0, 0, 0.0405834, 0, 0, 0, 0.0369272, 0.833703, -0.0671828, -0.347959 )
+
+[node name="Cube039" parent="." index="121"]
+transform = Transform( 0.0332412, 0, 0, 0, 0.0405834, 0, 0, 0, 0.0369272, 0.833703, -0.0671828, -0.252343 )
+
+[node name="Cube042" parent="." index="122"]
+transform = Transform( 1.25678e-07, 0, 1.03459, 0, -1.30793, 0, -1.05426, 0, 1.23333e-07, 0.64474, 0.697742, -1.99391 )
+
+[node name="Cube043" parent="." index="123"]
+transform = Transform( 1.25678e-07, 0, 1.03459, 0, -1.30793, 0, -1.05426, 0, 1.23333e-07, 0.64474, 0.697742, -1.99391 )
+
+[node name="Cube044" parent="." index="124"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.869128, 0.482911, -1.38646 )
+
+[node name="Cube045" parent="." index="125"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.869128, 0.482911, -1.38646 )
+
+[node name="Cube046" parent="." index="126"]
+transform = Transform( 1.25678e-07, 0, 1.03459, 0, -1.30793, 0, -1.05426, 0, 1.23333e-07, 0.64474, 0.697742, -1.99391 )
+
+[node name="Cube047" parent="." index="127"]
+transform = Transform( 0.0342711, 0, 3.46967e-09, 0, -0.246219, 0, -2.99607e-09, 0, 0.0396884, 0.771069, 0.412424, -0.0440933 )
+
+[node name="Cube048" parent="." index="128"]
+transform = Transform( 0.0342711, 0, 0, 0, 0.0342711, 0, 0, 0, 0.0831191, 0.662139, 1.39902, -1.65037 )
+
+[node name="Cube054" parent="." index="129"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.869128, 0.482911, -1.38646 )
+
+[node name="Cube055" parent="." index="130"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.869128, 0.482911, -1.38646 )
+
+[node name="Cube090" parent="." index="131"]
+transform = Transform( -0.0244762, 0, 0, 0, -0.0244762, 0, 0, 0, -0.0584172, 0.761672, -1.52755, -0.0575767 )
+
+[node name="Cube131" parent="." index="132"]
+transform = Transform( -0.476665, 0, 0, 0, 0.00719239, -1.50996e-07, 0, 1.08602e-09, 1, 0.212152, -0.525564, -1.33795 )
+
+[node name="Cube146" parent="." index="133"]
+transform = Transform( 0.0321615, 0, 0, 0, 0.0451464, 0, 0, 0, 0.0321615, 0.79443, -0.383486, 0.033293 )
+
+[node name="Cube147" parent="." index="134"]
+transform = Transform( 0.0321615, 0, 0, 0, 0.0750696, 0, 0, 0, 0.0321615, 0.79443, -0.65696, 0.033293 )
+
+[node name="Cube148" parent="." index="135"]
+transform = Transform( 0.0321615, 0, 0, 0, 0.0750696, 0, 0, 0, 0.0321615, 0.79443, -0.82629, 0.033293 )
+
+[node name="Cube149" parent="." index="136"]
+transform = Transform( 0.0321615, 0, 0, 0, 0.0750696, 0, 0, 0, 0.0321615, 0.79443, -0.988243, 0.033293 )
+
+[node name="Cube150" parent="." index="137"]
+transform = Transform( 0.0321615, 0, 0, 0, 0.041012, 0, 0, 0, 0.0321615, 0.79443, -1.13922, 0.033293 )
+
+[node name="Cube151" parent="." index="138"]
+transform = Transform( 0.0321615, 0, 0, 0, 0.041012, 0, 0, 0, 0.0321615, 0.79443, -1.25812, 0.033293 )
+
+[node name="Cylinder" parent="." index="139"]
+transform = Transform( 9.5653e-09, 0.0130177, 0, -0.0267465, 4.65549e-09, 0, 0, 0, 0.0267465, 0.76616, -0.36148, -0.197603 )
+
+[node name="Cylinder001" parent="." index="140"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.474178, -1.40406 )
+
+[node name="Cylinder002" parent="." index="141"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.474178, -1.48729 )
+
+[node name="Cylinder003" parent="." index="142"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.544953, -1.40406 )
+
+[node name="Cylinder004" parent="." index="143"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.544953, -1.48729 )
+
+[node name="Cylinder005" parent="." index="144"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.611896, -1.40406 )
+
+[node name="Cylinder006" parent="." index="145"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.611896, -1.48729 )
+
+[node name="Cylinder007" parent="." index="146"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.682441, -1.40406 )
+
+[node name="Cylinder008" parent="." index="147"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.682441, -1.48729 )
+
+[node name="Cylinder009" parent="." index="148"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.749385, -1.40406 )
+
+[node name="Cylinder010" parent="." index="149"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.401745, -1.40406 )
+
+[node name="Cylinder011" parent="." index="150"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.749385, -1.48729 )
+
+[node name="Cylinder012" parent="." index="151"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.149295, -1.30071 )
+
+[node name="Cylinder013" parent="." index="152"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.149295, -1.23186 )
+
+[node name="Cylinder014" parent="." index="153"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.149295, -1.16301 )
+
+[node name="Cylinder015" parent="." index="154"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.149295, -1.09416 )
+
+[node name="Cylinder016" parent="." index="155"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.149295, -1.01909 )
+
+[node name="Cylinder017" parent="." index="156"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.149295, -0.950237 )
+
+[node name="Cylinder018" parent="." index="157"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.00697933, -1.23186 )
+
+[node name="Cylinder019" parent="." index="158"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.00697933, -0.945457 )
+
+[node name="Cylinder020" parent="." index="159"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.00697933, -0.616246 )
+
+[node name="Cylinder021" parent="." index="160"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.706475, -0.624151 )
+
+[node name="Cylinder022" parent="." index="161"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.580568, -0.624151 )
+
+[node name="Cylinder023" parent="." index="162"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.652262, -0.150667 )
+
+[node name="Cylinder024" parent="." index="163"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.506346, -0.150667 )
+
+[node name="Cylinder025" parent="." index="164"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.723525, -0.150667 )
+
+[node name="Cylinder026" parent="." index="165"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.793483, -0.150667 )
+
+[node name="Cylinder027" parent="." index="166"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.231494, -0.150667 )
+
+[node name="Cylinder028" parent="." index="167"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.165034, -0.150667 )
+
+[node name="Cylinder029" parent="." index="168"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.0919234, -0.150667 )
+
+[node name="Cylinder030" parent="." index="169"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.811336, -0.0016011 )
+
+[node name="Cylinder031" parent="." index="170"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 0.878064, -0.0016011 )
+
+[node name="Cylinder032" parent="." index="171"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, -0.881564, -1.81915 )
+
+[node name="Cylinder033" parent="." index="172"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, -0.881564, -1.96181 )
+
+[node name="Cylinder034" parent="." index="173"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, -1.53383, -1.15621 )
+
+[node name="Cylinder035" parent="." index="174"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, -1.53383, -0.913573 )
+
+[node name="Cylinder036" parent="." index="175"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, -1.29249, -0.098245 )
+
+[node name="Cylinder037" parent="." index="176"]
+transform = Transform( 9.5653e-09, 0.0130177, 0, -0.0267465, 4.65549e-09, 0, 0, 0, 0.0267465, 0.76616, -0.73067, -0.755014 )
+
+[node name="Cylinder038" parent="." index="177"]
+transform = Transform( 9.5653e-09, 0.0130177, 0, -0.0267465, 4.65549e-09, 0, 0, 0, 0.0267465, 0.76616, -1.16245, -0.169622 )
+
+[node name="Cylinder039" parent="." index="178"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 1.01851, -1.32832 )
+
+[node name="Cylinder040" parent="." index="179"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 1.01851, -1.25892 )
+
+[node name="Cylinder041" parent="." index="180"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 1.01851, -1.18929 )
+
+[node name="Cylinder042" parent="." index="181"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 1.01851, -1.11989 )
+
+[node name="Cylinder043" parent="." index="182"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 1.01851, -1.04566 )
+
+[node name="Cylinder044" parent="." index="183"]
+transform = Transform( -1.15273e-08, -0.0322327, 0, 0.0322327, -1.15273e-08, 0, 0, 0, -0.0322327, 0.817578, 1.01851, -0.976268 )
+
+[node name="Cylinder107" parent="." index="184"]
+transform = Transform( 9.5653e-09, 0.0130177, 0, -0.0267465, 4.65549e-09, 0, 0, 0, 0.0267465, 0.838071, 0.211461, -0.69099 )
+
+[node name="Cylinder108" parent="." index="185"]
+transform = Transform( 9.5653e-09, 0.0130177, 0, -0.0267465, 4.65549e-09, 0, 0, 0, 0.0267465, 0.838071, 0.954999, -0.69099 )
+
+[node name="Cylinder109" parent="." index="186"]
+transform = Transform( 9.5653e-09, 0.0130177, 0, -0.0267465, 4.65549e-09, 0, 0, 0, 0.0267465, 0.838071, 0.954999, -1.43839 )
+
+[node name="Cylinder110" parent="." index="187"]
+transform = Transform( 9.5653e-09, 0.0130177, 0, -0.0267465, 4.65549e-09, 0, 0, 0, 0.0267465, 0.838071, 0.216621, -1.43839 )
+
+[node name="Cylinder115" parent="." index="188"]
+transform = Transform( 1.87661e-08, 0.0524739, 0, -0.0524739, 1.87661e-08, 0, 0, 0, 0.0524739, 0.696234, 0.729969, -0.686012 )
+
+[node name="Cylinder116" parent="." index="189"]
+transform = Transform( 1.87661e-08, 0.0524739, 0, -0.0524739, 1.87661e-08, 0, 0, 0, 0.0524739, 0.696234, 0.494124, -0.686012 )
+
+[node name="Plane" parent="." index="190"]
+transform = Transform( 6.53858e-08, 0.182832, 0, -0.182832, 6.53858e-08, 0, 0, 0, 0.182832, 0.831761, -0.758349, -0.472054 )
+
+[node name="ROGTRANSPARENT" parent="." index="191"]
+transform = Transform( 0, -0.416114, 0, 0, 0, -0.416114, 0.416114, 0, 0, 0.757901, -0.792409, -0.401189 )
+
+[node name="Cube094" parent="." index="192"]
+transform = Transform( -0.0150453, 0, 0, 0, -0.0150453, 0, 0, 0, -0.0359086, 0.761672, -1.52755, -1.73514 )
+
+[node name="Cube049" parent="." index="193"]
+transform = Transform( 0.613684, 0, 0, 0, 0.613684, 0, 0, 0, 0.0504519, -0.0265164, 0.780757, 1.89807 )
+
+[node name="Front Fan Holder" parent="." index="194"]
+transform = Transform( 0.954072, 0, 1.91486e-07, 0, -2.33482, 0, -8.34076e-08, 0, 2.19034, -0.0517325, -0.319091, -0.264562 )
+
+[node name="Panel" parent="." index="195"]
+transform = Transform( 0.00787804, 0, 0, 0, 1, 0, 0, 0, 1, -1.10257, -0.355155, -0.295926 )
+
+[node name="Cube061" parent="." index="196"]
+transform = Transform( 0.135664, 0, 0, 0, 0.637621, 0, 0, 0, 0.0234987, 0.646615, 0.612399, -0.252453 )
+
+[node name="Cube062" parent="." index="197"]
+transform = Transform( 0.120918, 0, 0, 0, 0.680315, 0, 0, 0, 0.00787134, 0.65415, 0.612399, -0.252453 )
+
+[node name="Cube064" parent="." index="198"]
+transform = Transform( 0.135664, 0, 0, 0, 0.637621, 0, 0, 0, 0.0234987, 0.646615, 0.612399, -0.252453 )
+
+[node name="Cube065" parent="." index="199"]
+transform = Transform( -0.166246, -2.482e-07, 0, 6.47385e-08, -0.637368, 0, 0, 0, 0.00489929, 0.576195, 0.607407, -0.283893 )
+
+[node name="Cube066" parent="." index="200"]
+transform = Transform( -0.166246, -2.482e-07, 0, 6.47385e-08, -0.637368, 0, 0, 0, 0.00489929, 0.576195, 0.607407, -0.283893 )
+
+[node name="Cube067" parent="." index="201"]
+transform = Transform( -0.166246, 0, -4.20434e-10, 0, 0.637368, 0, 1.45337e-08, 0, -0.0048092, 0.576195, 0.617566, -0.219984 )
+
+[node name="Cube068" parent="." index="202"]
+transform = Transform( -0.166246, 0, -4.20434e-10, 0, 0.637368, 0, 1.45337e-08, 0, -0.0048092, 0.576195, 0.617566, -0.219984 )
+
+[node name="Cube069" parent="." index="203"]
+transform = Transform( 0.135664, 0, 0, 0, 0.637621, 0, 0, 0, 0.0234987, 0.646615, 0.612399, -0.346756 )
+
+[node name="Cube070" parent="." index="204"]
+transform = Transform( 0.120918, 0, 0, 0, 0.680315, 0, 0, 0, 0.00787134, 0.65415, 0.612399, -0.346756 )
+
+[node name="Cube071" parent="." index="205"]
+transform = Transform( 0.135664, 0, 0, 0, 0.637621, 0, 0, 0, 0.0234987, 0.646615, 0.612399, -0.346756 )
+
+[node name="Cube072" parent="." index="206"]
+transform = Transform( -0.166246, -2.482e-07, 0, 6.47385e-08, -0.637368, 0, 0, 0, 0.00489929, 0.576195, 0.607407, -0.378197 )
+
+[node name="Cube073" parent="." index="207"]
+transform = Transform( -0.166246, -2.482e-07, 0, 6.47385e-08, -0.637368, 0, 0, 0, 0.00489929, 0.576195, 0.607407, -0.378197 )
+
+[node name="Cube074" parent="." index="208"]
+transform = Transform( -0.166246, 0, -4.20434e-10, 0, 0.637368, 0, 1.45337e-08, 0, -0.0048092, 0.576195, 0.617566, -0.314287 )
+
+[node name="Cube075" parent="." index="209"]
+transform = Transform( -0.166246, 0, -4.20434e-10, 0, 0.637368, 0, 1.45337e-08, 0, -0.0048092, 0.576195, 0.617566, -0.314287 )
+
+[node name="Cube076" parent="." index="210"]
+transform = Transform( 0.135664, 0, 0, 0, 0.637621, 0, 0, 0, 0.0234987, 0.646615, 0.612399, -0.442025 )
+
+[node name="Cube077" parent="." index="211"]
+transform = Transform( 0.120918, 0, 0, 0, 0.680315, 0, 0, 0, 0.00787134, 0.65415, 0.612399, -0.442025 )
+
+[node name="Cube078" parent="." index="212"]
+transform = Transform( 0.135664, 0, 0, 0, 0.637621, 0, 0, 0, 0.0234987, 0.646615, 0.612399, -0.442025 )
+
+[node name="Cube079" parent="." index="213"]
+transform = Transform( -0.166246, -2.482e-07, 0, 6.47385e-08, -0.637368, 0, 0, 0, 0.00489929, 0.576195, 0.607407, -0.473466 )
+
+[node name="Cube080" parent="." index="214"]
+transform = Transform( -0.166246, -2.482e-07, 0, 6.47385e-08, -0.637368, 0, 0, 0, 0.00489929, 0.576195, 0.607407, -0.473466 )
+
+[node name="Cube081" parent="." index="215"]
+transform = Transform( -0.166246, 0, -4.20434e-10, 0, 0.637368, 0, 1.45337e-08, 0, -0.0048092, 0.576195, 0.617566, -0.409556 )
+
+[node name="Cube082" parent="." index="216"]
+transform = Transform( -0.166246, 0, -4.20434e-10, 0, 0.637368, 0, 1.45337e-08, 0, -0.0048092, 0.576195, 0.617566, -0.409556 )
+
+[node name="Cube083" parent="." index="217"]
+transform = Transform( 0.135664, 0, 0, 0, 0.637621, 0, 0, 0, 0.0234987, 0.646615, 0.612399, -0.539879 )
+
+[node name="Cube084" parent="." index="218"]
+transform = Transform( 0.120918, 0, 0, 0, 0.680315, 0, 0, 0, 0.00787134, 0.65415, 0.612399, -0.539879 )
+
+[node name="Cube085" parent="." index="219"]
+transform = Transform( 0.135664, 0, 0, 0, 0.637621, 0, 0, 0, 0.0234987, 0.646615, 0.612399, -0.539879 )
+
+[node name="Cube086" parent="." index="220"]
+transform = Transform( -0.166246, -2.482e-07, 0, 6.47385e-08, -0.637368, 0, 0, 0, 0.00489929, 0.576195, 0.607407, -0.571319 )
+
+[node name="Cube087" parent="." index="221"]
+transform = Transform( -0.166246, -2.482e-07, 0, 6.47385e-08, -0.637368, 0, 0, 0, 0.00489929, 0.576195, 0.607407, -0.571319 )
+
+[node name="Cube088" parent="." index="222"]
+transform = Transform( -0.166246, 0, -4.20434e-10, 0, 0.637368, 0, 1.45337e-08, 0, -0.0048092, 0.576195, 0.617566, -0.50741 )
+
+[node name="Cube089" parent="." index="223"]
+transform = Transform( -0.166246, 0, -4.20434e-10, 0, 0.637368, 0, 1.45337e-08, 0, -0.0048092, 0.576195, 0.617566, -0.50741 )
+
+[node name="Cube063" parent="." index="224"]
+transform = Transform( 2.87962e-07, 0.0964356, 0, -0.8052, 3.4488e-08, 0, 0, 0, 1, -0.913782, -0.538823, -2.45519 )
+
+[node name="Cube098" parent="." index="225"]
+transform = Transform( 0.0120271, 0, 0, 0, 0.348138, 0, 0, 0, 0.348138, 0.755196, 0.580044, -1.06284 )
+
+[node name="Cylinder105" parent="." index="226"]
+transform = Transform( 1.15149e-07, 0.321981, 0, -0.321981, 1.15149e-07, 0, 0, 0, 0.321981, 0.773313, 0.587882, -1.05257 )
+
+[node name="Cylinder106" parent="." index="227"]
+transform = Transform( 1.15149e-07, 0.321981, 0, -0.321981, 1.15149e-07, 0, 0, 0, 0.321981, 0.773313, 0.587882, -1.05257 )
+
+[node name="Cube101" parent="." index="228"]
+transform = Transform( 0.340212, 0, 0, 0, -0.0063941, 1.67388e-07, 0, -9.65483e-10, -1.10856, 0.156657, -0.545677, -1.22858 )
+
+[node name="Cube143" parent="." index="229"]
+transform = Transform( -0.476665, 0, 0, 0, 0.00719239, -1.50996e-07, 0, 1.08602e-09, 1, 0.212152, -0.525564, -1.33795 )
+
+[node name="Text" parent="." index="230"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.407091, -1.41469 )
+
+[node name="Text001" parent="." index="231"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.479524, -1.41469 )
+
+[node name="Text002" parent="." index="232"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.479524, -1.49791 )
+
+[node name="Text003" parent="." index="233"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.550298, -1.41469 )
+
+[node name="Text004" parent="." index="234"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.550298, -1.49791 )
+
+[node name="Text005" parent="." index="235"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.617242, -1.41469 )
+
+[node name="Text006" parent="." index="236"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.617242, -1.49791 )
+
+[node name="Text007" parent="." index="237"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.687787, -1.41469 )
+
+[node name="Text008" parent="." index="238"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.687787, -1.49791 )
+
+[node name="Text009" parent="." index="239"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.75473, -1.41469 )
+
+[node name="Text010" parent="." index="240"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.75473, -1.49791 )
+
+[node name="Text011" parent="." index="241"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.154641, -1.31133 )
+
+[node name="Text012" parent="." index="242"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.154641, -1.24248 )
+
+[node name="Text013" parent="." index="243"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.154641, -1.17364 )
+
+[node name="Text014" parent="." index="244"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.154641, -1.10479 )
+
+[node name="Text015" parent="." index="245"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.154641, -1.02971 )
+
+[node name="Text016" parent="." index="246"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.154641, -0.960859 )
+
+[node name="Text017" parent="." index="247"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.012325, -1.24248 )
+
+[node name="Text018" parent="." index="248"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.012325, -0.956079 )
+
+[node name="Text019" parent="." index="249"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.012325, -0.626869 )
+
+[node name="Text020" parent="." index="250"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.711821, -0.634773 )
+
+[node name="Text021" parent="." index="251"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.585914, -0.634773 )
+
+[node name="Text022" parent="." index="252"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.657607, -0.16129 )
+
+[node name="Text023" parent="." index="253"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.511692, -0.16129 )
+
+[node name="Text024" parent="." index="254"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.728871, -0.16129 )
+
+[node name="Text025" parent="." index="255"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.798829, -0.16129 )
+
+[node name="Text026" parent="." index="256"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.236839, -0.16129 )
+
+[node name="Text027" parent="." index="257"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.170379, -0.16129 )
+
+[node name="Text028" parent="." index="258"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.097269, -0.16129 )
+
+[node name="Text029" parent="." index="259"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.816682, -0.0122235 )
+
+[node name="Text030" parent="." index="260"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 0.88341, -0.0122235 )
+
+[node name="Text031" parent="." index="261"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, -0.876218, -1.82977 )
+
+[node name="Text032" parent="." index="262"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, -0.876218, -1.97243 )
+
+[node name="Text033" parent="." index="263"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, -1.52849, -1.16683 )
+
+[node name="Text034" parent="." index="264"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, -1.52849, -0.924195 )
+
+[node name="Text035" parent="." index="265"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, -1.28715, -0.108867 )
+
+[node name="Text036" parent="." index="266"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 1.02386, -1.33894 )
+
+[node name="Text037" parent="." index="267"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 1.02386, -1.26954 )
+
+[node name="Text038" parent="." index="268"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 1.02386, -1.19991 )
+
+[node name="Text039" parent="." index="269"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 1.02386, -1.13051 )
+
+[node name="Text040" parent="." index="270"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 1.02386, -1.05629 )
+
+[node name="Text041" parent="." index="271"]
+transform = Transform( 0, -0.0085183, 0, 0, 0, -0.0085183, 0.0085183, 0, 0, 0.7859, 1.02386, -0.98689 )
+
+[node name="Text043" parent="." index="272"]
+transform = Transform( 0, 1.06005e-08, 0.0592822, -0.0592822, -7.06699e-09, 3.53349e-09, 3.53349e-09, -0.0592822, 7.06699e-09, 0.511418, 1.18931, -0.277038 )
+
+[node name="Text044" parent="." index="273"]
+transform = Transform( 7.06699e-09, 2.1201e-08, 0.0592822, 0.0592822, 0, -7.06699e-09, 0, 0.0592822, -2.1201e-08, 0.511418, 0.0349467, -0.227234 )
+
+[node name="Text045" parent="." index="274"]
+transform = Transform( 0, -0.033952, 1.06581e-08, -0.033952, 0, 1.06581e-08, -1.06581e-08, -1.06581e-08, -0.033952, 0.449502, 0.669958, -0.263556 )
+
+[node name="Text046" parent="." index="275"]
+transform = Transform( 0, 1.06005e-08, 0.0592822, -0.0592822, -7.06699e-09, 3.53349e-09, 3.53349e-09, -0.0592822, 7.06699e-09, 0.511418, 1.18931, -0.371341 )
+
+[node name="Text047" parent="." index="276"]
+transform = Transform( 7.06699e-09, 2.1201e-08, 0.0592822, 0.0592822, 0, -7.06699e-09, 0, 0.0592822, -2.1201e-08, 0.511418, 0.0349467, -0.321537 )
+
+[node name="Text048" parent="." index="277"]
+transform = Transform( 0, -0.033952, 1.06581e-08, -0.033952, 0, 1.06581e-08, -1.06581e-08, -1.06581e-08, -0.033952, 0.449502, 0.669958, -0.357859 )
+
+[node name="Text049" parent="." index="278"]
+transform = Transform( 0, 1.06005e-08, 0.0592822, -0.0592822, -7.06699e-09, 3.53349e-09, 3.53349e-09, -0.0592822, 7.06699e-09, 0.511418, 1.18931, -0.46661 )
+
+[node name="Text050" parent="." index="279"]
+transform = Transform( 7.06699e-09, 2.1201e-08, 0.0592822, 0.0592822, 0, -7.06699e-09, 0, 0.0592822, -2.1201e-08, 0.511418, 0.0349467, -0.416806 )
+
+[node name="Text051" parent="." index="280"]
+transform = Transform( 0, -0.033952, 1.06581e-08, -0.033952, 0, 1.06581e-08, -1.06581e-08, -1.06581e-08, -0.033952, 0.449502, 0.669958, -0.453129 )
+
+[node name="Text052" parent="." index="281"]
+transform = Transform( 0, 1.06005e-08, 0.0592822, -0.0592822, -7.06699e-09, 3.53349e-09, 3.53349e-09, -0.0592822, 7.06699e-09, 0.511418, 1.18931, -0.564464 )
+
+[node name="Text053" parent="." index="282"]
+transform = Transform( 7.06699e-09, 2.1201e-08, 0.0592822, 0.0592822, 0, -7.06699e-09, 0, 0.0592822, -2.1201e-08, 0.511418, 0.0349467, -0.51466 )
+
+[node name="Text054" parent="." index="283"]
+transform = Transform( 0, -0.033952, 1.06581e-08, -0.033952, 0, 1.06581e-08, -1.06581e-08, -1.06581e-08, -0.033952, 0.449502, 0.669958, -0.550982 )
+
+[node name="Fan_1" parent="." index="284"]
+transform = Transform( 0.0126626, 0, 0, 0, -0.0126626, 1.107e-09, 0, -1.107e-09, -0.0126626, 0.137985, -0.747594, -1.67869 )
+
+[node name="Cube" parent="." index="285"]
+transform = Transform( -0.668584, 0, -5.84494e-08, 0, 0.668584, 0, 5.84494e-08, 0, -0.668584, 0.853566, -0.0905929, -0.866579 )
+
+[node name="Plane001" parent="AMD_Ryzen_Threadripper_Ex_low" index="0"]
+transform = Transform( 0, -0.992712, 0, 0, 0, 0.992712, -1.19, 0, 0, -9.81405, -1.59353, -1.88581 )
+
+[node name="Cube003" parent="." index="287"]
+transform = Transform( 7.93633e-05, -0.17476, 0, 0.17476, 7.93633e-05, 0, 0, 0, 0.0307164, 0.563414, 1.06829, 0.284357 )
+
+[node name="Cube113" parent="." index="288"]
+transform = Transform( 7.93633e-05, -0.17476, 0, 0.17476, 7.93633e-05, 0, 0, 0, 0.0307164, 0.563414, 1.06279, 0.154658 )
+
+[node name="Text055" parent="." index="289"]
+transform = Transform( 0.0624324, 0.000198867, -8.82717e-05, -8.25121e-05, -0.00179685, -0.0624069, -0.000201325, 0.0624066, -0.00179658, 0.117782, -2.18988, -0.675192 )
