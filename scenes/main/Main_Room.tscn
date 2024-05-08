@@ -11,7 +11,7 @@
 [ext_resource path="res://scenes/objects/pc_tower.tscn" type="PackedScene" id=9]
 
 [sub_resource type="PlaneMesh" id=1]
-size = Vector2( 4, 4 )
+size = Vector2( 100, 100 )
 
 [sub_resource type="SpatialMaterial" id=4]
 albedo_color = Color( 0.854902, 0.0117647, 0.0156863, 1 )
@@ -74,7 +74,9 @@ visible = true
 [node name="StadablePlatform" type="StaticBody" parent="."]
 
 [node name="OmniLight" type="OmniLight" parent="StadablePlatform"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.52686, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 53.5587, 0 )
+omni_range = 600.0
+omni_attenuation = 6.06286
 
 [node name="Floor_Mesh_Plane" type="CSGMesh" parent="StadablePlatform"]
 mesh = SubResource( 1 )
@@ -85,17 +87,22 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
 shape = SubResource( 10 )
 
 [node name="X_Pos_Wall_Plane" type="CSGMesh" parent="StadablePlatform"]
-transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 2, 2, 0 )
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 50, 2, 0 )
 mesh = SubResource( 1 )
 material = SubResource( 5 )
 
 [node name="X_Neg_Wall_Plame" type="CSGMesh" parent="StadablePlatform"]
-transform = Transform( 4.37114e-08, 1, -8.74228e-08, 1, -4.37114e-08, 0, -3.82137e-15, -8.74228e-08, -1, -2, 2, 0 )
+transform = Transform( 4.37114e-08, 1, -8.74228e-08, 1, -4.37114e-08, 0, -3.82137e-15, -8.74228e-08, -1, -50, 2, 0 )
 mesh = SubResource( 1 )
 material = SubResource( 6 )
 
 [node name="Back_Wall_Plane" type="CSGMesh" parent="StadablePlatform"]
-transform = Transform( 1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 3.59989e-21, -4.37114e-08, -1, -4.37114e-08, 0, 2, 2 )
+transform = Transform( 1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 3.59989e-21, -4.37114e-08, -1, -4.37114e-08, 0, 2, -50 )
+mesh = SubResource( 1 )
+material = SubResource( 7 )
+
+[node name="Front_Wall_Plane" type="CSGMesh" parent="StadablePlatform"]
+transform = Transform( 1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 3.59989e-21, -4.37114e-08, -1, -4.37114e-08, 0, 2, 50 )
 mesh = SubResource( 1 )
 material = SubResource( 7 )
 
