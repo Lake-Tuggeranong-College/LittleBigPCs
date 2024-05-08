@@ -6,7 +6,7 @@
 [ext_resource path="res://addons/godot-xr-tools/functions/function_pickup.tscn" type="PackedScene" id=4]
 [ext_resource path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" type="PackedScene" id=5]
 [ext_resource path="res://addons/godot-xr-tools/functions/function_teleport.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/start/cube.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/test/cube.tscn" type="PackedScene" id=7]
 [ext_resource path="res://addons/godot-xr-tools/functions/movement_turn.tscn" type="PackedScene" id=8]
 [ext_resource path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_physics_fullglove_low.tscn" type="PackedScene" id=9]
 [ext_resource path="res://addons/godot-xr-tools/functions/movement_direct.tscn" type="PackedScene" id=10]
@@ -20,6 +20,7 @@
 [ext_resource path="res://assets/test_skins/Test object (6).png" type="Texture" id=18]
 [ext_resource path="res://assets/test_skins/Test object (1).png" type="Texture" id=19]
 [ext_resource path="res://scenes/objects/pc_tower.tscn" type="PackedScene" id=21]
+
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 1000, 1000 )
