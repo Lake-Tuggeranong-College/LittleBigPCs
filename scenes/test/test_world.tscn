@@ -19,7 +19,8 @@
 [ext_resource path="res://assets/test_skins/Test object (7).png" type="Texture" id=17]
 [ext_resource path="res://assets/test_skins/Test object (6).png" type="Texture" id=18]
 [ext_resource path="res://assets/test_skins/Test object (1).png" type="Texture" id=19]
-[ext_resource path="res://scenes/objects/pc_tower.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/objects/pc_tower/pc_tower.tscn" type="PackedScene" id=21]
+
 
 
 [sub_resource type="PlaneMesh" id=1]
