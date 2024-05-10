@@ -129,6 +129,8 @@ func _on_OptionsArea_body_entered(body):
 	if body.name == "PlayerBody":
 		var pop_up_screen = get_node("StandablePlatform/OptionsArea/OptionPopUp")
 		pop_up_screen.visible = true
+		var fade_out_stand_area = get_node("StandablePlatform/OptionsArea/FadeOutStandArea")
+		fade_out_stand_area.visible = true
 #		print("Detected the player, waiting for pop-up screen...")
 
 
@@ -136,23 +138,31 @@ func _on_OptionsArea_body_exited(body):
 	if body.name == "PlayerBody":
 		var pop_up_screen = get_node("StandablePlatform/OptionsArea/OptionPopUp")
 		pop_up_screen.visible = false
+		var fade_out_stand_area = get_node("StandablePlatform/OptionsArea/FadeOutStandArea")
+		fade_out_stand_area.visible = false
 #		print("Finish option configuration, waiting for player to close it...")
 
 
 func _on_QuitArea_body_entered(body):
 	if body.name == "PlayerBody":
+		var fade_out_stand_area = get_node("StandablePlatform/QuitArea/FadeOutStandArea")
+		fade_out_stand_area.visible = true
 		get_tree().quit()
 #		print("Detected the player, waiting to log out the game...")
 
 
 func _on_HelpArea_body_entered(body):
 	if body.name == "PlayerBody":
-		print("Detected the player, waiting for something...")
+		var fade_out_stand_area = get_node("StandablePlatform/HelpArea/FadeOutStandArea")
+		fade_out_stand_area.visible = true
+#		print("Detected the player, waiting for something...")
 
 
 func _on_HelpArea_body_exited(body):
 	if body.name == "PlayerBody":
-		print("Finish reading like a nerd, waiting for player to touch some grass...")
+		var fade_out_stand_area = get_node("StandablePlatform/HelpArea/FadeOutStandArea")
+		fade_out_stand_area.visible = false
+#		print("Finish reading like a nerd, waiting for player to touch some grass...")
 
 
 func _on_DoorTriggerArea_body_entered(body):

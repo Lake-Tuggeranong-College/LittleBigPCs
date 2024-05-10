@@ -8,7 +8,6 @@
 [ext_resource path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_physics_fullglove_low.tscn" type="PackedScene" id=6]
 [ext_resource path="res://addons/godot-openxr/scenes/first_person_controller_vr.tscn" type="PackedScene" id=7]
 [ext_resource path="res://addons/godot-xr-tools/functions/function_teleport.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/objects/pc_tower/pc_tower.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/objects/pc_tower/pickable_cpu.tscn" type="PackedScene" id=10]
 [ext_resource path="res://addons/godot-xr-tools/functions/function_pickup.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/objects/pc_tower/pickable_fans.tscn" type="PackedScene" id=12]
@@ -18,7 +17,8 @@
 [ext_resource path="res://scenes/objects/pc_tower/pickable_power_supply.tscn" type="PackedScene" id=16]
 [ext_resource path="res://scenes/objects/pc_tower/pickable_rams.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/objects/pc_tower/case.tscn" type="PackedScene" id=18]
-[ext_resource path="res://scenes/objects/pc_tower/pickable_gpu.tscn" type="PackedScene" id=19]
+[ext_resource path="res://addons/godot-xr-tools/functions/function_pointer.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/objects/pc_tower/pickable_gpu.tscn" type="PackedScene" id=20]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 100, 100 )
@@ -74,6 +74,8 @@ strafe = false
 
 [node name="FunctionPickup" parent="FPController/LeftHandController" index="3" instance=ExtResource( 11 )]
 
+[node name="FunctionPointer" parent="FPController/LeftHandController" index="4" instance=ExtResource( 19 )]
+
 [node name="RightHandController" parent="FPController" index="3"]
 visible = true
 
@@ -82,6 +84,8 @@ visible = true
 [node name="MovementTurn" parent="FPController/RightHandController" index="1" instance=ExtResource( 4 )]
 
 [node name="FunctionPickup" parent="FPController/RightHandController" index="2" instance=ExtResource( 11 )]
+
+[node name="FunctionPointer" parent="FPController/RightHandController" index="3" instance=ExtResource( 19 )]
 
 [node name="PlayerBody" parent="FPController" instance=ExtResource( 1 )]
 
@@ -124,10 +128,6 @@ material = SubResource( 7 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13, 1 )
 mesh = SubResource( 2 )
 
-[node name="PC" parent="StadablePlatform/Main Table" instance=ExtResource( 9 )]
-transform = Transform( -4.37114e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, -4.37114e-09, 0.0158972, 0.418012, -0.0830177 )
-visible = false
-
 [node name="Case" parent="StadablePlatform/Main Table" instance=ExtResource( 18 )]
 transform = Transform( -8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 0.0416854, 0.387807, -0.0856854 )
 
@@ -160,7 +160,7 @@ transform = Transform( 0.2, 0, -7.45058e-09, 0, 0.2, 0, 7.45058e-09, 0, 0.2, -1.
 [node name="PickableRAMs" parent="StadablePlatform/X_Neg_PC_Parts_table_Cube" instance=ExtResource( 17 )]
 transform = Transform( 0.137506, 0.145231, 6.34825e-09, 0, -8.74228e-09, 0.2, 0.145231, -0.137506, -6.01059e-09, -1.36853, 0.163059, 1.32708 )
 
-[node name="PickableGPU" parent="StadablePlatform/X_Neg_PC_Parts_table_Cube" instance=ExtResource( 19 )]
-transform = Transform( -0.2, 1.74846e-08, -7.45058e-09, -1.74846e-08, -0.2, 0, -7.45058e-09, -8.88178e-16, 0.2, 0.329319, 0.182257, -0.0689448 )
+[node name="PickableGPU" parent="StadablePlatform/X_Neg_PC_Parts_table_Cube" instance=ExtResource( 20 )]
+transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -1.482, 0.135, 1.816 )
 
 [editable path="FPController"]
