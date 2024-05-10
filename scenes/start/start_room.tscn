@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://default_env.tres" type="Environment" id=1]
 [ext_resource path="res://addons/godot-xr-tools/functions/function_teleport.tscn" type="PackedScene" id=2]
@@ -40,6 +40,14 @@ uv1_scale = Vector3( 15, 15, 15 )
 
 [sub_resource type="BoxShape" id=4]
 extents = Vector3( 50, 1, 50 )
+
+[sub_resource type="CylinderMesh" id=6]
+top_radius = 6.0
+bottom_radius = 6.0
+height = 0.3
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 0.0627451, 0.823529, 0.788235, 1 )
 
 [node name="StartRoom" type="Spatial"]
 script = ExtResource( 12 )
@@ -154,6 +162,11 @@ script = ExtResource( 12 )
 transform = Transform( -1, 0, -8.74228e-08, 0, 0.891187, 0, 8.74228e-08, 0, -1, 0, -0.44057, 0 )
 visible = false
 script = ExtResource( 12 )
+
+[node name="CSGMesh" type="CSGMesh" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.092, -43 )
+mesh = SubResource( 6 )
+material = SubResource( 7 )
 
 [connection signal="body_entered" from="StandablePlatform/QuitArea" to="." method="_on_QuitArea_body_entered"]
 [connection signal="body_entered" from="StandablePlatform/OptionsArea" to="." method="_on_OptionsArea_body_entered"]
