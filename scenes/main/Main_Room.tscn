@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://addons/godot-xr-tools/player/player_body.tscn" type="PackedScene" id=1]
 [ext_resource path="res://addons/godot-xr-tools/functions/movement_direct.tscn" type="PackedScene" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://scenes/objects/pc_tower/pickable_panel.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scenes/objects/pc_tower/pickable_power_supply.tscn" type="PackedScene" id=16]
 [ext_resource path="res://scenes/objects/pc_tower/pickable_rams.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/objects/pc_tower/case.tscn" type="PackedScene" id=18]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 100, 100 )
@@ -124,6 +125,10 @@ mesh = SubResource( 2 )
 
 [node name="PC" parent="StadablePlatform/Main Table" instance=ExtResource( 9 )]
 transform = Transform( -4.37114e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, -4.37114e-09, 0.00196642, 0.383861, -0.00204265 )
+visible = false
+
+[node name="Case" parent="StadablePlatform/Main Table" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14423, -4.78184 )
 
 [node name="X_Pos_PC_Parts_table_Cube" type="CSGMesh" parent="StadablePlatform"]
 transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1, 0.13, 0 )
