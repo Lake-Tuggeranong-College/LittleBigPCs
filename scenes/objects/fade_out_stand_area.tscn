@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="CylinderMesh" id=6]
+top_radius = 6.0
+bottom_radius = 6.0
+height = 0.3
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 0.0627451, 0.823529, 0.788235, 1 )
+
+[node name="FadeOutStandArea" type="CSGMesh"]
+mesh = SubResource( 6 )
+material = SubResource( 7 )

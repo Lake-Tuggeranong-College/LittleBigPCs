@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://default_env.tres" type="Environment" id=1]
 [ext_resource path="res://addons/godot-xr-tools/functions/function_teleport.tscn" type="PackedScene" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://scenes/objects/door.tscn" type="PackedScene" id=21]
 [ext_resource path="res://scenes/functions/scene_change.tscn" type="PackedScene" id=22]
 [ext_resource path="res://addons/godot-xr-tools/functions/function_pointer.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/objects/fade_out_stand_area.tscn" type="PackedScene" id=24]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 100, 100 )
@@ -40,14 +41,6 @@ uv1_scale = Vector3( 15, 15, 15 )
 
 [sub_resource type="BoxShape" id=4]
 extents = Vector3( 50, 1, 50 )
-
-[sub_resource type="CylinderMesh" id=6]
-top_radius = 6.0
-bottom_radius = 6.0
-height = 0.3
-
-[sub_resource type="SpatialMaterial" id=7]
-albedo_color = Color( 0.0627451, 0.823529, 0.788235, 1 )
 
 [node name="StartRoom" type="Spatial"]
 script = ExtResource( 12 )
@@ -134,6 +127,11 @@ script = ExtResource( 12 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.04128, 1.23116 )
 pixel_size = 0.065
 
+[node name="FadeOutStandArea" parent="StandablePlatform/QuitArea" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.79, 2.533 )
+visible = false
+invert_faces = true
+
 [node name="OptionsArea" parent="StandablePlatform" instance=ExtResource( 18 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45.987, 3.951, -23.555 )
 script = ExtResource( 12 )
@@ -146,6 +144,11 @@ pixel_size = 0.065
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -2.611, 4.15388 )
 visible = false
 
+[node name="FadeOutStandArea" parent="StandablePlatform/OptionsArea" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.79, 2.486 )
+visible = false
+invert_faces = true
+
 [node name="HelpArea" parent="StandablePlatform" instance=ExtResource( 20 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46, 3.951, 26.015 )
 script = ExtResource( 12 )
@@ -153,6 +156,11 @@ script = ExtResource( 12 )
 [node name="HelpText" parent="StandablePlatform/HelpArea" index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.041, 0 )
 pixel_size = 0.065
+
+[node name="FadeOutStandArea" parent="StandablePlatform/HelpArea" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.79, 2.464 )
+visible = false
+invert_faces = true
 
 [node name="DoorTriggerArea" parent="StandablePlatform" instance=ExtResource( 21 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.256, 49.2554 )
@@ -162,11 +170,6 @@ script = ExtResource( 12 )
 transform = Transform( -1, 0, -8.74228e-08, 0, 0.891187, 0, 8.74228e-08, 0, -1, 0, -0.44057, 0 )
 visible = false
 script = ExtResource( 12 )
-
-[node name="CSGMesh" type="CSGMesh" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.092, -43 )
-mesh = SubResource( 6 )
-material = SubResource( 7 )
 
 [connection signal="body_entered" from="StandablePlatform/QuitArea" to="." method="_on_QuitArea_body_entered"]
 [connection signal="body_entered" from="StandablePlatform/OptionsArea" to="." method="_on_OptionsArea_body_entered"]
