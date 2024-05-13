@@ -123,7 +123,7 @@ collision_layer = 1048576
 collision_mask = 1048576
 script = ExtResource( 2 )
 
-[node name="GPUSnap" type="MeshInstance" parent="Front Fan Holder/GPUBodySnapIn" index="0"]
+[node name="GPU" type="MeshInstance" parent="Front Fan Holder/GPUBodySnapIn" index="0"]
 transform = Transform( 1.00001, 0, 2.84217e-12, 0, 1, 0, 7.10543e-15, 0, 1, 0.245177, 0.079321, -0.312703 )
 visible = false
 mesh = SubResource( 1 )
@@ -138,7 +138,7 @@ collision_layer = 1048576
 collision_mask = 1048576
 script = ExtResource( 2 )
 
-[node name="MotherboardSnap" type="MeshInstance" parent="Front Fan Holder/MotherboardBodySnapIn" index="0"]
+[node name="Motherboard" type="MeshInstance" parent="Front Fan Holder/MotherboardBodySnapIn" index="0"]
 transform = Transform( 1, 0, 1.33582e-12, 0, 1, 0, 1.42109e-14, 0, 1, 0.701, -0.454, -0.313 )
 visible = false
 mesh = SubResource( 3 )
@@ -153,7 +153,7 @@ collision_layer = 1048576
 collision_mask = 1048576
 script = ExtResource( 2 )
 
-[node name="CPUSnap" type="MeshInstance" parent="Front Fan Holder/CPUBodySnapIn" index="0"]
+[node name="CPU" type="MeshInstance" parent="Front Fan Holder/CPUBodySnapIn" index="0"]
 transform = Transform( 1, 0, 4.54747e-13, 0, 1, 0, 7.10543e-15, 0, 1, 0.860677, -0.503101, -0.408886 )
 visible = false
 mesh = SubResource( 19 )
@@ -168,49 +168,52 @@ collision_layer = 1048576
 collision_mask = 1048576
 script = ExtResource( 2 )
 
-[node name="BackFan" type="MeshInstance" parent="Front Fan Holder/FanBodySnapIn" index="0"]
-transform = Transform( 1, 0, 1.02318e-12, 0, 1, 0, 7.10543e-15, 0, 1, -0.312942, -0.505511, -0.909148 )
+[node name="FanModel" type="Spatial" parent="Front Fan Holder/FanBodySnapIn" index="0"]
+transform = Transform( 1, 0, 5.68434e-14, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="BackFan" type="MeshInstance" parent="Front Fan Holder/FanBodySnapIn/FanModel" index="0"]
+transform = Transform( 1, 0, 1.0516e-12, 0, 1, 0, 1.42109e-14, 0, 1, -0.312942, -0.505511, -0.909148 )
 visible = false
 mesh = SubResource( 5 )
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 material/0 = SubResource( 6 )
 
-[node name="TopFan1" type="MeshInstance" parent="Front Fan Holder/FanBodySnapIn" index="1"]
-transform = Transform( -1.7899e-08, 2.44755, 1.44951e-12, -0.409481, -1.06986e-07, 0, 3.17637e-22, -1.42109e-14, 1, -0.0834783, -0.891639, 0.1953 )
+[node name="TopFan1" type="MeshInstance" parent="Front Fan Holder/FanBodySnapIn/FanModel" index="1"]
+transform = Transform( -1.7899e-08, 2.44755, 1.50635e-12, -0.409481, -1.06986e-07, 0, 2.11758e-22, -1.42109e-14, 1, -0.0834783, -0.891639, 0.1953 )
 visible = false
 mesh = SubResource( 7 )
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 material/0 = SubResource( 8 )
 
-[node name="TopFan2" type="MeshInstance" parent="Front Fan Holder/FanBodySnapIn" index="2"]
-transform = Transform( -1.7899e-08, 2.44755, 1.90425e-12, -0.409481, -1.06986e-07, 0, 3.17637e-22, -1.42109e-14, 1, -0.083, -0.891734, -0.478 )
+[node name="TopFan2" type="MeshInstance" parent="Front Fan Holder/FanBodySnapIn/FanModel" index="2"]
+transform = Transform( -1.7899e-08, 2.44755, 1.9611e-12, -0.409481, -1.06986e-07, 0, 2.11758e-22, -1.42109e-14, 1, -0.083, -0.891734, -0.478 )
 visible = false
 mesh = SubResource( 7 )
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 material/0 = SubResource( 8 )
 
-[node name="RightFan1" type="MeshInstance" parent="Front Fan Holder/FanBodySnapIn" index="3"]
-transform = Transform( 1, 0, 1.22213e-12, 0, 1, 0, 1.42109e-14, 0, 1, 0.0257914, 0.313067, 0.913292 )
+[node name="RightFan1" type="MeshInstance" parent="Front Fan Holder/FanBodySnapIn/FanModel" index="3"]
+transform = Transform( 1, 0, 1.27898e-12, 0, 1, 0, 1.42109e-14, 0, 1, 0.0257914, 0.313067, 0.913292 )
 visible = false
 mesh = SubResource( 9 )
 skeleton = NodePath("")
 material/0 = SubResource( 10 )
 
-[node name="RightFan2" type="MeshInstance" parent="Front Fan Holder/FanBodySnapIn" index="4"]
-transform = Transform( 1, 0, 1.62004e-12, 0, 1, 0, 1.42109e-14, 0, 1, 0.026, -0.186, 0.913 )
+[node name="RightFan2" type="MeshInstance" parent="Front Fan Holder/FanBodySnapIn/FanModel" index="4"]
+transform = Transform( 1, 0, 1.64846e-12, 0, 1, 0, 1.42109e-14, 0, 1, 0.026, -0.186, 0.913 )
 visible = false
 mesh = SubResource( 9 )
 skeleton = NodePath("")
 material/0 = SubResource( 10 )
 
-[node name="RightFan3" type="MeshInstance" parent="Front Fan Holder/FanBodySnapIn" index="5"]
-transform = Transform( 1.00001, 0, 1.90425e-12, 0, 1, 0, 1.42109e-14, 0, 1, 0.026, -0.689, 0.913 )
+[node name="RightFan3" type="MeshInstance" parent="Front Fan Holder/FanBodySnapIn/FanModel" index="5"]
+transform = Transform( 1.00001, 0, 1.9611e-12, 0, 1, 0, 1.42109e-14, 0, 1, 0.026, -0.689, 0.913 )
 visible = false
 mesh = SubResource( 9 )
 skeleton = NodePath("")
 material/0 = SubResource( 10 )
 
-[node name="FanHitBox" type="CollisionShape" parent="Front Fan Holder/FanBodySnapIn" index="6"]
+[node name="FanHitBox" type="CollisionShape" parent="Front Fan Holder/FanBodySnapIn" index="1"]
 transform = Transform( 1, 0, 1.13687e-13, 0, 1, 0, 7.10543e-15, 0, 1, 0, 0, 0 )
 shape = SubResource( 27 )
 
@@ -219,21 +222,24 @@ collision_layer = 1048576
 collision_mask = 1048576
 script = ExtResource( 2 )
 
-[node name="HHDSnap1" type="MeshInstance" parent="Front Fan Holder/HHDBodySnapIn" index="0"]
-transform = Transform( -1.82229e-08, -2.44004, 8.81073e-13, 0.416892, -1.06657e-07, 0, 0, -5.68434e-14, 1, 0.103354, 0.87, 0.661626 )
+[node name="HHDModel" type="Spatial" parent="Front Fan Holder/HHDBodySnapIn" index="0"]
+transform = Transform( 1, 0, 5.68434e-14, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="HHD1" type="MeshInstance" parent="Front Fan Holder/HHDBodySnapIn/HHDModel" index="0"]
+transform = Transform( -1.82229e-08, -2.44004, 9.37916e-13, 0.416892, -1.06657e-07, 0, 1.05879e-22, -4.26326e-14, 1, 0.103354, 0.87, 0.661626 )
 visible = false
 mesh = SubResource( 11 )
 skeleton = NodePath("")
 material/0 = SubResource( 12 )
 
-[node name="HHDSnap2" type="MeshInstance" parent="Front Fan Holder/HHDBodySnapIn" index="1"]
-transform = Transform( -1.82229e-08, -2.44004, 9.9476e-13, 0.416892, -1.06657e-07, 0, 0, -5.68434e-14, 1, 0.103, 0.74, 0.662 )
+[node name="HHD2" type="MeshInstance" parent="Front Fan Holder/HHDBodySnapIn/HHDModel" index="1"]
+transform = Transform( -1.82229e-08, -2.44004, 1.02318e-12, 0.416892, -1.06657e-07, 0, 1.05879e-22, -4.26326e-14, 1, 0.103, 0.74, 0.662 )
 visible = false
 mesh = SubResource( 11 )
 skeleton = NodePath("")
 material/0 = SubResource( 12 )
 
-[node name="HHDHitBox" type="CollisionShape" parent="Front Fan Holder/HHDBodySnapIn" index="2"]
+[node name="HHDHitBox" type="CollisionShape" parent="Front Fan Holder/HHDBodySnapIn" index="1"]
 shape = SubResource( 28 )
 
 [node name="PowerSupplyBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="6"]
@@ -241,21 +247,24 @@ collision_layer = 1048576
 collision_mask = 1048576
 script = ExtResource( 2 )
 
-[node name="ActualPowerSupply" type="MeshInstance" parent="Front Fan Holder/PowerSupplyBodySnapIn" index="0"]
-transform = Transform( 1, 0, 1.19371e-12, 0, 1, 0, 1.42109e-14, 0, 1, 0.801116, 0.559524, -0.727445 )
+[node name="PowerSupplyModel" type="Spatial" parent="Front Fan Holder/PowerSupplyBodySnapIn" index="0"]
+transform = Transform( 1, 0, 5.68434e-14, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="ActualPowerSupply" type="MeshInstance" parent="Front Fan Holder/PowerSupplyBodySnapIn/PowerSupplyModel" index="0"]
+transform = Transform( 1, 0, 1.27898e-12, 0, 1, 0, 1.42109e-14, 0, 1, 0.801116, 0.559524, -0.727445 )
 visible = false
 mesh = SubResource( 15 )
 skeleton = NodePath("")
 material/0 = SubResource( 16 )
 
-[node name="PowerSupplyModelWithText" type="MeshInstance" parent="Front Fan Holder/PowerSupplyBodySnapIn" index="1"]
-transform = Transform( 1.00001, 0, 2.55795e-12, 0, 1, 0, 7.10543e-15, 0, 1, 0.035001, 0.773881, -0.379907 )
+[node name="PowerSupplyModelWithText" type="MeshInstance" parent="Front Fan Holder/PowerSupplyBodySnapIn/PowerSupplyModel" index="1"]
+transform = Transform( 1.00001, 0, 2.67164e-12, 0, 1, 0, 7.10543e-15, 0, 1, 0.035001, 0.773881, -0.379907 )
 visible = false
 mesh = SubResource( 13 )
 skeleton = NodePath("")
 material/0 = SubResource( 14 )
 
-[node name="PowerSupplyHitBox" type="CollisionShape" parent="Front Fan Holder/PowerSupplyBodySnapIn" index="2"]
+[node name="PowerSupplyHitBox" type="CollisionShape" parent="Front Fan Holder/PowerSupplyBodySnapIn" index="1"]
 shape = SubResource( 29 )
 
 [node name="RAMBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="7"]
@@ -263,21 +272,24 @@ collision_layer = 1048576
 collision_mask = 1048576
 script = ExtResource( 2 )
 
-[node name="RAMSnap1" type="MeshInstance" parent="Front Fan Holder/RAMBodySnapIn" index="0"]
-transform = Transform( 1, 0, 1.16529e-12, 0, 1, 0, 2.84217e-14, 0, 1, 0.775543, -0.426583, 0.034298 )
+[node name="RAMModel" type="Spatial" parent="Front Fan Holder/RAMBodySnapIn" index="0"]
+transform = Transform( 1, 0, 5.68434e-14, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="RAM1" type="MeshInstance" parent="Front Fan Holder/RAMBodySnapIn/RAMModel" index="0"]
+transform = Transform( 1, 0, 1.22213e-12, 0, 1, 0, 2.13163e-14, 0, 1, 0.775543, -0.426583, 0.034298 )
 visible = false
 mesh = SubResource( 17 )
 skeleton = NodePath("")
 material/0 = SubResource( 18 )
 
-[node name="RAMSnap2" type="MeshInstance" parent="Front Fan Holder/RAMBodySnapIn" index="1"]
-transform = Transform( 1, 0, 1.22213e-12, 0, 1, 0, 2.84217e-14, 0, 1, 0.775543, -0.426583, 0.128099 )
+[node name="RAM2" type="MeshInstance" parent="Front Fan Holder/RAMBodySnapIn/RAMModel" index="1"]
+transform = Transform( 1, 0, 1.27898e-12, 0, 1, 0, 2.13163e-14, 0, 1, 0.775543, -0.426583, 0.128099 )
 visible = false
 mesh = SubResource( 17 )
 skeleton = NodePath("")
 material/0 = SubResource( 18 )
 
-[node name="RAMHitBox" type="CollisionShape" parent="Front Fan Holder/RAMBodySnapIn" index="2"]
+[node name="RAMHitBox" type="CollisionShape" parent="Front Fan Holder/RAMBodySnapIn" index="1"]
 shape = SubResource( 30 )
 
 [connection signal="pointer_entered" from="Front Fan Holder/PanelBodySnapIn" to="Front Fan Holder/PanelBodySnapIn" method="_on_PanelBodySnapIn_pointer_entered"]
