@@ -118,6 +118,7 @@ transform = Transform( 1, 0, 5.11591e-13, 0, 1, 0, 1.42109e-14, 0, 1, -1.00618, 
 shape = SubResource( 23 )
 
 [node name="GPUBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="1"]
+script = ExtResource( 2 )
 
 [node name="GPUSnap" type="MeshInstance" parent="Front Fan Holder/GPUBodySnapIn" index="0"]
 transform = Transform( 1.00001, 0, 2.84217e-12, 0, 1, 0, 7.10543e-15, 0, 1, 0.245177, 0.079321, -0.312703 )
@@ -130,6 +131,7 @@ material/0 = SubResource( 2 )
 shape = SubResource( 24 )
 
 [node name="MotherboardBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="2"]
+script = ExtResource( 2 )
 
 [node name="MotherboardSnap" type="MeshInstance" parent="Front Fan Holder/MotherboardBodySnapIn" index="0"]
 transform = Transform( 1, 0, 1.33582e-12, 0, 1, 0, 1.42109e-14, 0, 1, 0.701, -0.454, -0.313 )
@@ -142,6 +144,7 @@ material/0 = SubResource( 4 )
 shape = SubResource( 25 )
 
 [node name="CPUBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="3"]
+script = ExtResource( 2 )
 
 [node name="CPUSnap" type="MeshInstance" parent="Front Fan Holder/CPUBodySnapIn" index="0"]
 transform = Transform( 1, 0, 4.54747e-13, 0, 1, 0, 7.10543e-15, 0, 1, 0.860677, -0.503101, -0.408886 )
@@ -154,6 +157,7 @@ material/0 = SubResource( 20 )
 shape = SubResource( 26 )
 
 [node name="FanBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="4"]
+script = ExtResource( 2 )
 
 [node name="BackFan" type="MeshInstance" parent="Front Fan Holder/FanBodySnapIn" index="0"]
 transform = Transform( 1, 0, 1.02318e-12, 0, 1, 0, 7.10543e-15, 0, 1, -0.312942, -0.505511, -0.909148 )
@@ -202,6 +206,7 @@ transform = Transform( 1, 0, 1.13687e-13, 0, 1, 0, 7.10543e-15, 0, 1, 0, 0, 0 )
 shape = SubResource( 27 )
 
 [node name="HHDBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="5"]
+script = ExtResource( 2 )
 
 [node name="HHDSnap1" type="MeshInstance" parent="Front Fan Holder/HHDBodySnapIn" index="0"]
 transform = Transform( -1.82229e-08, -2.44004, 8.81073e-13, 0.416892, -1.06657e-07, 0, 0, -5.68434e-14, 1, 0.103354, 0.87, 0.661626 )
@@ -221,6 +226,7 @@ material/0 = SubResource( 12 )
 shape = SubResource( 28 )
 
 [node name="PowerSupplyBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="6"]
+script = ExtResource( 2 )
 
 [node name="ActualPowerSupply" type="MeshInstance" parent="Front Fan Holder/PowerSupplyBodySnapIn" index="0"]
 transform = Transform( 1, 0, 1.19371e-12, 0, 1, 0, 1.42109e-14, 0, 1, 0.801116, 0.559524, -0.727445 )
@@ -240,6 +246,7 @@ material/0 = SubResource( 14 )
 shape = SubResource( 29 )
 
 [node name="RAMBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="7"]
+script = ExtResource( 2 )
 
 [node name="RAMSnap1" type="MeshInstance" parent="Front Fan Holder/RAMBodySnapIn" index="0"]
 transform = Transform( 1, 0, 1.16529e-12, 0, 1, 0, 2.84217e-14, 0, 1, 0.775543, -0.426583, 0.034298 )
