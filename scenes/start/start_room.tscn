@@ -51,6 +51,19 @@ transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0
 
 [node name="VRCommonShaderCache" parent="FPController/ARVRCamera" index="0" instance=ExtResource( 8 )]
 
+[node name="Label" type="Label" parent="FPController/ARVRCamera" index="1"]
+visible = false
+anchor_left = 0.45
+anchor_right = 0.45
+margin_left = -310.8
+margin_right = -199.8
+margin_bottom = 14.0
+rect_scale = Vector2( 6, 6 )
+custom_colors/font_color = Color( 0.780392, 1, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.0509804, 0.294118, 0, 1 )
+text = "PC has been built"
+align = 1
+
 [node name="LeftHandController" parent="FPController" index="2"]
 visible = true
 
@@ -142,7 +155,6 @@ pixel_size = 0.065
 
 [node name="OptionPopUp" parent="StandablePlatform/OptionsArea" instance=ExtResource( 19 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -2.611, 4.15388 )
-visible = false
 
 [node name="FadeOutStandArea" parent="StandablePlatform/OptionsArea" instance=ExtResource( 24 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.79, 2.486 )
