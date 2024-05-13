@@ -404,6 +404,10 @@ import=false
 
 common/drop_mouse_on_gui_input_disabled=true
 
+[layer_names]
+
+3d_physics/layer_21="Pointable Objects"
+
 [mono]
 
 project/assembly_name="LittleBigPCs"
