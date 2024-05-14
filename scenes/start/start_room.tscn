@@ -52,7 +52,6 @@ transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0
 [node name="VRCommonShaderCache" parent="FPController/ARVRCamera" index="0" instance=ExtResource( 8 )]
 
 [node name="Label" type="Label" parent="FPController/ARVRCamera" index="1"]
-visible = false
 anchor_left = 0.45
 anchor_right = 0.45
 margin_left = -310.8
