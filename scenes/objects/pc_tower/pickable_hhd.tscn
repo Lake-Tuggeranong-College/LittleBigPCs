@@ -32,10 +32,11 @@ closed_pose = ExtResource( 8 )
 [node name="PickableHHD" instance=ExtResource( 2 )]
 
 [node name="CollisionShape" parent="." index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0854352, 0 )
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.0172643, 0 )
 shape = SubResource( 1 )
 
 [node name="HHD" parent="." index="1" instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
 
 [node name="Cube001" parent="HHD" index="0"]
 transform = Transform( -0.445, 0, -1.22276e-07, 0, 0.045, 0, 1.73289e-07, 0, -0.314, 0, 0, 0 )
@@ -44,12 +45,12 @@ transform = Transform( -0.445, 0, -1.22276e-07, 0, 0.045, 0, 1.73289e-07, 0, -0.
 script = ExtResource( 3 )
 
 [node name="HighlightMesh1" type="MeshInstance" parent="XRToolsHighlightVisible" index="0"]
-transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0 )
+transform = Transform( -8.74228e-09, 0.2, 0, -0.2, -8.74228e-09, 0, 0, 0, 0.2, 0, 0, 0 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
 [node name="HighlightMesh2" type="MeshInstance" parent="XRToolsHighlightVisible" index="1"]
-transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0.173366, 0 )
+transform = Transform( -8.74228e-09, 0.2, 0, -0.2, -8.74228e-09, 0, 0, 0, 0.2, 0, 0.0348647, 0 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 

@@ -32,10 +32,11 @@ closed_pose = ExtResource( 8 )
 [node name="PickablePowerSupply" instance=ExtResource( 2 )]
 
 [node name="CollisionShape" parent="." index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.094035, 0.0374772, -0.441201 )
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.094035, 0.00700788, -0.0905268 )
 shape = SubResource( 1 )
 
 [node name="PowerSupply" parent="." index="1" instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
 
 [node name="ActualPowerSupply" parent="PowerSupply" index="0"]
 transform = Transform( -0.008, 0, 0, 0, -0.008, 0, 0, 0, -0.018, 0.338069, 0.266903, -0.433933 )
@@ -47,7 +48,7 @@ transform = Transform( 0.0309998, 9.87481e-05, -4.38281e-05, -4.09683e-05, -0.00
 script = ExtResource( 3 )
 
 [node name="HighlightMesh" type="MeshInstance" parent="XRToolsHighlightVisible" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0931615, 0.0321306, -0.440907 )
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.0931615, 0.00720118, -0.0896915 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 

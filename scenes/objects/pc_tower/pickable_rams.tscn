@@ -32,10 +32,11 @@ closed_pose = ExtResource( 8 )
 [node name="PickableRAMs" instance=ExtResource( 2 )]
 
 [node name="CollisionShape" parent="." index="0"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0114835, -0.215441, 0.065 )
+transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, 0.0114835, -0.0429635, 0.0137302 )
 shape = SubResource( 1 )
 
 [node name="RAMs" parent="." index="1" instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
 
 [node name="RamStick1" parent="RAMs" index="0"]
 transform = Transform( 3.99646e-05, -0.088, 0, 0.088, 3.99646e-05, 0, 0, 0, 0.016, 0, 0, 0.13 )
@@ -47,12 +48,12 @@ transform = Transform( 3.99646e-05, -0.088, 0, 0.088, 3.99646e-05, 0, 0, 0, 0.01
 script = ExtResource( 3 )
 
 [node name="HighlightMesh1" type="MeshInstance" parent="XRToolsHighlightVisible" index="0"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.011793, -0.216234, 0 )
+transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, 0.011793, -0.0433485, 0 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
 [node name="HighlightMesh2" type="MeshInstance" parent="XRToolsHighlightVisible" index="1"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.011793, -0.216234, 0.130429 )
+transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, 0.011793, -0.0433485, 0.0260303 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 

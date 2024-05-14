@@ -32,10 +32,11 @@ closed_pose = ExtResource( 8 )
 [node name="PickableMotherboard" instance=ExtResource( 2 )]
 
 [node name="CollisionShape" parent="." index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.120201, 0, -0.00570454 )
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.0223633, 0, -0.00570454 )
 shape = SubResource( 1 )
 
 [node name="MotherBoard" parent="." index="1" instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
 
 [node name="Cube" parent="MotherBoard" index="0"]
 transform = Transform( -0.335, 0, -5.05836e-08, 0, 0.335, 0, 5.05836e-08, 0, -0.335, 0, 0, 0 )
@@ -44,7 +45,7 @@ transform = Transform( -0.335, 0, -5.05836e-08, 0, 0.335, 0, 5.05836e-08, 0, -0.
 script = ExtResource( 3 )
 
 [node name="HighlightMesh" type="MeshInstance" parent="XRToolsHighlightVisible" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.119599, 0, 0 )
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.020489, 0.000929415, 0 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
