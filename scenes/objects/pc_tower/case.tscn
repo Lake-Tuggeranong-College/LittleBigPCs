@@ -1,7 +1,14 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://assets/pc_tower/case.glb" type="PackedScene" id=1]
-[ext_resource path="res://scripts/snap_in_pc_parts.gd" type="Script" id=2]
+[ext_resource path="res://scripts/pc_parts/panel_snap_in.gd" type="Script" id=2]
+[ext_resource path="res://scripts/pc_parts/gpu_snap_in.gd" type="Script" id=3]
+[ext_resource path="res://scripts/pc_parts/motherboard_snap_in.gd" type="Script" id=4]
+[ext_resource path="res://scripts/pc_parts/cpu_snap_in.gd" type="Script" id=5]
+[ext_resource path="res://scripts/pc_parts/fan_snap_in.gd" type="Script" id=6]
+[ext_resource path="res://scripts/pc_parts/hhd_snap_in.gd" type="Script" id=7]
+[ext_resource path="res://scripts/pc_parts/ram_snap_in.gd" type="Script" id=8]
+[ext_resource path="res://scripts/pc_parts/power_supply_snap_in.gd" type="Script" id=9]
 
 [sub_resource type="CubeMesh" id=21]
 flip_faces = true
@@ -121,7 +128,7 @@ shape = SubResource( 23 )
 [node name="GPUBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="1"]
 collision_layer = 1048576
 collision_mask = 1048576
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 
 [node name="GPU" type="MeshInstance" parent="Front Fan Holder/GPUBodySnapIn" index="0"]
 transform = Transform( 1.00001, 0, 2.84217e-12, 0, 1, 0, 7.10543e-15, 0, 1, 0.245177, 0.079321, -0.312703 )
@@ -136,7 +143,7 @@ shape = SubResource( 24 )
 [node name="MotherboardBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="2"]
 collision_layer = 1048576
 collision_mask = 1048576
-script = ExtResource( 2 )
+script = ExtResource( 4 )
 
 [node name="Motherboard" type="MeshInstance" parent="Front Fan Holder/MotherboardBodySnapIn" index="0"]
 transform = Transform( 1, 0, 1.33582e-12, 0, 1, 0, 1.42109e-14, 0, 1, 0.701, -0.454, -0.313 )
@@ -151,7 +158,7 @@ shape = SubResource( 25 )
 [node name="CPUBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="3"]
 collision_layer = 1048576
 collision_mask = 1048576
-script = ExtResource( 2 )
+script = ExtResource( 5 )
 
 [node name="CPU" type="MeshInstance" parent="Front Fan Holder/CPUBodySnapIn" index="0"]
 transform = Transform( 1, 0, 4.54747e-13, 0, 1, 0, 7.10543e-15, 0, 1, 0.860677, -0.503101, -0.408886 )
@@ -166,7 +173,7 @@ shape = SubResource( 26 )
 [node name="FanBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="4"]
 collision_layer = 1048576
 collision_mask = 1048576
-script = ExtResource( 2 )
+script = ExtResource( 6 )
 
 [node name="FanModel" type="Spatial" parent="Front Fan Holder/FanBodySnapIn" index="0"]
 transform = Transform( 1, 0, 5.68434e-14, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
@@ -220,7 +227,7 @@ shape = SubResource( 27 )
 [node name="HHDBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="5"]
 collision_layer = 1048576
 collision_mask = 1048576
-script = ExtResource( 2 )
+script = ExtResource( 7 )
 
 [node name="HHDModel" type="Spatial" parent="Front Fan Holder/HHDBodySnapIn" index="0"]
 transform = Transform( 1, 0, 5.68434e-14, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
@@ -245,7 +252,7 @@ shape = SubResource( 28 )
 [node name="PowerSupplyBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="6"]
 collision_layer = 1048576
 collision_mask = 1048576
-script = ExtResource( 2 )
+script = ExtResource( 9 )
 
 [node name="PowerSupplyModel" type="Spatial" parent="Front Fan Holder/PowerSupplyBodySnapIn" index="0"]
 transform = Transform( 1, 0, 5.68434e-14, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
@@ -270,7 +277,7 @@ shape = SubResource( 29 )
 [node name="RAMBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="7"]
 collision_layer = 1048576
 collision_mask = 1048576
-script = ExtResource( 2 )
+script = ExtResource( 8 )
 
 [node name="RAMModel" type="Spatial" parent="Front Fan Holder/RAMBodySnapIn" index="0"]
 transform = Transform( 1, 0, 5.68434e-14, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
@@ -294,17 +301,17 @@ shape = SubResource( 30 )
 
 [connection signal="pointer_entered" from="Front Fan Holder/PanelBodySnapIn" to="Front Fan Holder/PanelBodySnapIn" method="_on_PanelBodySnapIn_pointer_entered"]
 [connection signal="pointer_exited" from="Front Fan Holder/PanelBodySnapIn" to="Front Fan Holder/PanelBodySnapIn" method="_on_PanelBodySnapIn_pointer_exited"]
-[connection signal="pointer_entered" from="Front Fan Holder/GPUBodySnapIn" to="Front Fan Holder/PanelBodySnapIn" method="_on_GPUBodySnapIn_pointer_entered"]
-[connection signal="pointer_exited" from="Front Fan Holder/GPUBodySnapIn" to="Front Fan Holder/PanelBodySnapIn" method="_on_GPUBodySnapIn_pointer_exited"]
-[connection signal="pointer_entered" from="Front Fan Holder/MotherboardBodySnapIn" to="Front Fan Holder/PanelBodySnapIn" method="_on_MotherboardBodySnapIn_pointer_entered"]
-[connection signal="pointer_exited" from="Front Fan Holder/MotherboardBodySnapIn" to="Front Fan Holder/PanelBodySnapIn" method="_on_MotherboardBodySnapIn_pointer_exited"]
-[connection signal="pointer_entered" from="Front Fan Holder/CPUBodySnapIn" to="Front Fan Holder/PanelBodySnapIn" method="_on_CPUBodySnapIn_pointer_entered"]
-[connection signal="pointer_exited" from="Front Fan Holder/CPUBodySnapIn" to="Front Fan Holder/PanelBodySnapIn" method="_on_CPUBodySnapIn_pointer_exited"]
-[connection signal="pointer_entered" from="Front Fan Holder/FanBodySnapIn" to="Front Fan Holder/PanelBodySnapIn" method="_on_FanBodySnapIn_pointer_entered"]
-[connection signal="pointer_exited" from="Front Fan Holder/FanBodySnapIn" to="Front Fan Holder/PanelBodySnapIn" method="_on_FanBodySnapIn_pointer_exited"]
-[connection signal="pointer_entered" from="Front Fan Holder/HHDBodySnapIn" to="Front Fan Holder/PanelBodySnapIn" method="_on_HHDBodySnapIn_pointer_entered"]
-[connection signal="pointer_exited" from="Front Fan Holder/HHDBodySnapIn" to="Front Fan Holder/PanelBodySnapIn" method="_on_HHDBodySnapIn_pointer_exited"]
-[connection signal="pointer_entered" from="Front Fan Holder/PowerSupplyBodySnapIn" to="Front Fan Holder/PanelBodySnapIn" method="_on_PowerSupplyBodySnapIn_pointer_entered"]
-[connection signal="pointer_exited" from="Front Fan Holder/PowerSupplyBodySnapIn" to="Front Fan Holder/PanelBodySnapIn" method="_on_PowerSupplyBodySnapIn_pointer_exited"]
-[connection signal="pointer_entered" from="Front Fan Holder/RAMBodySnapIn" to="Front Fan Holder/PanelBodySnapIn" method="_on_RAMBodySnapIn_pointer_entered"]
-[connection signal="pointer_exited" from="Front Fan Holder/RAMBodySnapIn" to="Front Fan Holder/PanelBodySnapIn" method="_on_RAMBodySnapIn_pointer_exited"]
+[connection signal="pointer_entered" from="Front Fan Holder/GPUBodySnapIn" to="Front Fan Holder/GPUBodySnapIn" method="_on_GPUBodySnapIn_pointer_entered"]
+[connection signal="pointer_exited" from="Front Fan Holder/GPUBodySnapIn" to="Front Fan Holder/GPUBodySnapIn" method="_on_GPUBodySnapIn_pointer_exited"]
+[connection signal="pointer_entered" from="Front Fan Holder/MotherboardBodySnapIn" to="Front Fan Holder/MotherboardBodySnapIn" method="_on_MotherboardBodySnapIn_pointer_entered"]
+[connection signal="pointer_exited" from="Front Fan Holder/MotherboardBodySnapIn" to="Front Fan Holder/MotherboardBodySnapIn" method="_on_MotherboardBodySnapIn_pointer_exited"]
+[connection signal="pointer_entered" from="Front Fan Holder/CPUBodySnapIn" to="Front Fan Holder/CPUBodySnapIn" method="_on_CPUBodySnapIn_pointer_entered"]
+[connection signal="pointer_exited" from="Front Fan Holder/CPUBodySnapIn" to="Front Fan Holder/CPUBodySnapIn" method="_on_CPUBodySnapIn_pointer_exited"]
+[connection signal="pointer_entered" from="Front Fan Holder/FanBodySnapIn" to="Front Fan Holder/FanBodySnapIn" method="_on_FanBodySnapIn_pointer_entered"]
+[connection signal="pointer_exited" from="Front Fan Holder/FanBodySnapIn" to="Front Fan Holder/FanBodySnapIn" method="_on_FanBodySnapIn_pointer_exited"]
+[connection signal="pointer_entered" from="Front Fan Holder/HHDBodySnapIn" to="Front Fan Holder/HHDBodySnapIn" method="_on_HHDBodySnapIn_pointer_entered"]
+[connection signal="pointer_exited" from="Front Fan Holder/HHDBodySnapIn" to="Front Fan Holder/HHDBodySnapIn" method="_on_HHDBodySnapIn_pointer_exited"]
+[connection signal="pointer_entered" from="Front Fan Holder/PowerSupplyBodySnapIn" to="Front Fan Holder/PowerSupplyBodySnapIn" method="_on_PowerSupplyBodySnapIn_pointer_entered"]
+[connection signal="pointer_exited" from="Front Fan Holder/PowerSupplyBodySnapIn" to="Front Fan Holder/PowerSupplyBodySnapIn" method="_on_PowerSupplyBodySnapIn_pointer_exited"]
+[connection signal="pointer_entered" from="Front Fan Holder/RAMBodySnapIn" to="Front Fan Holder/RAMBodySnapIn" method="_on_RAMBodySnapIn_pointer_entered"]
+[connection signal="pointer_exited" from="Front Fan Holder/RAMBodySnapIn" to="Front Fan Holder/RAMBodySnapIn" method="_on_RAMBodySnapIn_pointer_exited"]
