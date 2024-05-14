@@ -32,10 +32,11 @@ closed_pose = ExtResource( 8 )
 [node name="PickableCPU" instance=ExtResource( 2 )]
 
 [node name="CollisionShape" parent="." index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00294828, 0, 0 )
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.00294828, 0, 0 )
 shape = SubResource( 1 )
 
 [node name="CPU" parent="." index="1" instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
 
 [node name="AMD_Ryzen_Threadripper_Ex_low" parent="CPU" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
@@ -47,7 +48,7 @@ transform = Transform( -2.60083e-08, -0.497, -2.17246e-08, 0, -2.17246e-08, 0.49
 script = ExtResource( 3 )
 
 [node name="HighlightMesh" type="MeshInstance" parent="XRToolsHighlightVisible" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00321627, 0, 0 )
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.00321627, 0, 0 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 

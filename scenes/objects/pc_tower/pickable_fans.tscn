@@ -48,10 +48,11 @@ closed_pose = ExtResource( 8 )
 [node name="PickableFans" instance=ExtResource( 2 )]
 
 [node name="CollisionShape" parent="." index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0776103, -0.543017, -1.0282 )
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.546414, -0.107584, -0.205 )
 shape = SubResource( 1 )
 
 [node name="Fans" parent="." index="1" instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
 
 [node name="Cube049" parent="Fans" index="0"]
 transform = Transform( 0.307, 0, 0, 0, 0.307, 0, 0, 0, 0.025, 0, 0, 0 )
@@ -60,18 +61,18 @@ transform = Transform( 0.307, 0, 0, 0, 0.307, 0, 0, 0, 0.025, 0, 0, 0 )
 script = ExtResource( 3 )
 
 [node name="HighlightMesh1" type="MeshInstance" parent="XRToolsHighlightVisible" index="0"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -0.678686, -0.005 )
+transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, 0, -0.132955, -0.00166977 )
 mesh = SubResource( 6 )
 material/0 = SubResource( 7 )
 
 [node name="HighlightMesh2" type="MeshInstance" parent="XRToolsHighlightVisible" index="1"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.156703, 0.0296296, -2.06726 )
+transform = Transform( -8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -0.0311084, 0.00697077, -0.413204 )
 mesh = SubResource( 2 )
 skeleton = NodePath("")
 material/0 = SubResource( 3 )
 
 [node name="HighlightMesh3" type="MeshInstance" parent="XRToolsHighlightVisible" index="2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0749047, 0.513371, -1.14132 )
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.0155529, 0.102553, -0.228199 )
 mesh = SubResource( 8 )
 material/0 = SubResource( 9 )
 
