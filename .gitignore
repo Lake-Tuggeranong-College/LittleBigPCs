@@ -46,3 +46,5 @@ mono_crash.*.json
 
 # Do not ignore README
 !README
+
+**/.DS_Store
