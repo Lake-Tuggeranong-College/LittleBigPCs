@@ -352,6 +352,11 @@ func _button_released() -> void:
 			target.emit_signal("pointer_released", last_collided_at)
 		elif target.has_method("pointer_released"):
 			target.pointer_released(last_collided_at)
+			
+			# 1. is the Raycast colliding? -->  $RayCast.is_colliding() 
+			# 2. link the Collider to Hit_Box --> Hit_Box = $RayCast.get_collider()
+			# 3. Check if the Hit_Box matches the same name of the  "PC part" in hand -->  if "Hit_Box[PC part]" in collidedObject.collider.name:
+			# 4. Connect/send signals to change Pos,rotaion. and scale to match the "Hit-Box[PC part]" 
 
 		# unset target
 		target = null
