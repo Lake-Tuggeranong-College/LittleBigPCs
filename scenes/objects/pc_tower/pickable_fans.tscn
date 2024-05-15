@@ -48,7 +48,7 @@ closed_pose = ExtResource( 8 )
 [node name="PickableFans" instance=ExtResource( 2 )]
 
 [node name="CollisionShape" parent="." index="0"]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.546414, -0.107584, -0.205 )
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.0242255, -0.107584, -0.205 )
 shape = SubResource( 1 )
 
 [node name="Fans" parent="." index="1" instance=ExtResource( 1 )]
