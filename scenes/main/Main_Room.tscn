@@ -170,7 +170,7 @@ mesh = SubResource( 3 )
 material = SubResource( 14 )
 
 [node name="PickablePowerSupply" parent="StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube" instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.278752, 0.163, 0.0967264 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.305737, 0.174967, -0.00374269 )
 
 [node name="PickableRAMs" parent="StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube" instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.0335629, 0.163059, 0.0394635 )
