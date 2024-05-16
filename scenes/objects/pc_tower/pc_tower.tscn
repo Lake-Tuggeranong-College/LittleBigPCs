@@ -34,9 +34,6 @@ visible = false
 [node name="Cube" parent="." index="7"]
 transform = Transform( -0.668584, 0, -5.84494e-08, 0, 0.668584, 0, 5.84494e-08, 0, -0.668584, 0.853566, -0.0905929, -0.866579 )
 
-[node name="AMD_Ryzen_Threadripper_Ex_low" parent="." index="8"]
-visible = false
-
 [node name="Plane001" parent="AMD_Ryzen_Threadripper_Ex_low" index="0"]
 transform = Transform( 0, -0.992712, 0, 0, 0, 0.992712, -1.19, 0, 0, -9.81405, -1.59353, -1.88581 )
 

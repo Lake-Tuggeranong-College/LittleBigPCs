@@ -1,24 +1,14 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://assets/pc_tower/case.glb" type="PackedScene" id=1]
 [ext_resource path="res://scenes/snaps/gpu_snap_zone.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/snaps/motherboard_snap_zone.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scripts/snap_zones/cpu_snap_in.gd" type="Script" id=5]
+[ext_resource path="res://scenes/snaps/cpu_snap_zone.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scripts/snap_zones/fan_snap_in.gd" type="Script" id=6]
 [ext_resource path="res://scripts/snap_zones/hhd_snap_in.gd" type="Script" id=7]
 [ext_resource path="res://scripts/snap_zones/ram_snap_in.gd" type="Script" id=8]
 [ext_resource path="res://scripts/snap_zones/power_supply_snap_in.gd" type="Script" id=9]
 [ext_resource path="res://scenes/snaps/panel_snap_zone.tscn" type="PackedScene" id=10]
-
-[sub_resource type="CubeMesh" id=19]
-flip_faces = true
-size = Vector3( 0.05, 0.1, 0.1 )
-
-[sub_resource type="SpatialMaterial" id=20]
-flags_unshaded = true
-
-[sub_resource type="BoxShape" id=26]
-extents = Vector3( 0.055, 0.055, 0.055 )
 
 [sub_resource type="CubeMesh" id=5]
 flip_faces = true
@@ -83,23 +73,7 @@ transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
 [node name="Front Fan Holder" parent="." index="0"]
 transform = Transform( 0.477, 0, 1.66095e-07, 0, -1.168, 0, -7.2025e-08, 0, 1.1, 0, 0, 0 )
 
-[node name="CPUBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="0"]
-collision_layer = 1048576
-collision_mask = 1048576
-script = ExtResource( 5 )
-
-[node name="CPU" type="MeshInstance" parent="Front Fan Holder/CPUBodySnapIn" index="0"]
-transform = Transform( 1, 0, 4.54747e-13, 0, 1, 0, 7.10543e-15, 0, 1, 0.860677, -0.503101, -0.408886 )
-visible = false
-mesh = SubResource( 19 )
-skeleton = NodePath("../..")
-material/0 = SubResource( 20 )
-
-[node name="CPUHitBox" type="CollisionShape" parent="Front Fan Holder/CPUBodySnapIn" index="1"]
-transform = Transform( 1, 0, 1.13687e-13, 0, 1, 0, 7.10543e-15, 0, 1, 0.861, -0.506329, -0.409 )
-shape = SubResource( 26 )
-
-[node name="FanBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="1"]
+[node name="FanBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="0"]
 collision_layer = 1048576
 collision_mask = 1048576
 script = ExtResource( 6 )
@@ -154,7 +128,7 @@ transform = Transform( 1, 0, 1.13687e-13, 0, 1, 0, 7.10543e-15, 0, 1, 0, 0, 0 )
 visible = false
 shape = SubResource( 27 )
 
-[node name="HHDBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="2"]
+[node name="HHDBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="1"]
 collision_layer = 1048576
 collision_mask = 1048576
 script = ExtResource( 7 )
@@ -180,7 +154,7 @@ material/0 = SubResource( 12 )
 visible = false
 shape = SubResource( 28 )
 
-[node name="PowerSupplyBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="3"]
+[node name="PowerSupplyBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="2"]
 collision_layer = 1048576
 collision_mask = 1048576
 script = ExtResource( 9 )
@@ -206,7 +180,7 @@ material/0 = SubResource( 14 )
 visible = false
 shape = SubResource( 29 )
 
-[node name="RAMBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="4"]
+[node name="RAMBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="3"]
 collision_layer = 1048576
 collision_mask = 1048576
 script = ExtResource( 8 )
@@ -242,9 +216,12 @@ visible = false
 
 [node name="MotherBoardSnapZone" parent="." index="3" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.46623, 0.0970556, -0.264641 )
+visible = false
 
-[connection signal="pointer_entered" from="Front Fan Holder/CPUBodySnapIn" to="Front Fan Holder/CPUBodySnapIn" method="_on_CPUBodySnapIn_pointer_entered"]
-[connection signal="pointer_exited" from="Front Fan Holder/CPUBodySnapIn" to="Front Fan Holder/CPUBodySnapIn" method="_on_CPUBodySnapIn_pointer_exited"]
+[node name="CPUSnapZone" parent="." index="4" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.461524, 0.44942, -0.255801 )
+visible = false
+
 [connection signal="pointer_entered" from="Front Fan Holder/FanBodySnapIn" to="Front Fan Holder/FanBodySnapIn" method="_on_FanBodySnapIn_pointer_entered"]
 [connection signal="pointer_exited" from="Front Fan Holder/FanBodySnapIn" to="Front Fan Holder/FanBodySnapIn" method="_on_FanBodySnapIn_pointer_exited"]
 [connection signal="pointer_entered" from="Front Fan Holder/HHDBodySnapIn" to="Front Fan Holder/HHDBodySnapIn" method="_on_HHDBodySnapIn_pointer_entered"]
