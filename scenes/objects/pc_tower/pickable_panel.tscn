@@ -62,7 +62,7 @@ hand_pose = SubResource( 5 )
 [node name="XRToolsHighlightVisible" type="Spatial" parent="." index="5"]
 script = ExtResource( 3 )
 
-[node name="MeshInstance" type="MeshInstance" parent="XRToolsHighlightVisible" index="0"]
+[node name="PanelHighLight" type="MeshInstance" parent="XRToolsHighlightVisible" index="0"]
 transform = Transform( 0.008, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
 mesh = SubResource( 31 )
 material/0 = ExtResource( 10 )

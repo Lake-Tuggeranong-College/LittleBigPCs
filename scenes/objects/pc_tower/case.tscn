@@ -1,14 +1,15 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://assets/pc_tower/case.glb" type="PackedScene" id=1]
-[ext_resource path="res://scripts/pc_parts/gpu_snap_in.gd" type="Script" id=3]
-[ext_resource path="res://scripts/pc_parts/motherboard_snap_in.gd" type="Script" id=4]
-[ext_resource path="res://scripts/pc_parts/cpu_snap_in.gd" type="Script" id=5]
-[ext_resource path="res://scripts/pc_parts/fan_snap_in.gd" type="Script" id=6]
-[ext_resource path="res://scripts/pc_parts/hhd_snap_in.gd" type="Script" id=7]
-[ext_resource path="res://scripts/pc_parts/ram_snap_in.gd" type="Script" id=8]
-[ext_resource path="res://scripts/pc_parts/power_supply_snap_in.gd" type="Script" id=9]
-[ext_resource path="res://scenes/panel_snap_zone.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/snaps/gpu_snap_zone.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/snap_zones/gpu_snap_in.gd" type="Script" id=3]
+[ext_resource path="res://scripts/snap_zones/motherboard_snap_in.gd" type="Script" id=4]
+[ext_resource path="res://scripts/snap_zones/cpu_snap_in.gd" type="Script" id=5]
+[ext_resource path="res://scripts/snap_zones/fan_snap_in.gd" type="Script" id=6]
+[ext_resource path="res://scripts/snap_zones/hhd_snap_in.gd" type="Script" id=7]
+[ext_resource path="res://scripts/snap_zones/ram_snap_in.gd" type="Script" id=8]
+[ext_resource path="res://scripts/snap_zones/power_supply_snap_in.gd" type="Script" id=9]
+[ext_resource path="res://scenes/snaps/panel_snap_zone.tscn" type="PackedScene" id=10]
 
 [sub_resource type="CubeMesh" id=1]
 flip_faces = true
@@ -105,6 +106,7 @@ transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
 transform = Transform( 0.477, 0, 1.66095e-07, 0, -1.168, 0, -7.2025e-08, 0, 1.1, 0, 0, 0 )
 
 [node name="GPUBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="0"]
+visible = false
 collision_layer = 1048576
 collision_mask = 1048576
 script = ExtResource( 3 )
@@ -287,6 +289,10 @@ shape = SubResource( 30 )
 
 [node name="PanelSnapZone" parent="." index="1" instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.498, -0.017, -0.014 )
+visible = false
+
+[node name="GPUSnapZone" parent="." index="2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.115, -0.212, -0.364 )
 
 [connection signal="pointer_entered" from="Front Fan Holder/GPUBodySnapIn" to="Front Fan Holder/GPUBodySnapIn" method="_on_GPUBodySnapIn_pointer_entered"]
 [connection signal="pointer_exited" from="Front Fan Holder/GPUBodySnapIn" to="Front Fan Holder/GPUBodySnapIn" method="_on_GPUBodySnapIn_pointer_exited"]
