@@ -14,7 +14,6 @@ visible = false
 
 [node name="Cube049" parent="." index="2"]
 transform = Transform( 0.613684, 0, 0, 0, 0.613684, 0, 0, 0, 0.0504519, -0.0265164, 0.780757, 1.89807 )
-visible = false
 
 [node name="Front Fan Holder" parent="." index="3"]
 transform = Transform( 0.954072, 0, 1.91486e-07, 0, -2.33482, 0, -8.34076e-08, 0, 2.19034, -0.0517325, -0.319091, -0.264562 )
