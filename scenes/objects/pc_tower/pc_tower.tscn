@@ -6,7 +6,6 @@
 
 [node name="Cube001" parent="." index="0"]
 transform = Transform( -0.888562, 0, -2.44633e-07, 0, 0.0889182, 0, 3.46019e-07, 0, -0.628208, 0.061419, -2.29881, 0.98755 )
-visible = false
 
 [node name="Cube094" parent="." index="1"]
 transform = Transform( -0.0150453, 0, 0, 0, -0.0150453, 0, 0, 0, -0.0359086, 0.761672, -1.52755, -1.73514 )
