@@ -192,7 +192,7 @@ mesh = SubResource( 3 )
 material = SubResource( 15 )
 
 [node name="PickableMotherboard" parent="StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube" instance=ExtResource( 17 )]
-transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0.32075, 0.152657, -0.0223761 )
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0.367333, 0.152657, -0.0092845 )
 
 [node name="PickableFans" parent="StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube" instance=ExtResource( 6 )]
 transform = Transform( 0, 5.96046e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -1.19209e-07, 0.0779183, 0.225327, 0.00147104 )

@@ -6,36 +6,48 @@
 
 [node name="Cube001" parent="." index="0"]
 transform = Transform( -0.888562, 0, -2.44633e-07, 0, 0.0889182, 0, 3.46019e-07, 0, -0.628208, 0.061419, -2.29881, 0.98755 )
+visible = false
 
 [node name="Cube094" parent="." index="1"]
 transform = Transform( -0.0150453, 0, 0, 0, -0.0150453, 0, 0, 0, -0.0359086, 0.761672, -1.52755, -1.73514 )
+visible = false
 
 [node name="Cube049" parent="." index="2"]
 transform = Transform( 0.613684, 0, 0, 0, 0.613684, 0, 0, 0, 0.0504519, -0.0265164, 0.780757, 1.89807 )
+visible = false
 
 [node name="Front Fan Holder" parent="." index="3"]
 transform = Transform( 0.954072, 0, 1.91486e-07, 0, -2.33482, 0, -8.34076e-08, 0, 2.19034, -0.0517325, -0.319091, -0.264562 )
 
 [node name="Panel" parent="." index="4"]
 transform = Transform( 0.00787804, 0, 0, 0, 1, 0, 0, 0, 1, -1.10257, -0.355155, -0.295926 )
+visible = false
 
 [node name="Cube063" parent="." index="5"]
 transform = Transform( 2.87962e-07, 0.0964356, 0, -0.8052, 3.4488e-08, 0, 0, 0, 1, -0.913782, -0.538823, -2.45519 )
+visible = false
 
 [node name="Fan_1" parent="." index="6"]
 transform = Transform( 0.0126626, 0, 0, 0, -0.0126626, 1.107e-09, 0, -1.107e-09, -0.0126626, 0.137985, -0.747594, -1.67869 )
+visible = false
 
 [node name="Cube" parent="." index="7"]
 transform = Transform( -0.668584, 0, -5.84494e-08, 0, 0.668584, 0, 5.84494e-08, 0, -0.668584, 0.853566, -0.0905929, -0.866579 )
+
+[node name="AMD_Ryzen_Threadripper_Ex_low" parent="." index="8"]
+visible = false
 
 [node name="Plane001" parent="AMD_Ryzen_Threadripper_Ex_low" index="0"]
 transform = Transform( 0, -0.992712, 0, 0, 0, 0.992712, -1.19, 0, 0, -9.81405, -1.59353, -1.88581 )
 
 [node name="Cube003" parent="." index="9"]
 transform = Transform( 7.93633e-05, -0.17476, 0, 0.17476, 7.93633e-05, 0, 0, 0, 0.0307164, 0.563414, 1.06829, 0.284357 )
+visible = false
 
 [node name="Cube113" parent="." index="10"]
 transform = Transform( 7.93633e-05, -0.17476, 0, 0.17476, 7.93633e-05, 0, 0, 0, 0.0307164, 0.563414, 1.06279, 0.154658 )
+visible = false
 
 [node name="Text055" parent="." index="11"]
 transform = Transform( 0.0624324, 0.000198867, -8.82717e-05, -8.25121e-05, -0.00179685, -0.0624069, -0.000201325, 0.0624066, -0.00179658, 0.117782, -2.18988, -0.675192 )
+visible = false
