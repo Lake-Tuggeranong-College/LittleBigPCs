@@ -1,7 +1,6 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://assets/pc_tower/case.glb" type="PackedScene" id=1]
-[ext_resource path="res://scripts/pc_parts/panel_snap_in.gd" type="Script" id=2]
 [ext_resource path="res://scripts/pc_parts/gpu_snap_in.gd" type="Script" id=3]
 [ext_resource path="res://scripts/pc_parts/motherboard_snap_in.gd" type="Script" id=4]
 [ext_resource path="res://scripts/pc_parts/cpu_snap_in.gd" type="Script" id=5]
@@ -9,16 +8,7 @@
 [ext_resource path="res://scripts/pc_parts/hhd_snap_in.gd" type="Script" id=7]
 [ext_resource path="res://scripts/pc_parts/ram_snap_in.gd" type="Script" id=8]
 [ext_resource path="res://scripts/pc_parts/power_supply_snap_in.gd" type="Script" id=9]
-
-[sub_resource type="CubeMesh" id=21]
-flip_faces = true
-size = Vector3( 0.001, 1.915, 1.945 )
-
-[sub_resource type="SpatialMaterial" id=22]
-flags_unshaded = true
-
-[sub_resource type="BoxShape" id=23]
-extents = Vector3( 0.095, 1, 1 )
+[ext_resource path="res://scenes/panel_snap_zone.tscn" type="PackedScene" id=10]
 
 [sub_resource type="CubeMesh" id=1]
 flip_faces = true
@@ -109,27 +99,12 @@ flags_unshaded = true
 [sub_resource type="BoxShape" id=30]
 
 [node name="Case" instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
 
 [node name="Front Fan Holder" parent="." index="0"]
 transform = Transform( 0.477, 0, 1.66095e-07, 0, -1.168, 0, -7.2025e-08, 0, 1.1, 0, 0, 0 )
 
-[node name="PanelBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="0"]
-collision_layer = 1048576
-collision_mask = 1048576
-script = ExtResource( 2 )
-
-[node name="Panel" type="MeshInstance" parent="Front Fan Holder/PanelBodySnapIn" index="0"]
-transform = Transform( 1, 0, 4.83169e-13, 0, 1, 0, 1.42109e-14, 0, 1, -1.09241, -0.0156946, -7.15281e-08 )
-visible = false
-mesh = SubResource( 21 )
-skeleton = NodePath("../..")
-material/0 = SubResource( 22 )
-
-[node name="PanelHitBox" type="CollisionShape" parent="Front Fan Holder/PanelBodySnapIn" index="1"]
-transform = Transform( 1, 0, 5.40012e-13, 0, 1, 0, 1.42109e-14, 0, 1, -1.00618, 0, -6.58818e-08 )
-shape = SubResource( 23 )
-
-[node name="GPUBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="1"]
+[node name="GPUBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="0"]
 collision_layer = 1048576
 collision_mask = 1048576
 script = ExtResource( 3 )
@@ -145,7 +120,7 @@ material/0 = SubResource( 2 )
 transform = Transform( 1, 0, 3.69482e-13, 0, 1, 0, 1.42109e-14, 0, 1, 0.245156, 0.079, -0.313 )
 shape = SubResource( 24 )
 
-[node name="MotherboardBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="2"]
+[node name="MotherboardBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="1"]
 collision_layer = 1048576
 collision_mask = 1048576
 script = ExtResource( 4 )
@@ -161,7 +136,7 @@ material/0 = SubResource( 4 )
 transform = Transform( 1, 0, 2.84217e-13, 0, 1, 0, 1.42109e-14, 0, 1, 0.678729, -0.456075, -0.313 )
 shape = SubResource( 25 )
 
-[node name="CPUBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="3"]
+[node name="CPUBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="2"]
 collision_layer = 1048576
 collision_mask = 1048576
 script = ExtResource( 5 )
@@ -177,7 +152,7 @@ material/0 = SubResource( 20 )
 transform = Transform( 1, 0, 1.13687e-13, 0, 1, 0, 7.10543e-15, 0, 1, 0.861, -0.506329, -0.409 )
 shape = SubResource( 26 )
 
-[node name="FanBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="4"]
+[node name="FanBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="3"]
 collision_layer = 1048576
 collision_mask = 1048576
 script = ExtResource( 6 )
@@ -232,7 +207,7 @@ transform = Transform( 1, 0, 1.13687e-13, 0, 1, 0, 7.10543e-15, 0, 1, 0, 0, 0 )
 visible = false
 shape = SubResource( 27 )
 
-[node name="HHDBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="5"]
+[node name="HHDBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="4"]
 collision_layer = 1048576
 collision_mask = 1048576
 script = ExtResource( 7 )
@@ -258,7 +233,7 @@ material/0 = SubResource( 12 )
 visible = false
 shape = SubResource( 28 )
 
-[node name="PowerSupplyBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="6"]
+[node name="PowerSupplyBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="5"]
 collision_layer = 1048576
 collision_mask = 1048576
 script = ExtResource( 9 )
@@ -284,7 +259,7 @@ material/0 = SubResource( 14 )
 visible = false
 shape = SubResource( 29 )
 
-[node name="RAMBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="7"]
+[node name="RAMBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="6"]
 collision_layer = 1048576
 collision_mask = 1048576
 script = ExtResource( 8 )
@@ -310,8 +285,9 @@ material/0 = SubResource( 18 )
 visible = false
 shape = SubResource( 30 )
 
-[connection signal="pointer_entered" from="Front Fan Holder/PanelBodySnapIn" to="Front Fan Holder/PanelBodySnapIn" method="_on_PanelBodySnapIn_pointer_entered"]
-[connection signal="pointer_exited" from="Front Fan Holder/PanelBodySnapIn" to="Front Fan Holder/PanelBodySnapIn" method="_on_PanelBodySnapIn_pointer_exited"]
+[node name="PanelSnapZone" parent="." index="1" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.498, -0.017, -0.014 )
+
 [connection signal="pointer_entered" from="Front Fan Holder/GPUBodySnapIn" to="Front Fan Holder/GPUBodySnapIn" method="_on_GPUBodySnapIn_pointer_entered"]
 [connection signal="pointer_exited" from="Front Fan Holder/GPUBodySnapIn" to="Front Fan Holder/GPUBodySnapIn" method="_on_GPUBodySnapIn_pointer_exited"]
 [connection signal="pointer_entered" from="Front Fan Holder/MotherboardBodySnapIn" to="Front Fan Holder/MotherboardBodySnapIn" method="_on_MotherboardBodySnapIn_pointer_entered"]
