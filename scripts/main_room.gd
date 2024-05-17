@@ -21,9 +21,9 @@ onready var motherboard_snap_area = get_node("StadablePlatform/PlaceableTable1/M
 onready var pickable_motherboard = get_node("StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube/PickableMotherboard")
 onready var scaled_motherboard = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/MotherBoardSnapZone/MotherBoardModel")
 
-#onready var fan_snap_area = get_node()
-#onready var pickable_fan = get_node()
-#onready var scaled_fan = get_node()
+onready var fan_snap_area = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/FanSnapZone")
+onready var pickable_fan = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/FanSnapZone/FanModel")
+onready var scaled_fan = get_node("StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube/PickableFans")
 
 #onready var cpu_snap_area = get_node()
 #onready var pickable_cpu = get_node()
@@ -148,3 +148,21 @@ func _on_MotherBoardSnapZone_body_entered(body):
 func _on_MotherBoardSnapZone_body_exited(body):
 	pickable_motherboard.visible = true
 	scaled_motherboard.visible = false
+
+
+func _on_PickableFans_picked_up(pickable):
+	fan_snap_area.visible = true
+
+
+func _on_PickableFans_dropped(pickable):
+	fan_snap_area.visible = false
+
+
+func _on_FanSnapZone_body_entered(body):
+	pickable_fan.visible = false
+	scaled_fan.visible = true
+
+
+func _on_FanSnapZone_body_exited(body):
+	pickable_fan.visible = true
+	scaled_fan.visible = false
