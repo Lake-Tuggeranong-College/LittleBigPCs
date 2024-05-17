@@ -79,7 +79,6 @@ func _on_SceneChangeDoor_body_entered(body):
 	if body.name == "PlayerBody":
 		get_tree().change_scene("res://scenes/win/win_room.tscn")
 #		print("Transfer player to the win room.")
-# TODO: Add conditon for winning (Condition: Player finished building the PC Tower).
 
 
 func _on_PickablePanel_picked_up(pickable):
