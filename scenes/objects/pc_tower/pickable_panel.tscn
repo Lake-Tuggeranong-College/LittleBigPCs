@@ -9,7 +9,7 @@
 [ext_resource path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" type="PackedScene" id=7]
 [ext_resource path="res://addons/godot-xr-tools/hands/animations/right/Grip Shaft.anim" type="Animation" id=8]
 [ext_resource path="res://addons/godot-xr-tools/objects/grab_points/grab_point_snap.tscn" type="PackedScene" id=9]
-[ext_resource path="res://materials/pickable_panel.tres" type="Material" id=10]
+[ext_resource path="res://materials/pickable_pc_part_setting.tres" type="Material" id=10]
 
 [sub_resource type="BoxShape" id=1]
 margin = 0.01
