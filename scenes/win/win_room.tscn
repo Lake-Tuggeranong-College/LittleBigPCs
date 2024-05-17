@@ -1,0 +1,192 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://addons/godot-xr-tools/functions/movement_direct.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/godot-xr-tools/player/player_body.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_physics_fullglove_low.tscn" type="PackedScene" id=4]
+[ext_resource path="res://addons/godot-openxr/scenes/first_person_controller_vr.tscn" type="PackedScene" id=5]
+[ext_resource path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_physics_fullglove_low.tscn" type="PackedScene" id=6]
+[ext_resource path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" type="PackedScene" id=7]
+[ext_resource path="res://addons/godot-xr-tools/functions/movement_turn.tscn" type="PackedScene" id=8]
+[ext_resource path="res://addons/godot-xr-tools/functions/function_pointer.tscn" type="PackedScene" id=9]
+[ext_resource path="res://addons/godot-xr-tools/functions/function_teleport.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/objects/trophy.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scripts/win_room.gd" type="Script" id=12]
+[ext_resource path="res://scenes/objects/door.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/functions/scene_change.tscn" type="PackedScene" id=14]
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 50, 1, 50 )
+
+[sub_resource type="PlaneMesh" id=3]
+size = Vector2( 100, 100 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0.352941, 0.215686, 0.396078, 1 )
+
+[sub_resource type="CubeMesh" id=5]
+size = Vector3( 0.5, 100, 100 )
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 0.501961, 0.258824, 0.258824, 1 )
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 0.188235, 0.54902, 0.372549, 1 )
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_color = Color( 0.211765, 0.470588, 0.462745, 1 )
+
+[sub_resource type="SpatialMaterial" id=9]
+albedo_color = Color( 0.592157, 0.592157, 0.258824, 1 )
+
+[sub_resource type="Animation" id=10]
+resource_name = "close_door"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("DoorLeft:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -1.505, 0, 0 ), Vector3( -0.252, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("DoorRight:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 1.505, 0, 0 ), Vector3( 0.252, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "open_door"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("DoorLeft:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -0.252, 0, 0 ), Vector3( -1.505, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("DoorRight:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.252, 0, 0 ), Vector3( 1.505, 0, 0 ) ]
+}
+
+[node name="WinRoom" type="Spatial"]
+script = ExtResource( 12 )
+
+[node name="FPController" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.498 )
+
+[node name="VRCommonShaderCache" parent="FPController/ARVRCamera" index="0" instance=ExtResource( 7 )]
+
+[node name="LeftHandController" parent="FPController" index="2"]
+visible = true
+
+[node name="LeftPhysicsHand" parent="FPController/LeftHandController" index="0" instance=ExtResource( 4 )]
+
+[node name="MovementDirect" parent="FPController/LeftHandController" index="1" instance=ExtResource( 2 )]
+enabled = true
+order = 10
+max_speed = 10.0
+strafe = false
+
+[node name="FunctionTeleport" parent="FPController/LeftHandController" index="2" instance=ExtResource( 10 )]
+
+[node name="FunctionPointer" parent="FPController/LeftHandController" index="3" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0432006, 0 )
+
+[node name="RightHandController" parent="FPController" index="3"]
+visible = true
+
+[node name="RightPhysicsHand" parent="FPController/RightHandController" index="0" instance=ExtResource( 6 )]
+
+[node name="MovementTurn" parent="FPController/RightHandController" index="1" instance=ExtResource( 8 )]
+
+[node name="FunctionPointer" parent="FPController/RightHandController" index="2" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0402006, 0 )
+
+[node name="PlayerBody" parent="FPController" instance=ExtResource( 3 )]
+
+[node name="StadablePlatform" type="StaticBody" parent="."]
+
+[node name="RoomLight" type="OmniLight" parent="StadablePlatform"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 53.5587, 0 )
+omni_range = 600.0
+omni_attenuation = 6.06286
+
+[node name="CollisionShape" type="CollisionShape" parent="StadablePlatform"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+shape = SubResource( 2 )
+
+[node name="Floor" type="MeshInstance" parent="StadablePlatform"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
+[node name="Wall" type="CSGCombiner" parent="StadablePlatform"]
+use_collision = true
+
+[node name="LeftWall" type="MeshInstance" parent="StadablePlatform/Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49.75, 0, 0 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 6 )
+
+[node name="RightWall" type="MeshInstance" parent="StadablePlatform/Wall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -49.75, 0, 0 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 7 )
+
+[node name="BackWall" type="MeshInstance" parent="StadablePlatform/Wall"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -49.75 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 8 )
+
+[node name="FrontWall" type="MeshInstance" parent="StadablePlatform/Wall"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 49.75 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 9 )
+
+[node name="StandableTrophy" parent="StadablePlatform" instance=ExtResource( 11 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
+
+[node name="DoorTriggerArea" parent="StadablePlatform" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.256, -49.255 )
+
+[node name="DoorOpenAnimation" parent="StadablePlatform/DoorTriggerArea" index="3"]
+anims/close_door = SubResource( 10 )
+anims/open_door = SubResource( 11 )
+
+[node name="SceneChangeDoor" parent="StadablePlatform/DoorTriggerArea" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 0.891187, 0, 0, 0, 1, 0, -0.44057, 0 )
+visible = false
+
+[connection signal="body_entered" from="StadablePlatform/DoorTriggerArea" to="." method="_on_DoorTriggerArea_body_entered"]
+[connection signal="body_exited" from="StadablePlatform/DoorTriggerArea" to="." method="_on_DoorTriggerArea_body_exited"]
+[connection signal="body_entered" from="StadablePlatform/DoorTriggerArea/SceneChangeDoor" to="." method="_on_SceneChangeDoor_body_entered"]
+
+[editable path="FPController"]
+[editable path="StadablePlatform/DoorTriggerArea"]
+[editable path="StadablePlatform/DoorTriggerArea/SceneChangeDoor"]

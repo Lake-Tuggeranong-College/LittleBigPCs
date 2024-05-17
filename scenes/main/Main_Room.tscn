@@ -45,11 +45,11 @@ albedo_color = Color( 1, 0, 0, 1 )
 margin = 0.01
 extents = Vector3( 0.475, 0.22, 0.45 )
 
-[sub_resource type="SpatialMaterial" id=9]
+[sub_resource type="SpatialMaterial" id=16]
 albedo_color = Color( 0.654902, 0.360784, 0.0117647, 1 )
 
 [sub_resource type="CylinderMesh" id=2]
-material = SubResource( 9 )
+material = SubResource( 16 )
 top_radius = 0.5
 bottom_radius = 0.25
 height = 0.25
@@ -115,7 +115,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0403355, 0 )
 
 [node name="StadablePlatform" type="StaticBody" parent="."]
 
-[node name="OmniLight" type="OmniLight" parent="StadablePlatform"]
+[node name="RoomLight" type="OmniLight" parent="StadablePlatform"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 53.5587, 0 )
 omni_range = 600.0
 omni_attenuation = 6.06286

@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://fonts/DragonHunter-9Ynxj.otf" type="DynamicFontData" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+size = Vector3( 2, 0.05, 2 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 1, 0.682353, 0, 1 )
+
+[sub_resource type="CubeMesh" id=4]
+size = Vector3( 0.5, 0.5, 0.95 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 64
+outline_size = 2
+use_filter = true
+extra_spacing_char = 5
+font_data = ExtResource( 1 )
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1, 0.0465491, 1 )
+
+[node name="StandableTrophy" type="StaticBody"]
+
+[node name="TrophyStand" type="MeshInstance" parent="."]
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
+
+[node name="TrophyModel" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.275718, 0 )
+mesh = SubResource( 4 )
+
+[node name="TrophyText" type="Label3D" parent="TrophyModel"]
+transform = Transform( -1.09278e-08, 0, 0.25, 0, 0.25, 0, -0.25, 0, -1.09278e-08, 0.254696, 0, 0 )
+text = "Trophy :3"
+font = SubResource( 5 )
+
+[node name="TrophyHitBox" type="CollisionShape" parent="."]
+shape = SubResource( 1 )

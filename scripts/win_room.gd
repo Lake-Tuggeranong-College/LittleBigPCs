@@ -28,6 +28,5 @@ func _on_DoorTriggerArea_body_exited(body):
 
 func _on_SceneChangeDoor_body_entered(body):
 	if body.name == "PlayerBody":
-		get_tree().change_scene("res://scenes/win/win_room.tscn")
+		get_tree().change_scene("res://scenes/start/start_room.tscn")
 #		print("Transfer player to the win room.")
-# TODO: Add conditon for winning (Condition: Player finished building the PC Tower).
