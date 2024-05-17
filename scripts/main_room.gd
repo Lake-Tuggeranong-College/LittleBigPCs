@@ -9,9 +9,9 @@ onready var power_supply_snap_area = get_node("StadablePlatform/PlaceableTable1/
 onready var pickable_power_supply = get_node("StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube/PickablePowerSupply")
 onready var scaled_power_supply = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/PowerSupplySnapZone/PowerSupplyModel")
 
-#onready var ram_snap_area = get_node()
-#onready var pickable_ram = get_node()
-#onready var scaled_ram = get_node()
+onready var ram_snap_area = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/RAMSnapZone")
+onready var pickable_ram = get_node("StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube/PickableRAMs")
+onready var scaled_ram = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/RAMSnapZone/RAMModel")
 
 #onready var gpu_snap_area = get_node()
 #onready var pickable_gpu = get_node()
@@ -90,6 +90,25 @@ func _on_PowerSupplySnapZone_body_entered(body):
 	pickable_power_supply.visible = false
 	scaled_power_supply.visible = true
 
+
 func _on_PowerSupplySnapZone_body_exited(body):
 	pickable_power_supply.visible = true
 	scaled_power_supply.visible = false
+
+
+func _on_PickableRAMs_picked_up(pickable):
+	ram_snap_area.visible = true
+
+
+func _on_PickableRAMs_dropped(pickable):
+	ram_snap_area.visible = false
+
+
+func _on_RAMSnapZone_body_entered(body):
+	pickable_ram.visible = false
+	scaled_ram.visible = true
+
+
+func _on_RAMSnapZone_body_exited(body):
+	pickable_ram.visible = true
+	scaled_ram.visible = false
