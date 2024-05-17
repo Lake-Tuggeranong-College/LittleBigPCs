@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/pc_tower/case.glb" type="PackedScene" id=1]
 [ext_resource path="res://scenes/snaps/gpu_snap_zone.tscn" type="PackedScene" id=2]
@@ -7,49 +7,14 @@
 [ext_resource path="res://scenes/snaps/fan_snap_zone.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/snaps/hhd_snap_zone.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/snaps/power_supply_snap_zone.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scripts/snap_zones/ram_snap_in.gd" type="Script" id=8]
+[ext_resource path="res://scenes/snaps/ram_snap_zone.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/snaps/panel_snap_zone.tscn" type="PackedScene" id=10]
-
-[sub_resource type="CubeMesh" id=17]
-flip_faces = true
-size = Vector3( 0.5, 0.8, 0.05 )
-
-[sub_resource type="SpatialMaterial" id=18]
-flags_unshaded = true
-
-[sub_resource type="BoxShape" id=30]
 
 [node name="Case" instance=ExtResource( 1 )]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
 
 [node name="Front Fan Holder" parent="." index="0"]
 transform = Transform( 0.477, 0, 1.66095e-07, 0, -1.168, 0, -7.2025e-08, 0, 1.1, 0, 0, 0 )
-
-[node name="RAMBodySnapIn" type="StaticBody" parent="Front Fan Holder" index="0"]
-collision_layer = 1048576
-collision_mask = 1048576
-script = ExtResource( 8 )
-
-[node name="RAMModel" type="Spatial" parent="Front Fan Holder/RAMBodySnapIn" index="0"]
-transform = Transform( 1, 0, 5.68434e-14, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-
-[node name="RAM1" type="MeshInstance" parent="Front Fan Holder/RAMBodySnapIn/RAMModel" index="0"]
-transform = Transform( 1, 0, 1.22213e-12, 0, 1, 0, 2.13163e-14, 0, 1, 0.775543, -0.426583, 0.034298 )
-visible = false
-mesh = SubResource( 17 )
-skeleton = NodePath("")
-material/0 = SubResource( 18 )
-
-[node name="RAM2" type="MeshInstance" parent="Front Fan Holder/RAMBodySnapIn/RAMModel" index="1"]
-transform = Transform( 1, 0, 1.27898e-12, 0, 1, 0, 2.13163e-14, 0, 1, 0.775543, -0.426583, 0.128099 )
-visible = false
-mesh = SubResource( 17 )
-skeleton = NodePath("")
-material/0 = SubResource( 18 )
-
-[node name="RAMHitBox" type="CollisionShape" parent="Front Fan Holder/RAMBodySnapIn" index="1"]
-visible = false
-shape = SubResource( 30 )
 
 [node name="PanelSnapZone" parent="." index="1" instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.498, -0.017, -0.014 )
@@ -79,5 +44,6 @@ visible = false
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002, -0.902, -0.669 )
 visible = false
 
-[connection signal="pointer_entered" from="Front Fan Holder/RAMBodySnapIn" to="Front Fan Holder/RAMBodySnapIn" method="_on_RAMBodySnapIn_pointer_entered"]
-[connection signal="pointer_exited" from="Front Fan Holder/RAMBodySnapIn" to="Front Fan Holder/RAMBodySnapIn" method="_on_RAMBodySnapIn_pointer_exited"]
+[node name="RAMSnapZone" parent="." index="8" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.290934, 0.460597, 0.307805 )
+visible = false
