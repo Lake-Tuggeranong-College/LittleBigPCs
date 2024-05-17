@@ -41,7 +41,21 @@ onready var pickable_hhd = get_node("StadablePlatform/PlaceableTable3/X_Pos_PC_P
 onready var scaled_hhd = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/HHDSnapZone/HHDModel")
 
 
+onready var scene_change_area = get_node("StadablePlatform/DoorTriggerArea")
+export var required_snap_pc_part: int = 8
+export var counted_snap_pc_part: int = 0
+
+
+func _on_Win_condition():
+	if counted_snap_pc_part == required_snap_pc_part:
+		scene_change_area.visible = true
+	else:
+		scene_change_area.visible = false
+
+
 func _on_DoorTriggerArea_body_entered(body):
+	_on_Win_condition()
+	
 	if body.name == "PlayerBody":
 		var door_trigger_animation = get_node("StadablePlatform/DoorTriggerArea/DoorOpenAnimation")
 		door_trigger_animation.play("open_door")
@@ -79,6 +93,11 @@ func _on_PickablePanel_dropped(pickable):
 func _on_PanelSnapZone_body_entered(body):
 	pickable_panel.visible = false
 	scaled_panel.visible = true
+	
+	counted_snap_pc_part += 1
+	print("Counted: ", counted_snap_pc_part)
+	_on_Win_condition()
+	print("Checked.", _on_Win_condition())
 
 
 func _on_PanelSnapZone_body_exited(body):
@@ -97,6 +116,11 @@ func _on_PickablePowerSupply_dropped(pickable):
 func _on_PowerSupplySnapZone_body_entered(body):
 	pickable_power_supply.visible = false
 	scaled_power_supply.visible = true
+	
+	counted_snap_pc_part += 1
+	print("Counted: ", counted_snap_pc_part)
+	_on_Win_condition()
+	print("Checked.", _on_Win_condition())
 
 
 func _on_PowerSupplySnapZone_body_exited(body):
@@ -115,6 +139,11 @@ func _on_PickableRAMs_dropped(pickable):
 func _on_RAMSnapZone_body_entered(body):
 	pickable_ram.visible = false
 	scaled_ram.visible = true
+	
+	counted_snap_pc_part += 1
+	print("Counted: ", counted_snap_pc_part)
+	_on_Win_condition()
+	print("Checked.", _on_Win_condition())
 
 
 func _on_RAMSnapZone_body_exited(body):
@@ -133,6 +162,11 @@ func _on_PickableGPU_dropped(pickable):
 func _on_GPUSnapZone_body_entered(body):
 	pickable_gpu.visible = false
 	scaled_gpu.visible = true
+	
+	counted_snap_pc_part += 1
+	print("Counted: ", counted_snap_pc_part)
+	_on_Win_condition()
+	print("Checked.", _on_Win_condition())
 
 
 func _on_GPUSnapZone_body_exited(body):
@@ -151,6 +185,11 @@ func _on_PickableMotherboard_dropped(pickable):
 func _on_MotherBoardSnapZone_body_entered(body):
 	pickable_motherboard.visible = false
 	scaled_motherboard.visible = true
+	
+	counted_snap_pc_part += 1
+	print("Counted: ", counted_snap_pc_part)
+	_on_Win_condition()
+	print("Checked.", _on_Win_condition())
 
 
 func _on_MotherBoardSnapZone_body_exited(body):
@@ -169,6 +208,11 @@ func _on_PickableFans_dropped(pickable):
 func _on_FanSnapZone_body_entered(body):
 	pickable_fan.visible = false
 	scaled_fan.visible = true
+	
+	counted_snap_pc_part += 1
+	print("Counted: ", counted_snap_pc_part)
+	_on_Win_condition()
+	print("Checked.", _on_Win_condition())
 
 
 func _on_FanSnapZone_body_exited(body):
@@ -187,6 +231,11 @@ func _on_PickableCPU_dropped(pickable):
 func _on_CPUSnapZone_body_entered(body):
 	pickable_cpu.visible = false
 	scaled_cpu.visible = true
+	
+	counted_snap_pc_part += 1
+	print("Counted: ", counted_snap_pc_part)
+	_on_Win_condition()
+	print("Checked.", _on_Win_condition())
 
 
 func _on_CPUSnapZone_body_exited(body):
@@ -205,6 +254,11 @@ func _on_PickableHHD_dropped(pickable):
 func _on_HHDSnapZone_body_entered(body):
 	pickable_hhd.visible = false
 	scaled_hhd.visible = true
+	
+	counted_snap_pc_part += 1
+	print("Counted: ", counted_snap_pc_part)
+	_on_Win_condition()
+	print("Checked.", _on_Win_condition())
 
 
 func _on_HHDSnapZone_body_exited(body):

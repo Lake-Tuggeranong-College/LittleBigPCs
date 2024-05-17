@@ -207,6 +207,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.369541, 0.138691, -0.007631
 
 [node name="DoorTriggerArea" parent="StadablePlatform" instance=ExtResource( 20 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.256, 49.255 )
+visible = false
 
 [node name="SceneChangeDoor" parent="StadablePlatform/DoorTriggerArea" instance=ExtResource( 22 )]
 transform = Transform( -1, 0, 8.74228e-08, 0, 0.891, 0, -8.74228e-08, 0, -1, 0, -0.441, 0 )
