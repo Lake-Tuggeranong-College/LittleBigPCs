@@ -1,97 +1,8 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://addons/godot-xr-tools/objects/snap_zone.tscn" type="PackedScene" id=1]
 [ext_resource path="res://addons/godot-xr-tools/objects/highlight/highlight_ring.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/pc_tower/power_supply.glb" type="PackedScene" id=3]
-[ext_resource path="res://materials/snap_zone_material_setting.tres" type="Material" id=4]
-
-[sub_resource type="SpatialMaterial" id=1]
-flags_unshaded = true
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=3]
-flags_unshaded = true
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=4]
-flags_unshaded = true
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=5]
-flags_unshaded = true
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=6]
-flags_unshaded = true
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=7]
-flags_unshaded = true
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=8]
-flags_unshaded = true
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=9]
-flags_unshaded = true
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=10]
-flags_unshaded = true
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=11]
-flags_unshaded = true
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=12]
-flags_unshaded = true
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=13]
-flags_unshaded = true
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=14]
-flags_unshaded = true
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=15]
-flags_unshaded = true
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=16]
-flags_unshaded = true
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=17]
-flags_unshaded = true
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=18]
-flags_unshaded = true
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=19]
-flags_unshaded = true
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=20]
-flags_unshaded = true
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=21]
-flags_unshaded = true
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=22]
-flags_unshaded = true
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="SpatialMaterial" id=23]
-flags_unshaded = true
-albedo_color = Color( 0, 0, 0, 1 )
 
 [node name="PowerSupplySnapZone" instance=ExtResource( 1 )]
 grab_distance = 0.5
@@ -102,34 +13,12 @@ snap_require = "PowerSupply"
 
 [node name="PowerSupplyModel" parent="." index="2" instance=ExtResource( 3 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
+visible = false
 
 [node name="ActualPowerSupply" parent="PowerSupplyModel" index="0"]
 transform = Transform( -0.0150453, 0, 0, 0, -0.0150453, 0, 0, 0, -0.0359086, 0.815752, 0.460689, -0.0207162 )
-material/0 = SubResource( 1 )
 
 [node name="PowerSupplyModelWIthText" parent="PowerSupplyModel" index="1"]
 transform = Transform( 0.0624324, 0.000198867, -8.82717e-05, -8.25121e-05, -0.00179685, -0.0624069, -0.000201325, 0.0624066, -0.00179658, 0.188788, -0.0818083, 0.885873 )
-material/0 = ExtResource( 4 )
-material/1 = SubResource( 3 )
-material/2 = SubResource( 4 )
-material/3 = SubResource( 5 )
-material/4 = SubResource( 6 )
-material/5 = SubResource( 7 )
-material/6 = SubResource( 8 )
-material/7 = SubResource( 9 )
-material/8 = SubResource( 10 )
-material/9 = SubResource( 11 )
-material/10 = SubResource( 12 )
-material/11 = SubResource( 13 )
-material/12 = SubResource( 14 )
-material/13 = SubResource( 15 )
-material/14 = SubResource( 16 )
-material/15 = SubResource( 17 )
-material/16 = SubResource( 18 )
-material/17 = SubResource( 19 )
-material/18 = SubResource( 20 )
-material/19 = SubResource( 21 )
-material/20 = SubResource( 22 )
-material/21 = SubResource( 23 )
 
 [editable path="PowerSupplyModel"]

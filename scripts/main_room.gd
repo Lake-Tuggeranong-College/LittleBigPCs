@@ -5,6 +5,33 @@ onready var panel_snap_area = get_node("StadablePlatform/PlaceableTable1/Main Ta
 onready var pickable_panel = get_node("StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube/PickablePanel")
 onready var scaled_panel = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/PanelSnapZone/PanelModel")
 
+onready var power_supply_snap_area = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/PowerSupplySnapZone")
+onready var pickable_power_supply = get_node("StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube/PickablePowerSupply")
+onready var scaled_power_supply = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/PowerSupplySnapZone/PowerSupplyModel")
+
+#onready var ram_snap_area = get_node()
+#onready var pickable_ram = get_node()
+#onready var scaled_ram = get_node()
+
+#onready var gpu_snap_area = get_node()
+#onready var pickable_gpu = get_node()
+#onready var scaled_gpu = get_node()
+
+#onready var motherboard_snap_area = get_node()
+#onready var pickable_motherboard = get_node()
+#onready var scaled_motherboard = get_node()
+
+#onready var fan_snap_area = get_node()
+#onready var pickable_fan = get_node()
+#onready var scaled_fan = get_node()
+
+#onready var cpu_snap_area = get_node()
+#onready var pickable_cpu = get_node()
+#onready var scaled_cpu = get_node()
+
+#onready var hhd_snap_area = get_node()
+#onready var pickable_hhd = get_node()
+#onready var scaled_hhd = get_node()
 
 func _on_DoorTriggerArea_body_entered(body):
 	if body.name == "PlayerBody":
@@ -49,3 +76,20 @@ func _on_PanelSnapZone_body_entered(body):
 func _on_PanelSnapZone_body_exited(body):
 	pickable_panel.visible = true
 	scaled_panel.visible = false
+
+
+func _on_PickablePowerSupply_picked_up(pickable):
+	power_supply_snap_area.visible = true
+
+
+func _on_PickablePowerSupply_dropped(pickable):
+	power_supply_snap_area.visible = false
+
+
+func _on_PowerSupplySnapZone_body_entered(body):
+	pickable_power_supply.visible = false
+	scaled_power_supply.visible = true
+
+func _on_PowerSupplySnapZone_body_exited(body):
+	pickable_power_supply.visible = true
+	scaled_power_supply.visible = false
