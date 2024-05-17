@@ -172,7 +172,7 @@ mesh = SubResource( 3 )
 material = SubResource( 14 )
 
 [node name="PickablePanel" parent="StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube" instance=ExtResource( 11 )]
-transform = Transform( 0.906308, -0.422618, 0, 0.422618, 0.906308, 0, 0, 1.49012e-08, 1, 0.533387, 0.0603115, -0.0504069 )
+transform = Transform( 0.906308, -0.422618, 6.29751e-09, 0.422618, 0.906308, -1.35051e-08, 4.44089e-16, 1.49012e-08, 1, 0.533387, 0.0603115, -0.0504069 )
 
 [node name="PickablePowerSupply" parent="StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.305737, 0.174967, -0.00374269 )
@@ -207,14 +207,64 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.369541, 0.138691, -0.007631
 
 [node name="DoorTriggerArea" parent="StadablePlatform" instance=ExtResource( 20 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.256, 49.255 )
+visible = false
 
 [node name="SceneChangeDoor" parent="StadablePlatform/DoorTriggerArea" instance=ExtResource( 22 )]
 transform = Transform( -1, 0, 8.74228e-08, 0, 0.891, 0, -8.74228e-08, 0, -1, 0, -0.441, 0 )
 visible = false
 
+[connection signal="body_entered" from="StadablePlatform/PlaceableTable1/Main Table/Case/PanelSnapZone" to="." method="_on_PanelSnapZone_body_entered"]
+[connection signal="body_exited" from="StadablePlatform/PlaceableTable1/Main Table/Case/PanelSnapZone" to="." method="_on_PanelSnapZone_body_exited"]
+[connection signal="body_entered" from="StadablePlatform/PlaceableTable1/Main Table/Case/PowerSupplySnapZone" to="." method="_on_PowerSupplySnapZone_body_entered"]
+[connection signal="body_exited" from="StadablePlatform/PlaceableTable1/Main Table/Case/PowerSupplySnapZone" to="." method="_on_PowerSupplySnapZone_body_exited"]
+[connection signal="body_entered" from="StadablePlatform/PlaceableTable1/Main Table/Case/RAMSnapZone" to="." method="_on_RAMSnapZone_body_entered"]
+[connection signal="body_exited" from="StadablePlatform/PlaceableTable1/Main Table/Case/RAMSnapZone" to="." method="_on_RAMSnapZone_body_exited"]
+[connection signal="body_entered" from="StadablePlatform/PlaceableTable1/Main Table/Case/GPUSnapZone" to="." method="_on_GPUSnapZone_body_entered"]
+[connection signal="body_exited" from="StadablePlatform/PlaceableTable1/Main Table/Case/GPUSnapZone" to="." method="_on_GPUSnapZone_body_exited"]
+[connection signal="body_entered" from="StadablePlatform/PlaceableTable1/Main Table/Case/MotherBoardSnapZone" to="." method="_on_MotherBoardSnapZone_body_entered"]
+[connection signal="body_exited" from="StadablePlatform/PlaceableTable1/Main Table/Case/MotherBoardSnapZone" to="." method="_on_MotherBoardSnapZone_body_exited"]
+[connection signal="body_entered" from="StadablePlatform/PlaceableTable1/Main Table/Case/FanSnapZone" to="." method="_on_FanSnapZone_body_entered"]
+[connection signal="body_exited" from="StadablePlatform/PlaceableTable1/Main Table/Case/FanSnapZone" to="." method="_on_FanSnapZone_body_exited"]
+[connection signal="body_entered" from="StadablePlatform/PlaceableTable1/Main Table/Case/CPUSnapZone" to="." method="_on_CPUSnapZone_body_entered"]
+[connection signal="body_exited" from="StadablePlatform/PlaceableTable1/Main Table/Case/CPUSnapZone" to="." method="_on_CPUSnapZone_body_exited"]
+[connection signal="body_entered" from="StadablePlatform/PlaceableTable1/Main Table/Case/HHDSnapZone" to="." method="_on_HHDSnapZone_body_entered"]
+[connection signal="body_exited" from="StadablePlatform/PlaceableTable1/Main Table/Case/HHDSnapZone" to="." method="_on_HHDSnapZone_body_exited"]
+[connection signal="dropped" from="StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube/PickablePanel" to="." method="_on_PickablePanel_dropped"]
+[connection signal="picked_up" from="StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube/PickablePanel" to="." method="_on_PickablePanel_picked_up"]
+[connection signal="dropped" from="StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube/PickablePowerSupply" to="." method="_on_PickablePowerSupply_dropped"]
+[connection signal="picked_up" from="StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube/PickablePowerSupply" to="." method="_on_PickablePowerSupply_picked_up"]
+[connection signal="dropped" from="StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube/PickableRAMs" to="." method="_on_PickableRAMs_dropped"]
+[connection signal="picked_up" from="StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube/PickableRAMs" to="." method="_on_PickableRAMs_picked_up"]
+[connection signal="dropped" from="StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube/PickableGPU" to="." method="_on_PickableGPU_dropped"]
+[connection signal="picked_up" from="StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube/PickableGPU" to="." method="_on_PickableGPU_picked_up"]
+[connection signal="dropped" from="StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube/PickableMotherboard" to="." method="_on_PickableMotherboard_dropped"]
+[connection signal="picked_up" from="StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube/PickableMotherboard" to="." method="_on_PickableMotherboard_picked_up"]
+[connection signal="dropped" from="StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube/PickableFans" to="." method="_on_PickableFans_dropped"]
+[connection signal="picked_up" from="StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube/PickableFans" to="." method="_on_PickableFans_picked_up"]
+[connection signal="dropped" from="StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube/PickableCPU" to="." method="_on_PickableCPU_dropped"]
+[connection signal="picked_up" from="StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube/PickableCPU" to="." method="_on_PickableCPU_picked_up"]
+[connection signal="dropped" from="StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube/PickableHHD" to="." method="_on_PickableHHD_dropped"]
+[connection signal="picked_up" from="StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube/PickableHHD" to="." method="_on_PickableHHD_picked_up"]
 [connection signal="body_entered" from="StadablePlatform/DoorTriggerArea" to="." method="_on_DoorTriggerArea_body_entered"]
 [connection signal="body_exited" from="StadablePlatform/DoorTriggerArea" to="." method="_on_DoorTriggerArea_body_exited"]
 [connection signal="body_entered" from="StadablePlatform/DoorTriggerArea/SceneChangeDoor" to="." method="_on_SceneChangeDoor_body_entered"]
 
 [editable path="FPController"]
+[editable path="StadablePlatform/PlaceableTable1/Main Table/Case"]
+[editable path="StadablePlatform/PlaceableTable1/Main Table/Case/PanelSnapZone"]
+[editable path="StadablePlatform/PlaceableTable1/Main Table/Case/PanelSnapZone/PanelModel"]
+[editable path="StadablePlatform/PlaceableTable1/Main Table/Case/PowerSupplySnapZone"]
+[editable path="StadablePlatform/PlaceableTable1/Main Table/Case/PowerSupplySnapZone/PowerSupplyModel"]
+[editable path="StadablePlatform/PlaceableTable1/Main Table/Case/RAMSnapZone"]
+[editable path="StadablePlatform/PlaceableTable1/Main Table/Case/RAMSnapZone/RAMModel"]
+[editable path="StadablePlatform/PlaceableTable1/Main Table/Case/GPUSnapZone"]
+[editable path="StadablePlatform/PlaceableTable1/Main Table/Case/GPUSnapZone/GPUModel"]
+[editable path="StadablePlatform/PlaceableTable1/Main Table/Case/MotherBoardSnapZone"]
+[editable path="StadablePlatform/PlaceableTable1/Main Table/Case/MotherBoardSnapZone/MotherBoardModel"]
+[editable path="StadablePlatform/PlaceableTable1/Main Table/Case/FanSnapZone"]
+[editable path="StadablePlatform/PlaceableTable1/Main Table/Case/FanSnapZone/FanModel"]
+[editable path="StadablePlatform/PlaceableTable1/Main Table/Case/CPUSnapZone"]
+[editable path="StadablePlatform/PlaceableTable1/Main Table/Case/CPUSnapZone/CPUModel"]
+[editable path="StadablePlatform/PlaceableTable1/Main Table/Case/HHDSnapZone"]
+[editable path="StadablePlatform/PlaceableTable1/Main Table/Case/HHDSnapZone/HHDModel"]
 [editable path="StadablePlatform/DoorTriggerArea"]
