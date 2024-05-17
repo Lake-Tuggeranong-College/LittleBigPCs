@@ -167,6 +167,9 @@ shape = SubResource( 12 )
 mesh = SubResource( 3 )
 material = SubResource( 14 )
 
+[node name="PickablePanel" parent="StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube" instance=ExtResource( 11 )]
+transform = Transform( 0.906308, -0.422618, 0, 0.422618, 0.906308, 0, 0, 1.49012e-08, 1, 0.533387, 0.0603115, -0.0504069 )
+
 [node name="PickablePowerSupply" parent="StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.305737, 0.174967, -0.00374269 )
 
@@ -175,9 +178,6 @@ transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.03687
 
 [node name="PickableGPU" parent="StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube" instance=ExtResource( 4 )]
 transform = Transform( -8.9407e-08, 0, 1, 0, 1, 0, -1, 0, -8.9407e-08, -0.344147, 0.135, 0.017375 )
-
-[node name="PickablePanel" parent="StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube" instance=ExtResource( 11 )]
-transform = Transform( 0.906308, -0.422618, 0, 0.422618, 0.906308, 0, 0, 0, 1, 0.533387, 0.0603115, -0.0504069 )
 
 [node name="PlaceableTable3" type="StaticBody" parent="StadablePlatform"]
 transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1, 0.167397, 5.5228 )
@@ -195,10 +195,10 @@ transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0.34066
 [node name="PickableFans" parent="StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube" instance=ExtResource( 6 )]
 transform = Transform( 0, 5.96046e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -1.19209e-07, -0.00903678, 0.224492, -0.0564532 )
 
-[node name="PickableHHD" parent="StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.369541, 0.138691, -0.0076313 )
-
 [node name="PickableCPU" parent="StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube" instance=ExtResource( 8 )]
 transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -0.0469358, 0.16587, -0.0553479 )
+
+[node name="PickableHHD" parent="StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.369541, 0.138691, -0.0076313 )
 
 [editable path="FPController"]
