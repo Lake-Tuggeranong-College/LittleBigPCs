@@ -22,12 +22,12 @@ onready var pickable_motherboard = get_node("StadablePlatform/PlaceableTable3/X_
 onready var scaled_motherboard = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/MotherBoardSnapZone/MotherBoardModel")
 
 onready var fan_snap_area = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/FanSnapZone")
-onready var pickable_fan = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/FanSnapZone/FanModel")
-onready var scaled_fan = get_node("StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube/PickableFans")
+onready var pickable_fan = get_node("StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube/PickableFans")
+onready var scaled_fan = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/FanSnapZone/FanModel")
 
-#onready var cpu_snap_area = get_node()
-#onready var pickable_cpu = get_node()
-#onready var scaled_cpu = get_node()
+onready var cpu_snap_area = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/CPUSnapZone")
+onready var pickable_cpu = get_node("StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube/PickableCPU")
+onready var scaled_cpu = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/CPUSnapZone/CPUModel")
 
 #onready var hhd_snap_area = get_node()
 #onready var pickable_hhd = get_node()
@@ -166,3 +166,21 @@ func _on_FanSnapZone_body_entered(body):
 func _on_FanSnapZone_body_exited(body):
 	pickable_fan.visible = true
 	scaled_fan.visible = false
+
+
+func _on_PickableCPU_picked_up(pickable):
+	cpu_snap_area.visible = true
+
+
+func _on_PickableCPU_dropped(pickable):
+	cpu_snap_area.visible = false
+
+
+func _on_CPUSnapZone_body_entered(body):
+	pickable_cpu.visible = false
+	scaled_cpu.visible = true
+
+
+func _on_CPUSnapZone_body_exited(body):
+	pickable_cpu.visible = true
+	scaled_cpu.visible = false
