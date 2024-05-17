@@ -13,9 +13,9 @@ onready var ram_snap_area = get_node("StadablePlatform/PlaceableTable1/Main Tabl
 onready var pickable_ram = get_node("StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube/PickableRAMs")
 onready var scaled_ram = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/RAMSnapZone/RAMModel")
 
-#onready var gpu_snap_area = get_node()
-#onready var pickable_gpu = get_node()
-#onready var scaled_gpu = get_node()
+onready var gpu_snap_area = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/GPUSnapZone")
+onready var pickable_gpu = get_node("StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube/PickableGPU")
+onready var scaled_gpu = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/GPUSnapZone/GPUModel")
 
 #onready var motherboard_snap_area = get_node()
 #onready var pickable_motherboard = get_node()
@@ -112,3 +112,21 @@ func _on_RAMSnapZone_body_entered(body):
 func _on_RAMSnapZone_body_exited(body):
 	pickable_ram.visible = true
 	scaled_ram.visible = false
+
+
+func _on_PickableGPU_picked_up(pickable):
+	gpu_snap_area.visible = true
+
+
+func _on_PickableGPU_dropped(pickable):
+	gpu_snap_area.visible = false
+
+
+func _on_GPUSnapZone_body_entered(body):
+	pickable_gpu.visible = false
+	scaled_gpu.visible = true
+
+
+func _on_GPUSnapZone_body_exited(body):
+	pickable_gpu.visible = true
+	scaled_gpu.visible = false
