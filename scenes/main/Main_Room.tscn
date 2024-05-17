@@ -193,12 +193,12 @@ material = SubResource( 15 )
 transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0.340668, 0.152657, -0.0232787 )
 
 [node name="PickableFans" parent="StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube" instance=ExtResource( 6 )]
-transform = Transform( 0.499935, 0.0161785, 0.865912, 0.866026, -3.78552e-08, -0.5, -0.00808923, 0.999869, -0.014011, 0.630792, 0.327576, -0.0147915 )
+transform = Transform( 0, 5.96046e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -1.19209e-07, -0.00903678, 0.224492, -0.0564532 )
 
 [node name="PickableHHD" parent="StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.336051, 0.138691, -0.00306225 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.369541, 0.138691, -0.0076313 )
 
 [node name="PickableCPU" parent="StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube" instance=ExtResource( 8 )]
-transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -0.13328, 0.16587, -0.0446682 )
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -0.0469358, 0.16587, -0.0553479 )
 
 [editable path="FPController"]
