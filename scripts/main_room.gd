@@ -5,33 +5,41 @@ onready var panel_snap_area = get_node("StadablePlatform/PlaceableTable1/Main Ta
 onready var pickable_panel = get_node("StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube/PickablePanel")
 onready var scaled_panel = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/PanelSnapZone/PanelModel")
 
+
 onready var power_supply_snap_area = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/PowerSupplySnapZone")
 onready var pickable_power_supply = get_node("StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube/PickablePowerSupply")
 onready var scaled_power_supply = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/PowerSupplySnapZone/PowerSupplyModel")
+
 
 onready var ram_snap_area = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/RAMSnapZone")
 onready var pickable_ram = get_node("StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube/PickableRAMs")
 onready var scaled_ram = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/RAMSnapZone/RAMModel")
 
+
 onready var gpu_snap_area = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/GPUSnapZone")
 onready var pickable_gpu = get_node("StadablePlatform/PlaceableTable2/X_Neg_PC_Parts_table_Cube/PickableGPU")
 onready var scaled_gpu = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/GPUSnapZone/GPUModel")
+
 
 onready var motherboard_snap_area = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/MotherBoardSnapZone")
 onready var pickable_motherboard = get_node("StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube/PickableMotherboard")
 onready var scaled_motherboard = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/MotherBoardSnapZone/MotherBoardModel")
 
+
 onready var fan_snap_area = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/FanSnapZone")
 onready var pickable_fan = get_node("StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube/PickableFans")
 onready var scaled_fan = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/FanSnapZone/FanModel")
+
 
 onready var cpu_snap_area = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/CPUSnapZone")
 onready var pickable_cpu = get_node("StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube/PickableCPU")
 onready var scaled_cpu = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/CPUSnapZone/CPUModel")
 
-#onready var hhd_snap_area = get_node()
-#onready var pickable_hhd = get_node()
-#onready var scaled_hhd = get_node()
+
+onready var hhd_snap_area = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/HHDSnapZone")
+onready var pickable_hhd = get_node("StadablePlatform/PlaceableTable3/X_Pos_PC_Parts_table_Cube/PickableHHD")
+onready var scaled_hhd = get_node("StadablePlatform/PlaceableTable1/Main Table/Case/HHDSnapZone/HHDModel")
+
 
 func _on_DoorTriggerArea_body_entered(body):
 	if body.name == "PlayerBody":
@@ -184,3 +192,21 @@ func _on_CPUSnapZone_body_entered(body):
 func _on_CPUSnapZone_body_exited(body):
 	pickable_cpu.visible = true
 	scaled_cpu.visible = false
+
+
+func _on_PickableHHD_picked_up(pickable):
+	hhd_snap_area.visible = true
+
+
+func _on_PickableHHD_dropped(pickable):
+	hhd_snap_area.visible = false
+
+
+func _on_HHDSnapZone_body_entered(body):
+	pickable_hhd.visible = false
+	scaled_hhd.visible = true
+
+
+func _on_HHDSnapZone_body_exited(body):
+	pickable_hhd.visible = true
+	scaled_hhd.visible = false
